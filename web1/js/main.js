@@ -139,32 +139,75 @@
 
 	// Content Selection Modal Handler
 	$(document).ready(function() {
-		$('#contentSelectionModal .btn').on('click', function() {
+		const modalHTML = `
+			<div class="content-type-selector text-center">
+				<span data-type="description">Description</span>
+				<span data-type="images">Images</span>
+				<span data-type="certificates">Certificates</span>
+			</div>
+			<div id="contentArea"></div>
+		`;
+
+		$('#contentSelectionModal .modal-body').html(modalHTML);
+
+		$('.content-type-selector span').on('click', function() {
 			const type = $(this).data('type');
 			const contentArea = $('#contentArea');
+			
+			// Update active state
+			$('.content-type-selector span').removeClass('active');
+			$(this).addClass('active');
 			
 			contentArea.attr('class', type);
 			contentArea.empty();
 
+			// Example content - replace with your actual content
 			switch(type) {
 				case 'description':
 					contentArea.html(`
-						<textarea class="form-control" placeholder="Enter description"></textarea>
+						<div class="content-description">
+							<h4>Project Description</h4>
+							<p>This is where your project description will appear. Add your text here.</p>
+						</div>
 					`);
 					break;
 				case 'images':
 					contentArea.html(`
-						<input type="file" class="form-control" accept="image/*" multiple>
-						<div class="preview"></div>
+						<div class="content-images">
+							<div class="image-gallery">
+								<img src="img/work-1.jpg" alt="Project Image 1">
+								<img src="img/work-2.jpg" alt="Project Image 2">
+							</div>
+						</div>
 					`);
 					break;
 				case 'certificates':
 					contentArea.html(`
-						<input type="file" class="form-control" accept="image/*,.pdf" multiple>
-						<div class="preview"></div>
+						<div class="content-certificates">
+							<div class="certificate-gallery">
+								<img src="img/certificate-1.jpg" alt="Certificate 1">
+								<img src="img/certificate-2.jpg" alt="Certificate 2">
+							</div>
+						</div>
 					`);
 					break;
 			}
+		});
+
+		// Prevent modal from forcing scroll to top
+		$('#contentSelectionModal').on('show.bs.modal', function() {
+			$(this).css('display', 'block');
+			setTimeout(() => {
+				const scrollY = window.scrollY;
+				$(this).addClass('show');
+				$('body').css('top', `-${scrollY}px`);
+			}, 0);
+		});
+
+		$('#contentSelectionModal').on('hide.bs.modal', function() {
+			const scrollY = parseInt($('body').css('top').replace('-', ''));
+			$('body').css('top', '');
+			window.scrollTo(0, scrollY);
 		});
 
 		// Handle file previews
