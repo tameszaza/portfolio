@@ -114,4 +114,75 @@
 		}
 	});
 
+	// Add content selector handling
+	$(document).ready(function() {
+		$('.content-selector .btn').on('click', function() {
+			const contentType = $(this).data('type');
+			const display = $('.content-display');
+			
+			// Clear previous content
+			display.empty();
+			
+			switch(contentType) {
+				case 'description':
+					display.html('<div class="description-content"><textarea class="form-control" rows="5" placeholder="Enter description"></textarea></div>');
+					break;
+				case 'images':
+					display.html('<div class="image-upload"><input type="file" class="form-control" accept="image/*" multiple></div>');
+					break;
+				case 'certificates':
+					display.html('<div class="certificate-upload"><input type="file" class="form-control" accept="image/*,application/pdf" multiple></div>');
+					break;
+			}
+		});
+	});
+
+	// Content Selection Modal Handler
+	$(document).ready(function() {
+		$('#contentSelectionModal .btn').on('click', function() {
+			const type = $(this).data('type');
+			const contentArea = $('#contentArea');
+			
+			contentArea.attr('class', type);
+			contentArea.empty();
+
+			switch(type) {
+				case 'description':
+					contentArea.html(`
+						<textarea class="form-control" placeholder="Enter description"></textarea>
+					`);
+					break;
+				case 'images':
+					contentArea.html(`
+						<input type="file" class="form-control" accept="image/*" multiple>
+						<div class="preview"></div>
+					`);
+					break;
+				case 'certificates':
+					contentArea.html(`
+						<input type="file" class="form-control" accept="image/*,.pdf" multiple>
+						<div class="preview"></div>
+					`);
+					break;
+			}
+		});
+
+		// Handle file previews
+		$(document).on('change', '#contentArea input[type="file"]', function() {
+			const files = this.files;
+			const preview = $(this).siblings('.preview');
+			preview.empty();
+			
+			Array.from(files).forEach(file => {
+				if (file.type.startsWith('image/')) {
+					const reader = new FileReader();
+					reader.onload = e => {
+						preview.append(`<img src="${e.target.result}" alt="Preview">`);
+					};
+					reader.readAsDataURL(file);
+				}
+			});
+		});
+	});
+
 })(jQuery);

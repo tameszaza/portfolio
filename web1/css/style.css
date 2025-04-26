@@ -686,6 +686,13 @@ a:hover {
 
 .skill-mf span {
   color: #4e4e4e;
+
+}
+.skill-mf  {
+  margin-right: 5%;
+}
+.school {
+  margin-top: 2rem;
 }
 
 .skill-mf .progress {
@@ -1175,6 +1182,36 @@ footer .credits a {
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: .3rem;
+}
+
+/* Content Selection Modal */
+#contentSelectionModal .btn {
+  min-width: 120px;
+}
+
+#contentArea {
+  min-height: 200px;
+  padding: 20px;
+}
+
+#contentArea.description textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+#contentArea.images .preview,
+#contentArea.certificates .preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#contentArea.images img,
+#contentArea.certificates img {
+  max-width: 150px;
+  height: auto;
+  object-fit: cover;
 }
 
 @media (min-width: 577px) {
