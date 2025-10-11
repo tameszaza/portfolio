@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>DevFolio Bootstrap Template</title>
+    <title>Thanakrit Damduan | STEM Innovation Portfolio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content name="keywords" />
-    <meta content name="description" />
+    <meta
+      content="Thanakrit Damduan, STEM innovation, machine learning, research projects, awards, standardized tests"
+      name="keywords"
+    />
+    <meta
+      content="Academic honors, research portfolio, and leadership track record of Thanakrit Damduan, KVIS scholar and STEM innovator."
+      name="description"
+    />
 
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon" />
@@ -33,24 +39,183 @@
   </head>
 
   <body id="page-top">
-    <!-- Content Selection Modal -->
-    <div class="modal fade" id="contentSelectionModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content" style="background-color: #00000000;">
-          <div class="modal-header">
-            
-          
-          <div class="modal-body text-center">
-            <button class="btn btn-primary m-2" data-type="description">Description</button>
-            <button class="btn btn-primary m-2" data-type="images">Images</button>
-            <button class="btn btn-primary m-2" data-type="certificates">Certificates</button>
-            <div id="contentArea" class="mt-4"></div>
-          </div><button type="button" class="close" data-dismiss="modal" style="color: whitesmoke;">
-            <span>&times;</span>
-          </button></div>
+    <!-- Project Detail Modal -->
+    <div class="modal fade project-modal" id="projectModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="project-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="project-modal__header">
+              <span class="project-modal__meta" id="projectMeta"></span>
+              <h3 class="project-modal__title" id="projectTitle"></h3>
+            </div>
+            <div class="project-modal__content">
+              <div class="project-modal__gallery">
+                <div class="project-modal__main-image">
+                  <img id="projectMainImage" src="" alt="Project preview" />
+                </div>
+                <div class="project-modal__thumbnails" id="projectThumbnails"></div>
+              </div>
+              <div class="project-modal__details">
+                <div class="project-modal__section">
+                  <h5>Description</h5>
+                  <p id="projectDescription"></p>
+                </div>
+                <div class="project-modal__section">
+                  <h5>Certificates</h5>
+                  <div id="projectCertificates"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- Certificate Modal -->
+    <div class="modal fade certificate-modal" id="certificateModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="certificate-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="certificate-modal__image">
+              <img id="certificateModalImage" src="" alt="Certificate preview" />
+            </div>
+            <div class="certificate-modal__details">
+              <h3 id="certificateModalTitle"></h3>
+              <p class="certificate-modal__meta" id="certificateModalMeta"></p>
+              <p id="certificateModalDescription"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="awards" class="awards-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">Honors &amp; Awards</h3>
+              <p class="subtitle-a">
+                Recognition from global STEM stages, olympiads, and innovation challenges that validate the impact of my work.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-primary">Bronze Medalist</span>
+                <span class="award-card__date">May &ndash; Jun 2025 · NJC, Singapore</span>
+              </div>
+              <h4 class="award-card__title">Singapore International STEM Innovation Challenge 2025</h4>
+              <ul class="award-card__list">
+                <li>Represented KVIS with an assistive AI system for visually impaired users.</li>
+                <li>Received bronze among 64 global teams for user-centred innovation.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-success">Silver &amp; Distinction</span>
+                <span class="award-card__date">May 2024 &amp; 2025 · Rayong, Thailand</span>
+              </div>
+              <h4 class="award-card__title">Computational &amp; Algorithmic Thinking (CAT)</h4>
+              <ul class="award-card__list">
+                <li>Awarded national silver (2024) and bronze (2025) with global Distinction ranking.</li>
+                <li>Demonstrated algorithmic strategy under Australian Mathematics Trust challenge.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-info">Honorable Mention</span>
+                <span class="award-card__date">Apr 2025 · Global Online</span>
+              </div>
+              <h4 class="award-card__title">Ilst International Mathematical Modeling Challenge</h4>
+              <ul class="award-card__list">
+                <li>Led the Thailand team of four to optimize sports league scheduling with decision analytics.</li>
+                <li>Recognized among 69 countries for outstanding collaborative modeling.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-warning">Silver &amp; Popular Vote</span>
+                <span class="award-card__date">Feb 2025 · BITEC, Thailand</span>
+              </div>
+              <h4 class="award-card__title">Thailand New Gen Inventors Award 2025</h4>
+              <ul class="award-card__list">
+                <li>Developed a food allergen warning platform to empower Thai households.</li>
+                <li>Selected from 1,549 teams nationwide through public and expert voting.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-warning">Gold Medalist</span>
+                <span class="award-card__date">Jan 2025 · NSTDA, Thailand</span>
+              </div>
+              <h4 class="award-card__title">27th Young Scientist Competition</h4>
+              <ul class="award-card__list">
+                <li>Championed GAN-based speech synthesis detection under 508 qualifying projects.</li>
+                <li>Invited to present at IEEE CIS Thailand Chapter and partner universities.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-info">Honorable Mention</span>
+                <span class="award-card__date">Nov 2024 &ndash; Feb 2025 · Online</span>
+              </div>
+              <h4 class="award-card__title">High School Mathematical Contest in Modeling</h4>
+              <ul class="award-card__list">
+                <li>Modeled Olympic scheduling using SARIMAX forecasting for a globally judged case.</li>
+                <li>Earned special mention across 1,055 teams for data-driven planning.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-secondary">2nd Runner-Up</span>
+                <span class="award-card__date">Jun 2024 · Bangkok, Thailand</span>
+              </div>
+              <h4 class="award-card__title">Siriraj Mathematics &amp; Science Aptitude Test</h4>
+              <ul class="award-card__list">
+                <li>Top three out of 1,303 national teams, representing Siriraj Hospital’s STEM cohort.</li>
+                <li>Excelled in physics, mathematics, biology, and chemistry integration.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="award-card">
+              <div class="award-card__meta">
+                <span class="badge badge-pill badge-primary">Silver Medalist</span>
+                <span class="award-card__date">May 2024 · Thailand</span>
+              </div>
+              <h4 class="award-card__title">23rd Thailand Physics Olympiad</h4>
+              <ul class="award-card__list">
+                <li>Ranked 12th among 30 national finalists after multi-round theory and experiment exams.</li>
+                <li>Advanced by the Promotion of Academic Olympiad and POSN foundations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!--/ Nav Star /-->
     <nav
@@ -84,13 +249,16 @@
               <a class="nav-link js-scroll" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll" href="#service">Awards</a>
+              <a class="nav-link js-scroll" href="#scores">Scores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#awards">Awards</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#work">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll" href="#blog">Extracurriculars</a>
+              <a class="nav-link js-scroll" href="#activities">Activities</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll" href="#contact">Contact</a>
@@ -115,10 +283,11 @@
             <h1 class="intro-title mb-4">I am Thanakrit Damduan</h1>
             <p class="intro-subtitle">
               <span class="text-slider-items"
-                >KVIS Student,Backend Web Developer, ML Researcher,Computer
-                Network,Junior Physicist, Inovator,Head of IT | KVIS Student
-                Committee </span
+                >STEM Innovator,Machine Learning Researcher,Physics Olympian,Bootstrap Founder,Student Leader,Science Communicator</span
               ><strong class="text-slider"></strong>
+            </p>
+            <p class="intro-lead">
+              KVIS scholar shaping accessible AI, national award-winning research, and student-driven technology platforms.
             </p>
             <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
           </div>
@@ -185,37 +354,22 @@
                     <div class="school">
                       <p class="title-s">Kamnoetvidya Science Academy</p>
                       <span style="font-size: 1rem">2023-2026</span>
-                      <span class="pull-right title-s" style="font-size: 1rem"
-                        >3.99</span
-                      >
+                      <span class="pull-right title-s" style="font-size: 1rem">3.99</span>
                     </div>
                     <div class="school">
                       <p class="title-s">Patumwan Demonstration School</p>
                       <span style="font-size: 1rem">2020-2023</span>
-                      <span class="pull-right title-s" style="font-size: 1rem"
-                        >3.99</span
-                      >
+                      <span class="pull-right title-s" style="font-size: 1rem">3.99</span>
                     </div>
-                    <!-- <span>HTML</span> <span class="pull-right">85%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>CSS3</span> <span class="pull-right">75%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>PHP</span> <span class="pull-right">50%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                  <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div> -->
+                    <div class="skills-wrapper">
+                      <p class="title-s">Skills &amp; Courses</p>
+                      <ul class="about-bullets">
+                        <li>Advanced courses in Physics, Chemistry, and Biology</li>
+                        <li>Machine Learning, General Computer Science, Graph Theory</li>
+                        <li>Robotic and Automation systems, Intelligent mobile robot on ROS</li>
+                        <li>Python, C, C++, C#, Java, JavaScript, React, HTML, SQL, Bash</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -224,24 +378,22 @@
                       <h5 class="title-left">About me</h5>
                     </div>
                     <p class="lead">
-                      Curabitur non nulla sit amet nisl tempus convallis quis ac
-                      lectus. Curabitur arcu erat, accumsan id imperdiet et,
-                      porttitor at sem. Praesent sapien massa, convallis a
-                      pellentesque nec, egestas non nisi. Nulla porttitor
-                      accumsan tincidunt.
+                      Driven by a deep passion for computer science, machine learning, computer networks, and physics, I turn scientific curiosity into solutions that improve everyday life.
                     </p>
                     <p class="lead">
-                      Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-                      a. Vivamus suscipit tortor eget felis porttitor volutpat.
-                      Vestibulum ac diam sit amet quam vehicula elementum sed
-                      sit amet dui. porttitor at sem.
+                      At Kamnoetvidya Science Academy I lead cross-disciplinary squads on projects that span synthetic speech detection, decision-based optimisation, and assistive technologies—bridging research with real deployment.
                     </p>
                     <p class="lead">
-                      Nulla porttitor accumsan tincidunt. Quisque velit nisi,
-                      pretium ut lacinia in, elementum id enim. Nulla porttitor
-                      accumsan tincidunt. Mauris blandit aliquet elit, eget
-                      tincidunt nibh pulvinar a.
+                      Beyond research, I empower the KVIS community as Head of Information &amp; Technology for the Student Committee, building the campus booking platform and mentoring juniors through national innovation programmes.
                     </p>
+                    <div class="about-highlights">
+                      <p class="title-s">Current Highlights</p>
+                      <ul class="about-bullets">
+                        <li>Guiding Limneth and GO-KILA to deliver accessible AI and data-driven matchmaking experiences.</li>
+                        <li>Coaching research teams recognised by YSC, SISTIC, and NSC on system design and validation.</li>
+                        <li>Supporting JSTP-SCB scholars and school innovators in speech processing, computer vision, and data science.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -252,116 +404,82 @@
     </section>
 
     <!--/ Section Services Star /-->
-    <section id="service" class="services-mf route">
+    <section id="scores" class="services-mf route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Standardized test</h3>
+              <h3 class="title-a">Standardized Test Profile</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Benchmarks that evidence the language, reasoning, and advanced STEM foundations driving my research.
               </p>
               <div class="line-mf"></div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-box scores-card">
               <div class="service-ico">
-                <span class="ico-circle"><i class="ion-monitor"></i></span>
+                <span class="ico-circle"><i class="ion-android-globe"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
+                <h2 class="s-title">IELTS 7.5 / 9.0</h2>
+                <ul class="scores-list">
+                  <li>Listening 8.0 · Reading 8.5</li>
+                  <li>Writing 7.0 · Speaking 6.0</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-box scores-card">
               <div class="service-ico">
-                <span class="ico-circle"><i class="ion-code-working"></i></span>
+                <span class="ico-circle"><i class="ion-ios-analytics"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
+                <h2 class="s-title">SAT 1420</h2>
+                <ul class="scores-list">
+                  <li>Math 780 · Evidence-Based Reading &amp; Writing 640</li>
+                  <li>Focus on quantitative reasoning and analytical writing</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-box scores-card">
               <div class="service-ico">
-                <span class="ico-circle"><i class="ion-camera"></i></span>
+                <span class="ico-circle"><i class="ion-ios-paper"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Photography</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
+                <h2 class="s-title">Advanced Placement</h2>
+                <ul class="scores-list">
+                  <li>Calculus BC 5 (AB subscore 5)</li>
+                  <li>Statistics 5 · Computer Science A 5</li>
+                  <li>Physics C: Mechanics 5 · E&amp;M 5</li>
+                  <li>Chemistry 5</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
+          <div class="col-md-6 col-lg-3">
+            <div class="service-box scores-card">
               <div class="service-ico">
-                <span class="ico-circle"
-                  ><i class="ion-android-phone-portrait"></i
-                ></span>
+                <span class="ico-circle"><i class="ion-ios-speedometer"></i></span>
               </div>
               <div class="service-content">
-                <h2 class="s-title">Responsive Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-paintbrush"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Graphic Design</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="ion-stats-bars"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Marketing Services</h2>
-                <p class="s-description text-center">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
+                <h2 class="s-title">ACT STEM Strength</h2>
+                <ul class="scores-list">
+                  <li>ACT Math 36 / 36</li>
+                  <li>ACT Science 35 / 36</li>
+                  <li>Reinforces readiness for rigorous university STEM</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!--/ Section Services End /-->
+    </section>    <!--/ Section Scores End /-->
 
     <div
       class="section-counter paralax-mf bg-image"
@@ -378,8 +496,8 @@
                 ></span>
               </div>
               <div class="counter-num">
-                <p class="counter">450</p>
-                <span class="counter-text">WORKS COMPLETED</span>
+                <p class="counter">15</p>
+                <span class="counter-text">HONORS &amp; AWARDS</span>
               </div>
             </div>
           </div>
@@ -391,8 +509,8 @@
                 ></span>
               </div>
               <div class="counter-num">
-                <p class="counter">15</p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
+                <p class="counter">8</p>
+                <span class="counter-text">RESEARCH INITIATIVES</span>
               </div>
             </div>
           </div>
@@ -402,8 +520,8 @@
                 <span class="ico-circle"><i class="ion-ios-people"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">550</p>
-                <span class="counter-text">TOTAL CLIENTS</span>
+                <p class="counter">6</p>
+                <span class="counter-text">LEADERSHIP ROLES</span>
               </div>
             </div>
           </div>
@@ -413,8 +531,8 @@
                 <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">36</p>
-                <span class="counter-text">AWARD WON</span>
+                <p class="counter">12</p>
+                <span class="counter-text">EXTRACURRICULARS</span>
               </div>
             </div>
           </div>
@@ -428,28 +546,78 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Portfolio</h3>
+              <h3 class="title-a">Research &amp; Projects</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Translating machine learning, optimization, and systems thinking into solutions that serve communities.
               </p>
               <div class="line-mf"></div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
+          <div class="col-md-4 mb-4">
+            <div class="work-box" data-project="limneth">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
                 <div class="work-img">
-                  <img src="img/work-1.jpg" alt class="img-fluid" />
+                  <img src="img/projects/limneth-cover.jpg" alt="Preview of Limneth assistive AI system" class="img-fluid" />
                 </div>
                 <div class="work-content">
                   <div class="row">
                     <div class="col-sm-8">
-                      <h2 class="w-title">Lorem impsum dolor</h2>
+                      <h2 class="w-title">Limneth Assistive AI</h2>
                       <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2018</span>
+                        <span class="w-ctegory">Accessible Computing</span> /
+                        <span class="w-date">2025</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="w-like">
+                        <span class="ion-ios-plus-outline"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="work-box" data-project="speech-detection">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
+                <div class="work-img">
+                  <img src="img/projects/speech-detection.jpg" alt="Synthetic speech detection GAN project" class="img-fluid" />
+                </div>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <h2 class="w-title">Synthetic Speech Detection</h2>
+                      <div class="w-more">
+                        <span class="w-ctegory">Machine Learning</span> /
+                        <span class="w-date">2024 &ndash; 2025</span>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="w-like">
+                        <span class="ion-ios-plus-outline"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="work-box" data-project="food-allergen">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
+                <div class="work-img">
+                  <img src="img/projects/food-allergen.jpg" alt="Food allergen warning platform overview" class="img-fluid" />
+                </div>
+                <div class="work-content">
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <h2 class="w-title">Food Allergen Warning</h2>
+                      <div class="w-more">
+                        <span class="w-ctegory">Public Health Tech</span> /
+                        <span class="w-date">2024 &ndash; 2025</span>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -463,18 +631,18 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
+            <div class="work-box" data-project="global-league">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
                 <div class="work-img">
-                  <img src="img/work-2.jpg" alt class="img-fluid" />
+                  <img src="img/projects/global-league.jpg" alt="Optimization model for global sports league scheduling" class="img-fluid" />
                 </div>
                 <div class="work-content">
                   <div class="row">
                     <div class="col-sm-8">
-                      <h2 class="w-title">Loreda Cuno Nere</h2>
+                      <h2 class="w-title">Global Sports League Optimizer</h2>
                       <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2018</span>
+                        <span class="w-ctegory">Operations Research</span> /
+                        <span class="w-date">2025</span>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -488,18 +656,18 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
+            <div class="work-box" data-project="go-kila">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
                 <div class="work-img">
-                  <img src="img/work-3.jpg" alt class="img-fluid" />
+                  <img src="img/projects/go-kila.jpg" alt="GO-KILA sports matchmaking platform visuals" class="img-fluid" />
                 </div>
                 <div class="work-content">
                   <div class="row">
                     <div class="col-sm-8">
-                      <h2 class="w-title">Mavrito Lana Dere</h2>
+                      <h2 class="w-title">GO-KILA Sports Platform</h2>
                       <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2018</span>
+                        <span class="w-ctegory">Start-up Engineering</span> /
+                        <span class="w-date">2025</span>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -513,68 +681,18 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
+            <div class="work-box" data-project="enrollment-scanner">
+              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
                 <div class="work-img">
-                  <img src="img/work-4.jpg" alt class="img-fluid" />
+                  <img src="img/projects/enrollment-scanner.jpg" alt="KVIS OPH enrollment scanner interface" class="img-fluid" />
                 </div>
                 <div class="work-content">
                   <div class="row">
                     <div class="col-sm-8">
-                      <h2 class="w-title">Bindo Laro Cado</h2>
+                      <h2 class="w-title">KVIS Enrollment Scanner</h2>
                       <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2018</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
-                <div class="work-img">
-                  <img src="img/work-5.jpg" alt class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Studio Lena Mado</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2018</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="#" data-toggle="modal" data-target="#contentSelectionModal">
-                <div class="work-img">
-                  <img src="img/work-6.jpg" alt class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Studio Big Bang</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Web Design</span> /
-                        <span class="w-date">18 Sep. 2017</span>
+                        <span class="w-ctegory">Data Systems</span> /
+                        <span class="w-date">2024 &ndash; 2025</span>
                       </div>
                     </div>
                     <div class="col-sm-4">
@@ -592,67 +710,154 @@
     </section>
     <!--/ Section Portfolio End /-->
 
-    <!--/ Section Testimonials Star /-->
-    <div
-      class="testimonials paralax-mf bg-image"
-      style="background-image: url(img/overlay-bg.jpg)"
-    >
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div id="testimonial-mf" class="owl-carousel owl-theme">
-              <div class="testimonial-box">
-                <div class="author-test">
-                  <img
-                    src="img/testimonial-2.jpg"
-                    alt
-                    class="rounded-circle b-shadow-a"
-                  />
-                  <span class="author">Xavi Alonso</span>
-                </div>
-                <div class="content-test">
-                  <p class="description lead">
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                    sem. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
-                  </p>
-                  <span class="comit"><i class="fa fa-quote-right"></i></span>
-                </div>
-              </div>
-              <div class="testimonial-box">
-                <div class="author-test">
-                  <img
-                    src="img/testimonial-4.jpg"
-                    alt
-                    class="rounded-circle b-shadow-a"
-                  />
-                  <span class="author">Marta Socrate</span>
-                </div>
-                <div class="content-test">
-                  <p class="description lead">
-                    Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                    sem. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit.
-                  </p>
-                  <span class="comit"><i class="fa fa-quote-right"></i></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--/ Section Blog Star /-->
-    <section id="blog" class="blog-mf sect-pt4 route">
+    <!--/ Section Certificates Star /-->
+    <section id="certificates" class="certificates-mf sect-pt4 route">
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Blog</h3>
+              <h3 class="title-a">Certificate Gallery</h3>
               <p class="subtitle-a">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Browse the credential highlights—select any certificate to view the full-resolution award.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/sistemic-2025.jpg"
+              data-title="Singapore International STEM Innovation Challenge 2025"
+              data-meta="Bronze Medalist · NJC, Singapore · 2025"
+              data-description="Recognised for Limneth, an assistive AI platform enhancing accessibility for visually impaired users."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/sistemic-2025.jpg" alt="SISTEMIC 2025 bronze medal certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>STEM Innovation Challenge</h5>
+                <p>Bronze Medalist</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/ysc-2025.jpg"
+              data-title="27th Young Scientist Competition 2025"
+              data-meta="Gold Medalist · NSTDA, Thailand · 2025"
+              data-description="Honoured for presenting a GAN-based anomaly detector that secures audio authenticity."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/ysc-2025.jpg" alt="Young Scientist Competition 2025 gold medal certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>Young Scientist Competition</h5>
+                <p>Gold Medalist</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/new-gen-2025.jpg"
+              data-title="Thailand New Gen Inventors Award 2025"
+              data-meta="Silver Medalist &amp; Popular Vote · BITEC Bangkok · 2025"
+              data-description="Awarded for the Food Allergen Warning Program supporting families with dietary restrictions."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/new-gen-2025.jpg" alt="Thailand New Gen Inventors Award 2025 certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>New Gen Inventors Award</h5>
+                <p>Silver &amp; Popular Vote</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/tpho-2024.jpg"
+              data-title="23rd Thailand Physics Olympiad"
+              data-meta="Silver Medalist · Thailand · 2024"
+              data-description="Recognised after national finals covering theoretical and experimental physics."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/tpho-2024.jpg" alt="Thailand Physics Olympiad silver medal certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>Thailand Physics Olympiad</h5>
+                <p>Silver Medalist</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/ipst-camp.jpg"
+              data-title="IPST Physics Camp 2024"
+              data-meta="Qualified Finalist · Bangkok, Thailand · 2024"
+              data-description="Selected among 10,000+ applicants to represent Thailand in International Physics Olympiad training."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/ipst-camp.jpg" alt="IPST Physics Camp finalist certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>IPST Physics Camp</h5>
+                <p>National Finalist</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-lg-3 mb-4">
+            <a
+              href="#"
+              class="certificate-card"
+              role="button"
+              aria-controls="certificateModal"
+              data-full="img/certificates/simsat-2024.jpg"
+              data-title="Siriraj Mathematics and Science Aptitude Test"
+              data-meta="2nd Runner-Up · Bangkok, Thailand · 2024"
+              data-description="Placed top three nationwide for integrated mathematics and science aptitude."
+            >
+              <div class="certificate-card__frame">
+                <img src="img/certificates/simsat-2024.jpg" alt="Siriraj Mathematics and Science Aptitude Test certificate" class="img-fluid" />
+              </div>
+              <div class="certificate-card__caption">
+                <h5>Siriraj SIMSAT</h5>
+                <p>2nd Runner-Up</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/ Section Activities Star /-->
+    <section id="activities" class="activities-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">Leadership &amp; Activities</h3>
+              <p class="subtitle-a">
+                Building communities, mentoring future innovators, and amplifying STEM outreach.
               </p>
               <div class="line-mf"></div>
             </div>
@@ -660,126 +865,48 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-1.jpg" alt class="img-fluid"
-                /></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Travel</h6>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
-                </h3>
-                <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="img/testimonial-2.jpg"
-                      alt
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
+            <div class="activity-card">
+              <h4>Leadership &amp; Governance</h4>
+              <p class="activity-card__meta">2023 &ndash; 2025 · Kamnoetvidya Science Academy</p>
+              <ul class="activity-card__list">
+                <li>Head of Information &amp; Technology, KVIS Student Committee—built the room booking platform to eliminate scheduling conflicts.</li>
+                <li>Vice President, FiSym Club—created financial literacy programmes and club investment fund.</li>
+                <li>President, Animator’s Tournament Club—led 17-member cohort mastering Blender for 3D storytelling.</li>
+                <li>KVIS Student Council leader—drove election campaigns and policy advocacy via student media.</li>
+                <li>Give Got Grown co-founder—mobilised fundraising and activity kits for community exercise programmes.</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-2.jpg" alt class="img-fluid"
-                /></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Web Design</h6>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
-                </h3>
-                <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="img/testimonial-2.jpg"
-                      alt
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
+            <div class="activity-card">
+              <h4>STEM Outreach &amp; Mentorship</h4>
+              <p class="activity-card__meta">2023 &ndash; 2025 · Thailand &amp; Singapore</p>
+              <ul class="activity-card__list">
+                <li>Senior student mentor, JSTP-SCB Batch 6—guided gifted middle school scholars in AI and innovation.</li>
+                <li>Mentor for juniors’ projects—coached Thai-Singapore speech technology teams on data workflows.</li>
+                <li>Producer &amp; editor, KVISDOM YouTube channel—delivered national science tutorials and livestream content.</li>
+                <li>KVIS Open House developer—managed computer vision enrollment scanners for 3 consecutive years.</li>
+                <li>International Data Science Elite Camp participant—collaborated on data challenges at CUHK Shenzhen.</li>
+              </ul>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-blog">
-              <div class="card-img">
-                <a href="blog-single.html"
-                  ><img src="img/post-3.jpg" alt class="img-fluid"
-                /></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Web Design</h6>
-                  </div>
-                </div>
-                <h3 class="card-title">
-                  <a href="blog-single.html">See more ideas about Travel</a>
-                </h3>
-                <p class="card-description">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div class="card-footer">
-                <div class="post-author">
-                  <a href="#">
-                    <img
-                      src="img/testimonial-2.jpg"
-                      alt
-                      class="avatar rounded-circle"
-                    />
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div>
-                <div class="post-date">
-                  <span class="ion-ios-clock-outline"></span> 10 min
-                </div>
-              </div>
+            <div class="activity-card">
+              <h4>Creative &amp; Campus Life</h4>
+              <p class="activity-card__meta">2023 &ndash; 2025 · KVIS Community</p>
+              <ul class="activity-card__list">
+                <li>Official photographer for KVIS festivals, sports events, and student council campaigns.</li>
+                <li>School choir performer—presented the Wai Khru tribute and arts showcases after intensive vocal training.</li>
+                <li>KVIS Student Committee member—oversaw PR storytelling and event coverage for campus culture.</li>
+                <li>Logistics leader for sports field booking—designed digital inventory and access systems.</li>
+                <li>Championing inclusion by organising cross-school workshops and volunteering initiatives.</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!--/ Section Blog End /-->
+    <!--/ Section Activities End /-->
 
     <!--/ Section Contact-Footer Star /-->
     <section
@@ -795,7 +922,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="title-box-2">
-                      <h5 class="title-left">Send Message Us</h5>
+                      <h5 class="title-left">Send Me a Message</h5>
                     </div>
                     <div>
                       <form
@@ -882,48 +1009,40 @@
                     </div>
                     <div class="more-info">
                       <p class="lead">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis dolorum dolorem soluta quidem expedita aperiam
-                        aliquid at. Totam magni ipsum suscipit amet? Autem nemo
-                        esse laboriosam ratione nobis mollitia inventore?
+                        I welcome collaborations across research, innovation challenges, and community STEM outreach. Reach out for project partnerships, speaking opportunities, or to learn more about my ongoing work.
                       </p>
                       <ul class="list-ico">
                         <li>
-                          <span class="ion-ios-location"></span> 329 WASHINGTON
-                          ST BOSTON, MA 02108
+                          <span class="ion-ios-location"></span> Kamnoetvidya Science Academy, Rayong 21210, Thailand
                         </li>
                         <li>
-                          <span class="ion-ios-telephone"></span> (617) 557-0089
+                          <span class="ion-ios-telephone"></span>
+                          <a href="tel:+66843292183">(+66) 84-329-2183</a>
                         </li>
                         <li>
-                          <span class="ion-email"></span> contact@example.com
+                          <span class="ion-email"></span>
+                          <a href="mailto:thanakrit.dam64@gmail.com">thanakrit.dam64@gmail.com</a>
                         </li>
                       </ul>
                     </div>
                     <div class="socials">
                       <ul>
                         <li>
-                          <a href
+                          <a href="https://github.com/tameszaza" target="_blank" rel="noopener"
                             ><span class="ico-circle"
-                              ><i class="ion-social-facebook"></i></span
+                              ><i class="ion-social-github"></i></span
                           ></a>
                         </li>
                         <li>
-                          <a href
+                          <a href="https://www.youtube.com/@KVISDOM" target="_blank" rel="noopener"
                             ><span class="ico-circle"
-                              ><i class="ion-social-instagram"></i></span
+                              ><i class="ion-social-youtube"></i></span
                           ></a>
                         </li>
                         <li>
-                          <a href
+                          <a href="mailto:thanakrit.dam64@gmail.com"
                             ><span class="ico-circle"
-                              ><i class="ion-social-twitter"></i></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a href
-                            ><span class="ico-circle"
-                              ><i class="ion-social-pinterest"></i></span
+                              ><i class="ion-email"></i></span
                           ></a>
                         </li>
                       </ul>
@@ -941,18 +1060,11 @@
             <div class="col-sm-12">
               <div class="copyright-box">
                 <p class="copyright">
-                  &copy; Copyright <strong>DevFolio</strong>. All Rights
-                  Reserved
+                  &copy; 2025 <strong>Thanakrit Damduan</strong>. Crafted with DevFolio.
                 </p>
                 <div class="credits">
-                  <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=DevFolio
-                -->
-                  Designed by
-                  <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  Template by
+                  <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>
                 </div>
               </div>
             </div>
@@ -983,4 +1095,3 @@
     <script src="js/main.js"></script>
   </body>
 </html>
-``` 

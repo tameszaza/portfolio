@@ -101,131 +101,253 @@
 		});
 	}
 
-	/*--/ Testimonials owl /--*/
-	$('#testimonial-mf').owlCarousel({
-		margin: 20,
-		autoplay: true,
-		autoplayTimeout: 4000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1,
+	// Project detail modal
+	$(function () {
+		const projectDetails = {
+			limneth: {
+				title: 'Limneth Assistive AI System',
+				category: 'Accessible Computing',
+				date: 'SISTEMIC 2025 • Singapore',
+				description: 'Designed a multimodal assistive platform that combines speech interfaces, computer vision and WebSocket automation so visually impaired users can navigate complex spaces independently. Embedded the model on an edge device with a cloud dashboard to monitor usage analytics.',
+				images: [
+					{ src: 'img/projects/limneth-cover.jpg', alt: 'Limneth assistive AI interface' },
+					{ src: 'img/certificates/sistemic-2025.jpg', alt: 'SISTEMIC bronze medal certificate' }
+				],
+				certificates: [
+					{ title: 'Singapore International STEM Innovation Challenge', issuer: 'National Junior College, Singapore', year: '2025', image: 'img/certificates/sistemic-2025.jpg' }
+				]
+			},
+			'speech-detection': {
+				title: 'Synthetic Speech Detection via Multi-Generator GANs',
+				category: 'Machine Learning & Security',
+				date: 'YSC 2025 • Thailand',
+				description: 'Constructed an anomaly-aware GAN ensemble trained on diverse speech corpora to distinguish human voices from deepfakes. Delivered a production-ready API with improved equal error rate and interpretability visualisations for audio forensics stakeholders.',
+				images: [
+					{ src: 'img/projects/speech-detection.jpg', alt: 'Synthetic speech detection GAN workflow' },
+					{ src: 'img/certificates/ysc-2025.jpg', alt: 'Young Scientist Competition gold medal certificate' }
+				],
+				certificates: [
+					{ title: '27th Young Scientist Competition', issuer: 'NSTDA • Thailand', year: '2025', image: 'img/certificates/ysc-2025.jpg' },
+					{ title: 'IEEE CIS Thailand Conference Presentation', issuer: 'IEEE Computational Intelligence Society Thailand Chapter', year: '2025' }
+				]
+			},
+			'food-allergen': {
+				title: 'Food Allergen Warning Program',
+				category: 'Public Health Tech',
+				date: 'New Gen Inventors Award 2025 • Thailand',
+				description: 'Developed a machine learning pipeline that identifies risky ingredients for people with food allergies, paired with a personalised alert network for household use. Integrated a national ingredient database and push notifications to guide safe consumption.',
+				images: [
+					{ src: 'img/projects/food-allergen.jpg', alt: 'Food allergen warning dashboard' },
+					{ src: 'img/certificates/new-gen-2025.jpg', alt: 'Thailand New Gen Inventors Award certificate' }
+				],
+				certificates: [
+					{ title: 'Thailand New Gen Inventors Award', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/new-gen-2025.jpg' },
+					{ title: 'National Software Contest Finalist', issuer: 'NECTEC • Thailand', year: '2024' }
+				]
+			},
+			'global-league': {
+				title: 'Global Sports League Optimizer',
+				category: 'Operations Research',
+				date: 'IMMC 2025 • International',
+				description: 'Formulated a decision-based annealing optimisation model that balances fairness, travel time and broadcast requirements for international sports leagues. Delivered sensitivity analyses and what-if scheduling scenarios for policy makers.',
+				images: [
+					{ src: 'img/projects/global-league.jpg', alt: 'Sports league scheduling optimisation results' }
+				],
+				certificates: [
+					{ title: 'International Mathematical Modeling Challenge (IMMC)', issuer: 'IMMC 2025', year: '2025', image: 'img/certificates/ipst-camp.jpg' },
+					{ title: 'High School Mathematical Contest in Modeling', issuer: 'COMAP • USA', year: '2024' }
+				]
+			},
+			'go-kila': {
+				title: 'GO-KILA Sports Matchmaking Platform',
+				category: 'Start-up Engineering',
+				date: 'Shark Tank TYP (in progress) • 2025',
+				description: 'Architected a cloud-native platform that pairs amateur athletes with nearby teams using routing heuristics and live chat. Built the backend services, database design, and websocket-based messaging for real-time coordination.',
+				images: [
+					{ src: 'img/projects/go-kila.jpg', alt: 'GO-KILA sports platform mobile mockup' }
+				],
+				certificates: [
+					{ title: 'Datathon 2025 ABData Science Elite Summer Camp', issuer: 'CHHK-Shenzhen & KVIS', year: '2025' }
+				]
+			},
+			'enrollment-scanner': {
+				title: 'KVIS OPH Enrollment Scanner',
+				category: 'Data Systems',
+				date: 'KVIS Open House 2023-2025',
+				description: 'Engineered a computer-vision powered scanning pipeline that digitises student enrollment forms for large-scale events. Automated statistical analytics and deployed the solution on Flask with integrated Dewarp models for 2025 operations.',
+				images: [
+					{ src: 'img/projects/enrollment-scanner.jpg', alt: 'KVIS enrollment scanner web interface' }
+				],
+				certificates: [
+					{ title: 'KVIS Open House Innovation Highlight', issuer: 'Kamnoetvidya Science Academy', year: '2025' }
+				]
 			}
-		}
-	});
+		};
 
-	// Add content selector handling
-	$(document).ready(function() {
-		$('.content-selector .btn').on('click', function() {
-			const contentType = $(this).data('type');
-			const display = $('.content-display');
-			
-			// Clear previous content
-			display.empty();
-			
-			switch(contentType) {
-				case 'description':
-					display.html('<div class="description-content"><textarea class="form-control" rows="5" placeholder="Enter description"></textarea></div>');
-					break;
-				case 'images':
-					display.html('<div class="image-upload"><input type="file" class="form-control" accept="image/*" multiple></div>');
-					break;
-				case 'certificates':
-					display.html('<div class="certificate-upload"><input type="file" class="form-control" accept="image/*,application/pdf" multiple></div>');
-					break;
+		const $modal = $('#projectModal');
+		const $projectTitle = $('#projectTitle');
+		const $projectMeta = $('#projectMeta');
+		const $projectDescription = $('#projectDescription');
+		const $projectMainImage = $('#projectMainImage');
+		const $projectThumbnails = $('#projectThumbnails');
+		const $projectCertificates = $('#projectCertificates');
+
+		function normaliseImages(detail) {
+			const images = Array.isArray(detail.images) ? detail.images : [];
+			const fallbackAlt = detail.title ? detail.title + ' preview image' : 'Project preview image';
+			if (!images.length) {
+				return [{ src: 'img/work-1.jpg', alt: fallbackAlt }];
 			}
-		});
-	});
-
-	// Content Selection Modal Handler
-	$(document).ready(function() {
-		const modalHTML = `
-			<div class="content-type-selector text-center">
-				<span data-type="description">Description</span>
-				<span data-type="images">Images</span>
-				<span data-type="certificates">Certificates</span>
-			</div>
-			<div id="contentArea"></div>
-		`;
-
-		$('#contentSelectionModal .modal-body').html(modalHTML);
-
-		$('.content-type-selector span').on('click', function() {
-			const type = $(this).data('type');
-			const contentArea = $('#contentArea');
-			
-			// Update active state
-			$('.content-type-selector span').removeClass('active');
-			$(this).addClass('active');
-			
-			contentArea.attr('class', type);
-			contentArea.empty();
-
-			// Example content - replace with your actual content
-			switch(type) {
-				case 'description':
-					contentArea.html(`
-						<div class="content-description">
-							<h4>Project Description</h4>
-							<p>This is where your project description will appear. Add your text here.</p>
-						</div>
-					`);
-					break;
-				case 'images':
-					contentArea.html(`
-						<div class="content-images">
-							<div class="image-gallery">
-								<img src="img/work-1.jpg" alt="Project Image 1">
-								<img src="img/work-2.jpg" alt="Project Image 2">
-							</div>
-						</div>
-					`);
-					break;
-				case 'certificates':
-					contentArea.html(`
-						<div class="content-certificates">
-							<div class="certificate-gallery">
-								<img src="img/certificate-1.jpg" alt="Certificate 1">
-								<img src="img/certificate-2.jpg" alt="Certificate 2">
-							</div>
-						</div>
-					`);
-					break;
-			}
-		});
-
-		// Prevent modal from forcing scroll to top
-		$('#contentSelectionModal').on('show.bs.modal', function() {
-			$(this).css('display', 'block');
-			setTimeout(() => {
-				const scrollY = window.scrollY;
-				$(this).addClass('show');
-				$('body').css('top', `-${scrollY}px`);
-			}, 0);
-		});
-
-		$('#contentSelectionModal').on('hide.bs.modal', function() {
-			const scrollY = parseInt($('body').css('top').replace('-', ''));
-			$('body').css('top', '');
-			window.scrollTo(0, scrollY);
-		});
-
-		// Handle file previews
-		$(document).on('change', '#contentArea input[type="file"]', function() {
-			const files = this.files;
-			const preview = $(this).siblings('.preview');
-			preview.empty();
-			
-			Array.from(files).forEach(file => {
-				if (file.type.startsWith('image/')) {
-					const reader = new FileReader();
-					reader.onload = e => {
-						preview.append(`<img src="${e.target.result}" alt="Preview">`);
+			return images
+				.map(image => {
+					if (!image) {
+						return null;
+					}
+					if (typeof image === 'string') {
+						return { src: image, alt: fallbackAlt };
+					}
+					if (!image.src) {
+						return null;
+					}
+					return {
+						src: image.src,
+						alt: image.alt || fallbackAlt
 					};
-					reader.readAsDataURL(file);
+				})
+				.filter(Boolean);
+		}
+
+		function setMainImage(src, altText) {
+			if (!src) {
+				$projectMainImage.attr('src', '').attr('alt', '');
+				return;
+			}
+			$projectMainImage.attr('src', src).attr('alt', altText || 'Project preview image');
+		}
+
+		function renderImages(detail) {
+			const images = normaliseImages(detail);
+			const hasMultiple = images.length > 1;
+			const [primaryImage] = images;
+			setMainImage(primaryImage ? primaryImage.src : '', primaryImage ? primaryImage.alt : '');
+			$projectThumbnails.empty();
+			$projectThumbnails.toggle(hasMultiple);
+			if (!hasMultiple) {
+				return;
+			}
+			images.forEach((image, index) => {
+				const $button = $('<button type="button" class="project-thumbnail"></button>');
+				$button.append($('<img />', { src: image.src, alt: image.alt }));
+				if (index === 0) {
+					$button.addClass('is-active');
 				}
+				$button.on('click', function () {
+					if ($button.hasClass('is-active')) {
+						return;
+					}
+					setMainImage(image.src, image.alt);
+					$projectThumbnails.find('.project-thumbnail').removeClass('is-active');
+					$button.addClass('is-active');
+				});
+				$projectThumbnails.append($button);
 			});
+		}
+
+		function renderCertificates(certificates) {
+			const items = Array.isArray(certificates) ? certificates.filter(Boolean) : [];
+			$projectCertificates.empty().removeClass('project-certificates');
+			if (!items.length) {
+				$projectCertificates.html('<p class="project-certificate__empty">Supporting certificates will appear here when available.</p>');
+				return;
+			}
+			$projectCertificates.addClass('project-certificates');
+			items.forEach(certificate => {
+				const $certificate = $('<div class="project-certificate"></div>');
+				const $thumb = $('<div class="project-certificate__thumb"></div>');
+				if (certificate.image) {
+					$thumb.append($('<img />', {
+						src: certificate.image,
+						alt: certificate.title ? certificate.title + ' preview' : 'Certificate thumbnail'
+					}));
+				} else {
+					$thumb.append('<i class="ion-ribbon-a"></i>');
+				}
+				const $text = $('<div class="project-certificate__text"></div>');
+				if (certificate.title) {
+					$text.append($('<p class="project-certificate__title"></p>').text(certificate.title));
+				}
+				const metaParts = [certificate.issuer, certificate.year].filter(Boolean);
+				if (metaParts.length) {
+					$text.append($('<p class="project-certificate__meta"></p>').text(metaParts.join(' • ')));
+				}
+				if (certificate.link) {
+					const $link = $('<a class="project-certificate__link" target="_blank" rel="noopener"></a>')
+						.attr('href', certificate.link)
+						.html('<i class="ion-ios-open-outline"></i><span>View credential</span>');
+					$text.append($link);
+				}
+				$certificate.append($thumb, $text);
+				$projectCertificates.append($certificate);
+			});
+		}
+
+		function populateProjectModal(projectId) {
+			const detail = projectDetails[projectId];
+			if (!detail) {
+				return;
+			}
+			$projectTitle.text(detail.title || 'Project detail');
+			const metaParts = [detail.category, detail.date].filter(Boolean);
+			$projectMeta.text(metaParts.join(' • '));
+			$projectDescription.text(detail.description || 'Add a short project overview to give visitors context.');
+			renderImages(detail);
+			renderCertificates(detail.certificates);
+			$modal.modal('show');
+		}
+
+		$('.work-box__link').on('click', function (event) {
+			const projectId = $(this).closest('.work-box').data('project');
+			if (!projectId) {
+				return;
+			}
+			event.preventDefault();
+			populateProjectModal(projectId);
 		});
+	});
+
+	// Certificate modal
+	const $certificateModal = $('#certificateModal');
+	const $certificateModalImage = $('#certificateModalImage');
+	const $certificateModalTitle = $('#certificateModalTitle');
+	const $certificateModalMeta = $('#certificateModalMeta');
+	const $certificateModalDescription = $('#certificateModalDescription');
+
+	function openCertificateModal(context) {
+		if (!context || !$certificateModal.length) {
+			return;
+		}
+		const $context = $(context);
+		const imageSrc = $context.data('full') || $context.find('img').attr('src');
+		const title = $context.data('title') || 'Certificate';
+		const meta = $context.data('meta') || '';
+		const description = $context.data('description') || '';
+		$certificateModalImage.attr('src', imageSrc || '').attr('alt', title);
+		$certificateModalTitle.text(title);
+		$certificateModalMeta.text(meta);
+		$certificateModalDescription.text(description);
+		$certificateModal.modal('show');
+	}
+
+	$('.certificate-card').on('click', function (event) {
+		event.preventDefault();
+		openCertificateModal(this);
+	});
+
+	$('.certificate-card').on('keyup', function (event) {
+		if (event.key === 'Enter' || event.key === ' ') {
+			event.preventDefault();
+			openCertificateModal(this);
+		}
 	});
 
 })(jQuery);
