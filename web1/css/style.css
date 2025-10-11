@@ -1437,9 +1437,17 @@ footer .credits a {
   margin-bottom: 1rem;
 }
 
+.services-mf#scores {
+  margin-bottom: 3rem;
+}
+
 .scores-card .s-title {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
+}
+
+.project-certificate--clickable {
+  cursor: pointer;
 }
 
 .scores-list {
@@ -1456,46 +1464,86 @@ footer .credits a {
   line-height: 1.6;
 }
 
-.awards-mf .award-card {
-  background: #fff;
-  border-radius: 1.35rem;
-  padding: 1.8rem;
-  margin-bottom: 1.5rem;
-  border-left: 4px solid #0078ff;
-  box-shadow: 0 16px 30px -24px rgba(15, 23, 42, 0.35);
-  height: 100%;
+.award-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
 }
 
-.award-card__meta {
+.award-timeline__item {
+  position: relative;
+  background: #fff;
+  border-radius: 1.75rem;
+  padding: 2rem 1.75rem 1.75rem;
+  box-shadow: 0 24px 46px -32px rgba(15, 23, 42, 0.55);
+  overflow: hidden;
+}
+
+.award-timeline__item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  pointer-events: none;
+}
+
+.award-timeline__dot {
+  position: absolute;
+  top: -28px;
+  right: -28px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.55), rgba(59, 130, 246, 0));
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 1.25rem 1.2rem 0;
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.award-timeline__panel {
+  position: relative;
+  z-index: 1;
+}
+
+.award-timeline__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
   font-size: 0.85rem;
   color: #64748b;
-  margin-bottom: 0.75rem;
-  align-items: center;
-  justify-content: space-between;
+  margin-bottom: 0.65rem;
 }
 
-.award-card__date {
+.award-timeline__year {
+  font-weight: 700;
+  color: #0078ff;
+  letter-spacing: 0.08em;
+}
+
+.award-timeline__location {
   font-weight: 500;
 }
 
-.award-card__title {
-  font-size: 1.2rem;
+.award-timeline__badge {
+  margin-bottom: 0.8rem;
+}
+
+.award-timeline__title {
+  font-size: 1.15rem;
   font-weight: 600;
-  color: #1e1e1e;
+  color: #1e293b;
   margin-bottom: 0.75rem;
 }
 
-.award-card__list {
-  padding-left: 1.1rem;
+.award-timeline__summary {
   margin: 0;
-  color: #4e4e4e;
-}
-
-.award-card__list li + li {
-  margin-top: 0.4rem;
+  color: #475569;
+  line-height: 1.7;
 }
 
 .certificate-card {
@@ -1542,6 +1590,151 @@ footer .credits a {
   margin: 0;
   font-size: 0.9rem;
   color: #64748b;
+}
+
+.activity-tile {
+  display: block;
+  background: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 22px 44px -30px rgba(15, 23, 42, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.activity-tile:hover,
+.activity-tile:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 56px -26px rgba(59, 130, 246, 0.45);
+}
+
+.activity-tile__image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.activity-tile__body {
+  padding: 1.5rem;
+}
+
+.activity-tile__tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #0078ff;
+  margin-bottom: 0.75rem;
+}
+
+.activity-tile__title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.4rem;
+}
+
+.activity-tile__meta {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.65rem;
+}
+
+.activity-tile__summary {
+  margin: 0;
+  color: #4e4e4e;
+  line-height: 1.6;
+}
+
+.activity-modal .modal-content {
+  border: none;
+  border-radius: 1.75rem;
+  padding: 2.5rem;
+  box-shadow: 0 40px 60px -35px rgba(15, 23, 42, 0.55);
+}
+
+.activity-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(148, 163, 184, 0.2);
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.activity-modal__close:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.activity-modal__media {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.activity-modal__media img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 1.35rem;
+  box-shadow: 0 28px 60px -35px rgba(15, 23, 42, 0.5);
+}
+
+.activity-modal__details {
+  text-align: left;
+}
+
+.activity-modal__tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #0078ff;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.activity-modal__details h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.activity-modal__meta {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.activity-modal__details p {
+  color: #4e4e4e;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.activity-modal__highlights {
+  display: none;
+  padding-left: 1.15rem;
+  margin: 0;
+  color: #4e4e4e;
+  line-height: 1.6;
+}
+
+.activity-modal__highlights li + li {
+  margin-top: 0.45rem;
 }
 
 .certificate-modal .modal-dialog {
@@ -1611,41 +1804,6 @@ footer .credits a {
   line-height: 1.7;
 }
 
-.activities-mf .activity-card {
-  background: #fff;
-  border-radius: 1.35rem;
-  padding: 1.9rem;
-  box-shadow: 0 22px 40px -30px rgba(15, 23, 42, 0.45);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.activity-card h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #1e1e1e;
-  margin: 0;
-}
-
-.activity-card__meta {
-  font-size: 0.9rem;
-  color: #64748b;
-  margin: 0;
-}
-
-.activity-card__list {
-  padding-left: 1.1rem;
-  margin: 0;
-  color: #4e4e4e;
-  line-height: 1.6;
-}
-
-.activity-card__list li + li {
-  margin-top: 0.45rem;
-}
-
 @media (max-width: 991.98px) {
   .project-modal .modal-content {
     padding: 2.25rem 1.75rem;
@@ -1697,6 +1855,31 @@ footer .credits a {
 
   .certificate-modal__meta {
     font-size: 0.85rem;
+  }
+
+  .activity-tile__image img {
+    height: 180px;
+  }
+
+  .activity-modal .modal-content {
+    padding: 2rem;
+  }
+
+  .activity-modal__media img {
+    max-height: 320px;
+  }
+
+  .activity-modal__details h3 {
+    font-size: 1.45rem;
+  }
+
+  .award-timeline__dot {
+    top: -18px;
+    right: -18px;
+    width: 90px;
+    height: 90px;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
