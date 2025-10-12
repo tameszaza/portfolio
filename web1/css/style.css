@@ -1464,6 +1464,13 @@ footer .credits a {
   line-height: 1.6;
 }
 
+.section-count {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-left: 0.5rem;
+}
+
 .award-timeline {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -1590,6 +1597,13 @@ footer .credits a {
   margin: 0;
   font-size: 0.9rem;
   color: #64748b;
+}
+
+.work-summary {
+  margin-top: 0.75rem;
+  font-size: 0.92rem;
+  color: #4e4e4e;
+  line-height: 1.6;
 }
 
 .activity-tile {

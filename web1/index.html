@@ -403,7 +403,7 @@
                 ></span>
               </div>
               <div class="counter-num">
-                <p class="counter">15</p>
+                <p class="counter" id="counterHonors">0</p>
                 <span class="counter-text">HONORS &amp; AWARDS</span>
               </div>
             </div>
@@ -416,7 +416,7 @@
                 ></span>
               </div>
               <div class="counter-num">
-                <p class="counter">8</p>
+                <p class="counter" id="counterResearch">0</p>
                 <span class="counter-text">RESEARCH INITIATIVES</span>
               </div>
             </div>
@@ -427,7 +427,7 @@
                 <span class="ico-circle"><i class="ion-ios-people"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">6</p>
+                <p class="counter" id="counterLeadership">0</p>
                 <span class="counter-text">LEADERSHIP ROLES</span>
               </div>
             </div>
@@ -438,7 +438,7 @@
                 <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
               </div>
               <div class="counter-num">
-                <p class="counter">12</p>
+                <p class="counter" id="counterActivities">0</p>
                 <span class="counter-text">EXTRACURRICULARS</span>
               </div>
             </div>
@@ -453,7 +453,10 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Research &amp; Projects</h3>
+              <h3 class="title-a">
+                Research &amp; Projects
+                <span class="section-count" id="projectCount"></span>
+              </h3>
               <p class="subtitle-a">
                 Translating machine learning, optimization, and systems thinking into solutions that serve communities.
               </p>
@@ -461,156 +464,12 @@
             </div>
           </div>
         </div>
+        <div class="row" id="projectGrid"></div>
         <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="work-box" data-project="limneth">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/limneth-cover.jpg" alt="Preview of Limneth assistive AI system" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Limneth Assistive AI</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Accessible Computing</span> /
-                        <span class="w-date">2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="work-box" data-project="speech-detection">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/speech-detection.jpg" alt="Synthetic speech detection GAN project" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Synthetic Speech Detection</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Machine Learning</span> /
-                        <span class="w-date">2024 &ndash; 2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="work-box" data-project="food-allergen">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/food-allergen.jpg" alt="Food allergen warning platform overview" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Food Allergen Warning</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Public Health Tech</span> /
-                        <span class="w-date">2024 &ndash; 2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box" data-project="global-league">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/global-league.jpg" alt="Optimization model for global sports league scheduling" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">Global Sports League Optimizer</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Operations Research</span> /
-                        <span class="w-date">2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box" data-project="go-kila">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/go-kila.jpg" alt="GO-KILA sports matchmaking platform visuals" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">GO-KILA Sports Platform</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Start-up Engineering</span> /
-                        <span class="w-date">2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box" data-project="enrollment-scanner">
-              <a href="#" class="work-box__link" role="button" aria-controls="projectModal">
-                <div class="work-img">
-                  <img src="img/projects/enrollment-scanner.jpg" alt="KVIS OPH enrollment scanner interface" class="img-fluid" />
-                </div>
-                <div class="work-content">
-                  <div class="row">
-                    <div class="col-sm-8">
-                      <h2 class="w-title">KVIS Enrollment Scanner</h2>
-                      <div class="w-more">
-                        <span class="w-ctegory">Data Systems</span> /
-                        <span class="w-date">2024 &ndash; 2025</span>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="w-like">
-                        <span class="ion-ios-plus-outline"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
+          <div class="col-12 text-center mt-4">
+            <button type="button" class="button button-a button-rouded d-none" id="projectToggle">
+              View All Projects
+            </button>
           </div>
         </div>
       </div>
@@ -622,7 +481,10 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Honors &amp; Awards</h3>
+              <h3 class="title-a">
+                Honors &amp; Awards
+                <span class="section-count" id="awardsCount"></span>
+              </h3>
               <p class="subtitle-a">
                 Spotlighting the milestones that propelled my research and innovation journey onto national and global stages.
               </p>
@@ -630,136 +492,7 @@
             </div>
           </div>
         </div>
-        <div class="award-timeline">
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-ribbon-b"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">NJC · Singapore</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-primary">Bronze Medalist</span>
-              <h4 class="award-timeline__title">Singapore International STEM Innovation Challenge</h4>
-              <p class="award-timeline__summary">
-                Presented Limneth: an assistive AI system for visually impaired users, ranking among 64 global teams.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-university"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">Rayong · Thailand</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-success">Silver &amp; Distinction</span>
-              <h4 class="award-timeline__title">Computational &amp; Algorithmic Thinking (CAT)</h4>
-              <p class="award-timeline__summary">
-                Achieved national silver (2024) and bronze (2025) with global Distinction recognition from AMT.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-lightbulb"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">BITEC · Thailand</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-warning">Silver &amp; Popular Vote</span>
-              <h4 class="award-timeline__title">Thailand New Gen Inventors Award</h4>
-              <p class="award-timeline__summary">
-                Built the Food Allergen Warning Program, winning nation-wide jury and public vote among 1,549 teams.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-stats-bars"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">Global Online</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-info">Honorable Mention</span>
-              <h4 class="award-timeline__title">International Mathematical Modeling Challenge</h4>
-              <p class="award-timeline__summary">
-                Led Thailand's team to optimise global sports scheduling, honoured among entries from 69 countries.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-android-bulb"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">NSTDA · Thailand</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-warning">Gold Medalist</span>
-              <h4 class="award-timeline__title">27th Young Scientist Competition</h4>
-              <p class="award-timeline__summary">
-                Awarded for GAN-based synthetic speech detection research, selected for IEEE CIS Thailand showcase.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-ios-people"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2025</span>
-                <span class="award-timeline__location">Online</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-info">Honorable Mention</span>
-              <h4 class="award-timeline__title">High School Mathematical Contest in Modeling</h4>
-              <p class="award-timeline__summary">
-                Earned global distinction among 1,055 teams with SARIMAX-based Olympic scheduling analytics.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-ios-flask"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2024</span>
-                <span class="award-timeline__location">Bangkok · Thailand</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-secondary">2nd Runner-Up</span>
-              <h4 class="award-timeline__title">Siriraj Mathematics &amp; Science Aptitude Test</h4>
-              <p class="award-timeline__summary">
-                Placed top three out of 1,303 national teams, representing Siriraj Hospital's interdisciplinary cohort.
-              </p>
-            </div>
-          </article>
-          <article class="award-timeline__item">
-            <div class="award-timeline__dot">
-              <i class="ion-ios-partlysunny"></i>
-            </div>
-            <div class="award-timeline__panel">
-              <div class="award-timeline__meta">
-                <span class="award-timeline__year">2024</span>
-                <span class="award-timeline__location">Thailand</span>
-              </div>
-              <span class="award-timeline__badge badge badge-pill badge-primary">Silver Medalist</span>
-              <h4 class="award-timeline__title">23rd Thailand Physics Olympiad</h4>
-              <p class="award-timeline__summary">
-                Ranked 12th nationally after rigorous theoretical and experimental finals with POSN selection.
-              </p>
-            </div>
-          </article>
-        </div>
+        <div class="award-timeline" id="awardsTimeline"></div>
       </div>
     </section>
 
@@ -907,7 +640,10 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Extracurricular Highlights</h3>
+              <h3 class="title-a">
+                Extracurricular Highlights
+                <span class="section-count" id="extracurricularCount"></span>
+              </h3>
               <p class="subtitle-a">
                 Initiatives that extend our lab impact into real classrooms, media, and cross-border collaborations.
               </p>
@@ -915,86 +651,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="jstp">
-              <div class="activity-tile__image">
-                <img src="img/activities/jstp-scb.jpg" alt="Junior Science Talent Project mentoring session" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">STEM Outreach</span>
-                <h4 class="activity-tile__title">Junior Science Talent Project</h4>
-                <p class="activity-tile__meta">2023-2025 · NSTDA</p>
-                <p class="activity-tile__summary">Advising JSTP-SCB Batch 6 on AI, innovation, and scientific storytelling.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="open-house">
-              <div class="activity-tile__image">
-                <img src="img/activities/kvis-open-house.jpg" alt="KVIS Open House enrollment scanner demo" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Applied AI</span>
-                <h4 class="activity-tile__title">KVIS Open House</h4>
-                <p class="activity-tile__meta">2023-2025 · KVIS</p>
-                <p class="activity-tile__summary">Designed the vision-powered enrollment scanner for three consecutive expos.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="kvisdom">
-              <div class="activity-tile__image">
-                <img src="img/activities/kvisdom.jpg" alt="KVISDOM YouTube production desk" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Media Production</span>
-                <h4 class="activity-tile__title">KVISDOM Channel</h4>
-                <p class="activity-tile__meta">2023-2025 · Thailand</p>
-                <p class="activity-tile__summary">Produced educational broadcasts and live coverage for national STEM outreach.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="mentor-singapore">
-              <div class="activity-tile__image">
-                <img src="img/activities/mentor-singapore.jpg" alt="Mentoring juniors project collaboration" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Mentorship</span>
-                <h4 class="activity-tile__title">Mentor for Juniors' Projects</h4>
-                <p class="activity-tile__meta">2024-2025 · Thailand &amp; Singapore</p>
-                <p class="activity-tile__summary">Coaching cross-school teams in speech tech to production-ready Git workflows.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="datascience-camp">
-              <div class="activity-tile__image">
-                <img src="img/activities/datascience-camp.jpg" alt="Data science elite summer camp group" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Global Collaboration</span>
-                <h4 class="activity-tile__title">ABData Science Elite Summer Camp</h4>
-                <p class="activity-tile__meta">Jul-Aug 2025 · CUHK Shenzhen</p>
-                <p class="activity-tile__summary">Represented Thailand in the international analytics datathon cohort.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="photography">
-              <div class="activity-tile__image">
-                <img src="img/activities/photography.jpg" alt="KVIS school photographer at event" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Creative Arts</span>
-                <h4 class="activity-tile__title">KVIS Event Photographer</h4>
-                <p class="activity-tile__meta">2023-2025 · KVIS</p>
-                <p class="activity-tile__summary">Captured major festivals, performances, and student council campaigns.</p>
-              </div>
-            </a>
-          </div>
-        </div>
+        <div class="row" id="extracurricularGrid"></div>
       </div>
     </section>
 
@@ -1003,7 +660,10 @@
         <div class="row">
           <div class="col-sm-12">
             <div class="title-box text-center">
-              <h3 class="title-a">Leadership &amp; Volunteering</h3>
+              <h3 class="title-a">
+                Leadership &amp; Volunteering
+                <span class="section-count" id="leadershipCount"></span>
+              </h3>
               <p class="subtitle-a">
                 Driving strategic operations, finance, and community wellbeing across clubs and social ventures.
               </p>
@@ -1011,86 +671,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="student-committee">
-              <div class="activity-tile__image">
-                <img src="img/leadership/student-committee.jpg" alt="KVIS Student Committee IT head leading meeting" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Digital Transformation</span>
-                <h4 class="activity-tile__title">Head of IT · KVIS Student Committee</h4>
-                <p class="activity-tile__meta">2024-2025 · KVIS</p>
-                <p class="activity-tile__summary">Launched the campus booking system that powers real-time space management.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="fisym">
-              <div class="activity-tile__image">
-                <img src="img/leadership/fisym.jpg" alt="FiSym club financial workshop" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Finance Literacy</span>
-                <h4 class="activity-tile__title">Vice President · FiSym Club</h4>
-                <p class="activity-tile__meta">2023-2024 · KVIS</p>
-                <p class="activity-tile__summary">Guided investment simulations and personal finance academies for peers.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="animators">
-              <div class="activity-tile__image">
-                <img src="img/leadership/animators-club.jpg" alt="Animator's tournament club working in Blender" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Creative Leadership</span>
-                <h4 class="activity-tile__title">President · Animator's Tournament Club</h4>
-                <p class="activity-tile__meta">2024-2025 · KVIS</p>
-                <p class="activity-tile__summary">Scaled Blender training and guided students to stage-ready 3D performances.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="student-council">
-              <div class="activity-tile__image">
-                <img src="img/leadership/student-council.jpg" alt="KVIS student council session" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Policy &amp; Governance</span>
-                <h4 class="activity-tile__title">Executive · KVIS Student Council</h4>
-                <p class="activity-tile__meta">2023-2025 · KVIS</p>
-                <p class="activity-tile__summary">Directed campus policies, campaigns, and cross-committee coordination.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="give-got-grown">
-              <div class="activity-tile__image">
-                <img src="img/leadership/give-got-grown.jpg" alt="Give Got Grown volunteer activity" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Social Innovation</span>
-                <h4 class="activity-tile__title">Co-founder · Give Got Grown</h4>
-                <p class="activity-tile__meta">2024-2025 · Thailand</p>
-                <p class="activity-tile__summary">Mobilised funding and health kits to support district-wide exercise initiatives.</p>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4">
-            <a href="#" class="activity-tile" role="button" aria-controls="activityModal" data-activity="school-choir">
-              <div class="activity-tile__image">
-                <img src="img/leadership/school-choir.jpg" alt="KVIS choir performance on stage" class="img-fluid" />
-              </div>
-              <div class="activity-tile__body">
-                <span class="activity-tile__tag">Community Spirit</span>
-                <h4 class="activity-tile__title">School Choir · Bass Section</h4>
-                <p class="activity-tile__meta">2024 · KVIS</p>
-                <p class="activity-tile__summary">Performed for Wai Khru and campus ceremonies, strengthening solidarity.</p>
-              </div>
-            </a>
-          </div>
-        </div>
+        <div class="row" id="leadershipGrid"></div>
       </div>
     </section>
     <!--/ Section Activities End /-->
