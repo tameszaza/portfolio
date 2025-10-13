@@ -1237,6 +1237,8 @@ footer .credits a {
   z-index: 2;
 }
 
+
+
 .project-modal__close:hover {
   background: rgba(59, 130, 246, 0.4);
   border-color: rgba(59, 130, 246, 0.65);
@@ -1438,9 +1440,11 @@ footer .credits a {
 }
 
 .services-mf#scores {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
-
+.about-bullets li {
+  margin-bottom: 0.7rem;
+}
 .scores-card .s-title {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
@@ -1451,7 +1455,7 @@ footer .credits a {
 }
 
 .scores-list {
-  padding-left: 1.1rem;
+  padding-left: 0;
   margin: 0;
   color: #4e4e4e;
   line-height: 1.6;
@@ -1485,6 +1489,30 @@ footer .credits a {
   box-shadow: 0 24px 46px -32px rgba(15, 23, 42, 0.55);
   overflow: hidden;
 }
+.award-timeline__item.is-linkable {
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.award-timeline__item.is-linkable:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 60px -28px rgba(59, 130, 246, 0.35);
+}
+
+.award-timeline__media {
+  margin-bottom: 1rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 20px 45px -30px rgba(15, 23, 42, 0.4);
+}
+
+.award-timeline__media img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
 
 .award-timeline__item::after {
   content: '';
@@ -1552,6 +1580,27 @@ footer .credits a {
   color: #475569;
   line-height: 1.7;
 }
+
+.award-timeline__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.award-timeline__cta::after {
+  content: '\f3d1';
+  font-family: 'Ionicons';
+  font-size: 0.85rem;
+}
+
+.award-timeline__item.is-linkable:hover .award-timeline__cta {
+  color: #1d4ed8;
+}
+
 
 .certificate-card {
   display: block;
@@ -1818,6 +1867,43 @@ footer .credits a {
   line-height: 1.7;
 }
 
+/* Scores: align subject left, score right on the same line */
+.score-row,
+.scores-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Left label grows, right value hugs the edge */
+.scores-list .label,
+.score-row .label {
+  flex: 1 1 auto;
+  min-width: 0; /* allow ellipsis if needed */
+}
+
+.scores-list .value,
+.score-row .value {
+  flex: 0 0 auto;
+  text-align: right;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Optional: make top-level score pop a bit */
+.s-title .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Optional: wrap long labels gracefully */
+.scores-list .label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 @media (max-width: 991.98px) {
   .project-modal .modal-content {
     padding: 2.25rem 1.75rem;
@@ -1881,6 +1967,10 @@ footer .credits a {
 
   .activity-modal__media img {
     max-height: 320px;
+  }
+
+  .award-timeline__media img {
+    height: 140px;
   }
 
   .activity-modal__details h3 {
