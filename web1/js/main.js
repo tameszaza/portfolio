@@ -120,21 +120,28 @@
         { src: 'img/projects/YSC1.jpg', alt: 'Young Scientist Competition gold medal certificate' }
       ],
       certificates: [
-        { title: '27th Young Scientist Competition', issuer: 'NSTDA • Thailand', year: '2025', image: 'img/certificates/ysc-2025.jpg' },
+        { title: '27th Young Scientist Competition: Gold Medal', issuer: 'NSTDA • Thailand', year: '2025', image: 'img/certificates/ysc.png' },
         { title: 'IEEE CIS Thailand Conference Presentation', issuer: 'IEEE Computational Intelligence Society Thailand Chapter', year: '2025' }
       ]
     },
     'food-allergen': {
       title: 'Food Allergen Warning Program',
-      category: 'Public Health Tech',
-      date: 'New Gen Inventors Award 2025 • Thailand',
-      description: 'Developed a machine learning pipeline that identifies risky ingredients for people with food allergies, paired with a personalised alert network for household use. Integrated a national ingredient database and push notifications to guide safe consumption.',
+      category: 'Machine learning & Public Health Tech',
+      date: 'NSC 2024 • New Gen Inventors Award 2025 • Thailand',
+      description: 'Developed a computer vision machine learning model that can accurately identify the type and ingredients of food from their images with an integrated database for user personalization and deploy using a sophisticated computer network model so users can access the program conveniently and efficiently. Reduced the risk of food consumption for individuals with food allergies, making their lives easier.' + 
+	  ' <a href="https://app.kvis.ac.th/foodallergies/" target="_blank" rel="noopener">Click here to visit the website</a>.',
       images: [
-        { src: 'img/projects/food-allergen.jpg', alt: 'Food allergen warning dashboard' },
-        { src: 'img/certificates/new-gen-2025.jpg', alt: 'Thailand New Gen Inventors Award certificate' }
+        { src: 'img/projects/inewgen0.jpg', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/inewgen2.png', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/inewgen3.jpg', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/inewgen4.jpg', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/inewgen5.jpg', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/NSC0.jpg', alt: 'Food allergen warning program for people with food allergy' },
+		{ src: 'img/projects/NSC1.jpg', alt: 'Food allergen warning program for people with food allergy' },
       ],
       certificates: [
-        { title: 'Thailand New Gen Inventors Award', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/new-gen-2025.jpg' },
+        { title: 'Thailand New Gen Inventors Award: Silver Medal', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/inewgen0.png' },
+		{ title: 'Thailand New Gen Inventors Award: Popular Vote', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/inewgen1.jpeg' },
         { title: 'National Software Contest Finalist', issuer: 'NECTEC • Thailand', year: '2024' }
       ]
     },
@@ -405,7 +412,7 @@
   const projectCards = [
     { id: 'limneth', image: 'img/projects/lumineth-cover.jpeg', title: modalDetails.limneth.title, tag: 'Embedded & Networking systems', meta: '2025', summary: 'Edge AI assistant delivering scene narration, obstacle alerts, and transit guidance for visually impaired communities.' },
     { id: 'speech-detection', image: 'img/projects/YSC0.jpeg', title: modalDetails['speech-detection'].title, tag: 'Machine Learning', meta: '2024 – 2025', summary: 'Design an improved anomaly-based mGANs architecture with high accuracy for diverse/generalized datasets to classify synthetic speech and human speech.' },
-    { id: 'food-allergen', image: 'img/projects/food-allergen.jpg', title: modalDetails['food-allergen'].title, tag: 'Public Health Tech', meta: '2024 – 2025', summary: 'Computer vision and ML platform that personalises allergen alerts for Thai households and national competitions.' },
+    { id: 'food-allergen', image: 'img/projects/inewgen1.jpg', title: modalDetails['food-allergen'].title, tag: 'Public Health Tech', meta: '2024 – 2025', summary: 'Computer vision and ML platform that personalises allergen alerts and estimated nutrients.' },
     { id: 'global-league', image: 'img/projects/global-league.jpg', title: modalDetails['global-league'].title, tag: 'Operations Research', meta: '2025', summary: 'Scheduling optimizer balancing travel, fairness, and broadcast priorities for an international sports league case study.' },
     { id: 'go-kila', image: 'img/projects/go-kila.jpg', title: modalDetails['go-kila'].title, tag: 'Start-up Engineering', meta: '2025 (ongoing)', summary: 'Start-up backend connecting athletes with clubs through analytics-driven matchmaking and websocket messaging.' },
     { id: 'enrollment-scanner', image: 'img/projects/enrollment-scanner.jpg', title: modalDetails['enrollment-scanner'].title, tag: 'Data Systems', meta: '2023 – 2025', summary: 'Vision-powered kiosk digitising 2,500+ enrollment forms with instant analytics for KVIS Open House each year.' },
@@ -618,50 +625,138 @@
     });
   }
 
-  function renderCertificates(certificates, detail) {
-    const items = Array.isArray(certificates) ? certificates.filter(Boolean) : [];
-    $projectCertificates.empty().removeClass('project-certificates');
-    if (!items.length) {
-      $projectCertificates.html('<p class="project-certificate__empty">Supporting certificates will appear here when available.</p>');
-      return;
-    }
-    $projectCertificates.addClass('project-certificates');
-    items.forEach(c => {
-      const $row = $('<div class="project-certificate"></div>');
-      const $thumb = $('<div class="project-certificate__thumb"></div>');
-      if (c.image) {
-        $thumb.append($('<img/>', { src: c.image, alt: (c.title || 'Certificate') + ' preview' }));
-      } else {
-        $thumb.append('<i class="ion-ribbon-a"></i>');
-      }
-      const $text = $('<div class="project-certificate__text"></div>');
-      if (c.title) $text.append($('<p class="project-certificate__title"></p>').text(c.title));
-      const meta = [c.issuer, c.year].filter(Boolean).join(' • ');
-      if (meta) $text.append($('<p class="project-certificate__meta"></p>').text(meta));
-      if (c.link) {
-        const $link = $('<a class="project-certificate__link" target="_blank" rel="noopener"><i class="ion-ios-open-outline"></i><span>View credential</span></a>').attr('href', c.link);
-        $text.append($link);
-      }
-      $row.append($thumb, $text);
-
-      // Click opens Certificate Modal
-      if (c.image) {
-        $row.addClass('project-certificate--clickable')
-            .attr('tabindex','0')
-            .attr('data-full', c.image)
-            .attr('data-title', c.title || detail.title || 'Certificate')
-            .attr('data-meta', meta || '')
-            .attr('data-description', c.description || detail.description || '');
-        $row.on('click keyup', function (ev) {
-          if (ev.type === 'keyup' && ev.key !== 'Enter' && ev.key !== ' ') return;
-          if ($(ev.target).closest('.project-certificate__link').length) return;
-          openCertificateModal(this);
-        });
-      }
-
-      $projectCertificates.append($row);
-    });
+function renderCertificates(certificates, detail) {
+  const items = Array.isArray(certificates) ? certificates.filter(Boolean) : [];
+  $projectCertificates.empty().removeClass('project-certificates');
+  if (!items.length) {
+    $projectCertificates.html('<p class="project-certificate__empty">Supporting certificates will appear here when available.</p>');
+    return;
   }
+  $projectCertificates.addClass('project-certificates');
+  items.forEach(c => {
+    const $row = $('<div class="project-certificate"></div>');
+    const $thumb = $('<div class="project-certificate__thumb"></div>');
+    if (c.image) {
+      $thumb.append($('<img/>', { src: c.image, alt: (c.title || 'Certificate') + ' preview' }));
+    } else {
+      $thumb.append('<i class="ion-ribbon-a"></i>');
+    }
+
+    const $text = $('<div class="project-certificate__text"></div>');
+
+    // allow HTML in title
+    if (c.title) $text.append($('<p class="project-certificate__title"></p>').html(c.title));
+
+    const meta = [c.issuer, c.year].filter(Boolean).join(' • ');
+    if (meta) $text.append($('<p class="project-certificate__meta"></p>').text(meta));
+
+    // allow HTML in description (optional line, add only if you want inline descriptions under each certificate)
+    if (c.description) {
+      $text.append($('<div class="project-certificate__description"></div>').html(c.description));
+    }
+
+    if (c.link) {
+      const $link = $('<a class="project-certificate__link" target="_blank" rel="noopener"><i class="ion-ios-open-outline"></i><span>View credential</span></a>').attr('href', c.link);
+      $text.append($link);
+    }
+
+    $row.append($thumb, $text);
+
+    // Click opens Certificate Modal
+    if (c.image) {
+      $row.addClass('project-certificate--clickable')
+          .attr('tabindex','0')
+          .data('full', c.image)
+          .data('title', c.title || detail.title || 'Certificate')
+          .data('meta', meta || '')
+          .data('description', c.description || detail.description || '');
+      $row.on('click keyup', function (ev) {
+        if (ev.type === 'keyup' && ev.key !== 'Enter' && ev.key !== ' ') return;
+        if ($(ev.target).closest('.project-certificate__link').length) return;
+        openCertificateModal(this);
+      });
+    }
+
+    $projectCertificates.append($row);
+  });
+}
+
+function renderCertificateGallery() {
+  const $grid = $('#certificateGrid');
+  if (!$grid.length) return;
+
+  const items = [];
+  const seen = new Set();
+
+  // 1) from project certificates
+  Object.keys(modalDetails || {}).forEach(id => {
+    const detail = modalDetails[id];
+    const certs = Array.isArray(detail.certificates) ? detail.certificates : [];
+    certs.forEach(c => {
+      const title = c.title || detail.title || 'Certificate';
+      const issuer = c.issuer || '';
+      const year = c.year || '';
+      const meta = [issuer, year].filter(Boolean).join(' · ');
+      const image = c.image || '';
+      const description = c.description || detail.description || '';
+      const key = [title, meta, image].join('|');
+      if (image && !seen.has(key)) {
+        seen.add(key);
+        items.push({ title, meta, image, description });
+      }
+    });
+  });
+
+  // 2) from awards (use certificateImage OR image)
+  (awardsCards || []).forEach(a => {
+    const image = a.certificateImage || a.image || '';
+    if (!image) return;
+    const title = a.certificateTitle || a.title || 'Certificate';
+    const meta = a.certificateMeta || a.meta || '';
+    const description = a.certificateDescription || a.summary || '';
+    const key = [title, meta, image].join('|');
+    if (!seen.has(key)) {
+      seen.add(key);
+      items.push({ title, meta, image, description });
+    }
+  });
+
+  // 3) render
+  $grid.empty();
+  if (!items.length) {
+    $grid.html('<div class="col-12"><p class="text-center text-muted">Certificates will appear here when added to projects or awards.</p></div>');
+    return;
+  }
+
+  items.forEach(item => {
+  const col = document.createElement('div');
+  col.className = 'col-md-4 col-lg-3 mb-4';
+
+  // Build the element without dangerous inline data-*
+  const $card = $(`
+    <a href="#" class="certificate-card" role="button" aria-controls="certificateModal">
+      <div class="certificate-card__frame">
+        <img src="${item.image}" alt="${item.title} certificate" class="img-fluid" />
+      </div>
+      <div class="certificate-card__caption">
+        <h5>${item.title}</h5>
+        <p>${item.meta}</p>
+      </div>
+    </a>
+  `);
+
+  // Store values safely (no HTML injection into attributes)
+  $card.data('full', item.image);
+  $card.data('title', item.title);
+  $card.data('meta', item.meta);
+  $card.data('description', item.description); // can contain HTML
+
+  $(col).append($card);
+  $grid.append(col);
+});
+
+}
+
 
   function populateProjectModal(id) {
     const detail = modalDetails[id];
@@ -669,7 +764,7 @@
     $projectTitle.text(detail.title || 'Detail');
     const meta = [detail.category, detail.date].filter(Boolean).join(' • ');
     $projectMeta.text(meta);
-    $projectDescription.text(detail.description || '');
+    $projectDescription.html(detail.description || '');
     renderImages(detail);
     renderCertificates(detail.certificates, detail);
     $projectModal.modal('show');
@@ -678,30 +773,23 @@
   // =========================
   // Certificate Modal open (unchanged)
   // =========================
-  function openCertificateModal(context) {
-    if (!context || !$certificateModal.length) return;
-    const $ctx = $(context);
-    const imageSrc = $ctx.data('full') || $ctx.find('img').attr('src');
-    const title = $ctx.data('title') || 'Certificate';
-    const meta = $ctx.data('meta') || '';
-    const description = $ctx.data('description') || '';
-    $certificateModalImage.attr('src', imageSrc || '').attr('alt', title);
-    $certificateModalTitle.text(title);
-    $certificateModalMeta.text(meta);
-    $certificateModalDescription.text(description);
-    $certificateModal.modal('show');
-  }
+function openCertificateModal(context) {
+  if (!context || !$certificateModal.length) return;
+  const $ctx = $(context);
+  const imageSrc = $ctx.data('full') || $ctx.find('img').attr('src');
+  const title = $ctx.data('title') || 'Certificate';
+  const meta = $ctx.data('meta') || '';
+  const description = $ctx.data('description') || '';
 
-  // Click bindings for certificate cards (keep as-is)
-  $('.certificate-card').on('click', function (event) {
-    event.preventDefault();
-    openCertificateModal(this);
-  }).on('keyup', function (event) {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      openCertificateModal(this);
-    }
-  });
+  $certificateModalImage.attr('src', imageSrc || '').attr('alt', title);
+  $certificateModalTitle.text(title);
+  $certificateModalMeta.text(meta);
+  $certificateModalDescription.html(description); // ← allow HTML
+  $certificateModal.modal('show');
+}
+
+
+ 
 
   // =========================
   // Init render
@@ -712,18 +800,36 @@
   renderActivitySection(leadershipIds, $leadershipGrid);
   updateSectionCounts();
   updateCounters();
+  renderCertificateGallery(); // build the certificate gallery from projects and awards
+// Open the unified Project modal from any tile
+$(document).on('click', '.js-open-modal', function (e) {
+  e.preventDefault();
+  const id = $(this).data('id');
+  if (id) populateProjectModal(id);
+});
 
-  // Delegated click: any tile opens the unified Project Modal
-  $(document).on('click', '.activity-tile.js-open-modal', function (e) {
+// optional keyboard support
+$(document).on('keyup', '.js-open-modal', function (e) {
+  if (e.key === 'Enter' || e.key === ' ') {
     e.preventDefault();
     const id = $(this).data('id');
     if (id) populateProjectModal(id);
-  }).on('keyup', '.activity-tile.js-open-modal', function (e) {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      const id = $(this).data('id');
-      if (id) populateProjectModal(id);
-    }
-  });
+  }
+});
+
+  // Delegated click: any tile opens the unified Project Modal
+$(document).on('click', '.certificate-card', function (event) {
+  event.preventDefault();
+  openCertificateModal(this);
+});
+$(document).on('keyup', '.certificate-card', function (event) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    openCertificateModal(this);
+  }
+});
+
+
 
 })(jQuery);
+

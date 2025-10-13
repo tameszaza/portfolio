@@ -1891,6 +1891,19 @@ footer .credits a {
   white-space: nowrap;
 }
 
+/* Make links in the project modal visible */
+#projectDescription a {
+  color: #4da3ff;       /* choose a bright color, e.g. blue */
+  font-weight: 600;     /* optional: make it stand out */
+  text-decoration: underline; /* always underline so it looks clickable */
+}
+
+#projectDescription a:hover {
+  color: #1e90ff;       /* darker on hover */
+  text-decoration: none; /* optional: remove underline when hover */
+}
+
+
 /* Optional: make top-level score pop a bit */
 .s-title .value {
   font-size: 1.5rem;
