@@ -97,7 +97,7 @@
 
 	// Project detail modal
 	$(function () {
-	const projectDetails = {
+	const modalDetails = {
 		limneth: {
 			title: 'Limneth Assistive AI System',
 			category: 'Accessible Computing',
@@ -202,10 +202,10 @@
 
 	const projectVisibleLimit = 6;
 
-	const projectList = [
+	const projectCards = [
 		{
 			id: 'limneth',
-			title: projectDetails.limneth.title,
+			title: modalDetails.limneth.title,
 			category: 'Accessible Computing',
 			period: '2025',
 			image: 'img/projects/limneth-cover.jpg',
@@ -214,7 +214,7 @@
 		},
 		{
 			id: 'speech-detection',
-			title: projectDetails['speech-detection'].title,
+			title: modalDetails['speech-detection'].title,
 			category: 'Machine Learning',
 			period: '2024 – 2025',
 			image: 'img/projects/speech-detection.jpg',
@@ -223,7 +223,7 @@
 		},
 		{
 			id: 'food-allergen',
-			title: projectDetails['food-allergen'].title,
+			title: modalDetails['food-allergen'].title,
 			category: 'Public Health Tech',
 			period: '2024 – 2025',
 			image: 'img/projects/food-allergen.jpg',
@@ -232,7 +232,7 @@
 		},
 		{
 			id: 'global-league',
-			title: projectDetails['global-league'].title,
+			title: modalDetails['global-league'].title,
 			category: 'Operations Research',
 			period: '2025',
 			image: 'img/projects/global-league.jpg',
@@ -241,7 +241,7 @@
 		},
 		{
 			id: 'go-kila',
-			title: projectDetails['go-kila'].title,
+			title: modalDetails['go-kila'].title,
 			category: 'Start-up Engineering',
 			period: '2025 (ongoing)',
 			image: 'img/projects/go-kila.jpg',
@@ -250,7 +250,7 @@
 		},
 		{
 			id: 'enrollment-scanner',
-			title: projectDetails['enrollment-scanner'].title,
+			title: modalDetails['enrollment-scanner'].title,
 			category: 'Data Systems',
 			period: '2023 – 2025',
 			image: 'img/projects/enrollment-scanner.jpg',
@@ -259,7 +259,7 @@
 		},
 		{
 			id: 'surveillance-optimization',
-			title: projectDetails['surveillance-optimization'].title,
+			title: modalDetails['surveillance-optimization'].title,
 			category: 'Intelligent Systems',
 			period: '2024',
 			image: 'img/projects/surveillance-optimization.jpg',
@@ -268,7 +268,7 @@
 		},
 		{
 			id: 'stock-predictor',
-			title: projectDetails['stock-predictor'].title,
+			title: modalDetails['stock-predictor'].title,
 			category: 'Financial Data Science',
 			period: '2024',
 			image: 'img/projects/stock-predictor.jpg',
@@ -416,154 +416,167 @@
 	];
 
 	const activityDetails = {
-		jstp: {
-			title: 'Junior Science Talent Project (JSTP-SCB)',
-			tag: 'STEM Outreach Mentor',
-			meta: 'Mentor · 2023-2025 · NSTDA Thailand',
-			summary: 'Guided JSTP-SCB scholars by translating AI research journeys into hands-on, student-led prototypes.',
-			highlights: [
-				'Built machine learning sprint curriculum covering data collection, ethics, and deployment.',
-				'Reviewed project roadmaps and presentation scripts for the national innovation stage.',
-				'Led reflection clinics that refined problem statements and user impact stories.'
-			],
-			image: 'img/activities/jstp-scb.jpg'
-		},
-		'open-house': {
-			title: 'KVIS Open House Enrollment Scanner',
-			tag: 'Applied AI Developer',
-			meta: 'Lead Engineer · 2023-2025 · Kamnoetvidya Science Academy',
-			summary: 'Engineered the computer vision pipeline that digitises enrolment flows for 2,500+ visitors annually.',
-			highlights: [
-				'Implemented detection, alignment, and OCR stack with automated analytics dashboards.',
-				'Trained volunteers to operate the scanning workflow and troubleshoot baseline edge cases.',
-				'Deployed Flask-based microservices so visitors could retrieve personalised insights instantly.'
-			],
-			image: 'img/activities/kvis-open-house.jpg'
-		},
-		kvisdom: {
-			title: 'KVISDOM YouTube Channel',
-			tag: 'Executive Producer',
-			meta: 'Production Lead · 2023-2025 · Thailand',
-			summary: 'Produces national STEM broadcasts that translate complex research into accessible storytelling.',
-			highlights: [
-				'Orchestrated filming, editing, and live-streaming schedules across student creator teams.',
-				'Adopted data-driven content planning to improve viewer engagement and retention.',
-				'Delivered multi-camera coverage for flagship KVIS events and national olympiad briefings.'
-			],
-			image: 'img/activities/kvisdom.jpg'
-		},
-		'mentor-singapore': {
-			title: 'Mentor for Juniors\' Projects',
-			tag: 'Cross-border Mentor',
-			meta: 'Coach · 2024-2025 · Thailand & Singapore',
-			summary: 'Coached Thai and Singaporean student teams in speech technology, UX research, and deployment.',
-			highlights: [
-				'Introduced version-controlled workflows and Git hygiene for distributed collaboration.',
-				'Mapped model evaluation metrics to user acceptance criteria for competition judges.',
-				'Facilitated design critiques that strengthened pitch decks and live demos.'
-			],
-			image: 'img/activities/mentor-singapore.jpg'
-		},
-		'datascience-camp': {
-			title: 'ABData Science Elite Summer Camp',
-			tag: 'International Delegate',
-			meta: 'Participant · Jul-Aug 2025 · CUHK Shenzhen',
-			summary: 'Collaborated with global peers on datathon challenges spanning sustainability and smart cities.',
-			highlights: [
-				'Developed predictive pipelines with new teammates under 24-hour hackathon constraints.',
-				'Shared Thai community datasets to explore cross-cultural bias mitigation strategies.',
-				'Presented cross-border insights to delegates from Greater Bay Area universities.'
-			],
-			image: 'img/activities/datascience-camp.jpg'
-		},
-		'school-choir': {
-			title: 'Bass Section · KVIS School Choir',
-			tag: 'Community Spirit',
-			meta: 'Performer · 2024 · KVIS',
-			summary: 'Contributed to the choir\'s signature performances, celebrating school heritage and gratitude.',
-			highlights: [
-				'Performed the Wai Khru tribute, honouring teachers with traditional repertoire.',
-				'Balanced vocal training with academic commitments through disciplined practice.',
-				'Helped spark participation from classmates who were new to performing arts.'
-			],
-			image: 'img/leadership/school-choir.jpg'
-		},
-		'student-committee': {
-			title: 'Head of IT · KVIS Student Committee',
-			tag: 'Digital Transformation',
-			meta: 'Executive Board · 2024-2025 · KVIS',
-			summary: 'Modernised committee operations with a campus-wide booking and communications platform.',
-			highlights: [
-				'Migrated fragmented spreadsheets into a secure, real-time booking system.',
-				'Led user testing sessions with teachers, staff, and students to refine UX flows.',
-				'Implemented analytics dashboards to forecast resource usage and collisions.'
-			],
-			image: 'img/leadership/student-committee.jpg'
-		},
-		fisym: {
-			title: 'Vice President · FiSym Club',
-			tag: 'Finance Literacy',
-			meta: 'Executive Team · 2023-2024 · KVIS',
-			summary: 'Built financial literacy programmes that demystify personal finance and investing for teens.',
-			highlights: [
-				'Designed simulation portfolios with risk profiling tailored to student interests.',
-				'Invited industry mentors to host Q&A clinics on macro trends and wealth planning.',
-				'Published actionable playbooks on budgeting, saving, and ethical investing.'
-			],
-			image: 'img/leadership/fisym.jpg'
-		},
-		animators: {
-			title: 'President · Animator\'s Tournament Club',
-			tag: 'Creative Leadership',
-			meta: 'Club President · 2024-2025 · KVIS',
-			summary: 'Expanded a 3D animation community that fuses storytelling, Blender skills, and showcase events.',
-			highlights: [
-				'Authored the training roadmap from storyboarding to final renders for 17 members.',
-				'Coordinated with faculty advisors on equipment, venue logistics, and event curation.',
-				'Delivered live demos and exhibitions during festivals to inspire new cohorts.'
-			],
-			image: 'img/leadership/animators-club.jpg'
-		},
-		'student-council': {
-			title: 'Executive · KVIS Student Council',
-			tag: 'Policy & Governance',
-			meta: 'Elected Leader · 2023-2025 · KVIS',
-			summary: 'Steered campus-wide policy proposals, debates, and student-led civic engagement.',
-			highlights: [
-				'Organised public forums to gather insights ahead of school-wide referendums.',
-				'Crafted communications that clarified policy impacts and vote logistics.',
-				'Partnered with committee heads to align initiatives across departments.'
-			],
-			image: 'img/leadership/student-council.jpg'
-		},
-		'give-got-grown': {
-			title: 'Co-founder · Give Got Grown Volunteer Group',
-			tag: 'Social Innovation',
-			meta: 'Founder · 2024-2025 · Thailand',
-			summary: 'Mobilised volunteers to design exercise kits and wellness activities for rural communities.',
-			highlights: [
-				'Fundraised through community campaigns, delivering exercise kits and education.',
-				'Built partnerships with local schools to schedule wellness workshops.',
-				'Managed digital comms to recruit peers and report on impact transparently.'
-			],
-			image: 'img/leadership/give-got-grown.jpg'
-		},
-		photography: {
-			title: 'KVIS Event Photographer',
-			tag: 'Creative Arts Lead',
-			meta: 'Photographer · 2023-2025 · Kamnoetvidya Science Academy',
-			summary: 'Documented major academic and cultural events, crafting the visual narrative of campus life.',
-			highlights: [
-				'Produced photo essays for sports days, festivals, and national competition send-offs.',
-				'Coordinated asset delivery to media teams for same-day social coverage.',
-				'Taught junior photographers framing, lighting, and storytelling basics.'
-			],
-			image: 'img/activities/photography.jpg'
-		}
+	jstp: {
+		group: 'extracurricular',
+		title: 'Junior Science Talent Project (JSTP-SCB)',
+		tag: 'STEM Outreach',
+		meta: 'Mentor · 2023-2025 · NSTDA Thailand',
+		summary: 'Guided JSTP-SCB scholars by translating AI research journeys into hands-on, student-led prototypes.',
+		highlights: [
+			'Built machine learning sprint curriculum covering data collection, ethics, and deployment.',
+			'Reviewed project roadmaps and presentation scripts for the national innovation stage.',
+			'Led reflection clinics that refined problem statements and user impact stories.'
+		],
+		image: 'img/activities/jstp-scb.jpg'
+	},
+	'open-house': {
+		group: 'extracurricular',
+		title: 'KVIS Open House Enrollment Scanner',
+		tag: 'Applied AI',
+		meta: 'Lead Engineer · 2023-2025 · Kamnoetvidya Science Academy',
+		summary: 'Engineered the computer vision pipeline that digitises enrolment flows for 2,500+ visitors annually.',
+		highlights: [
+			'Implemented detection, alignment, and OCR stack with automated analytics dashboards.',
+			'Trained volunteers to operate the scanning workflow and troubleshoot baseline edge cases.',
+			'Deployed Flask-based microservices so visitors could retrieve personalised insights instantly.'
+		],
+		image: 'img/activities/kvis-open-house.jpg'
+	},
+	'mentor-singapore': {
+		group: 'extracurricular',
+		title: "Mentor for Juniors' Projects",
+		tag: 'Cross-border Mentor',
+		meta: 'Coach · 2024-2025 · Thailand & Singapore',
+		summary: 'Coached Thai and Singaporean student teams in speech technology, UX research, and deployment.',
+		highlights: [
+			'Introduced version-controlled workflows and Git hygiene for distributed collaboration.',
+			'Mapped model evaluation metrics to user acceptance criteria for competition judges.',
+			'Facilitated design critiques that strengthened pitch decks and live demos.'
+		],
+		image: 'img/activities/mentor-singapore.jpg'
+	},
+	'international-camp': {
+		group: 'extracurricular',
+		title: 'ABData Science Elite Summer Camp',
+		tag: 'International Delegate',
+		meta: 'Participant · Jul-Aug 2025 · CUHK Shenzhen',
+		summary: 'Collaborated with global peers on datathon challenges spanning sustainability and smart cities.',
+		highlights: [
+			'Developed predictive pipelines with new teammates under 24-hour hackathon constraints.',
+			'Shared Thai community datasets to explore cross-cultural bias mitigation strategies.',
+			'Presented cross-border insights to delegates from Greater Bay Area universities.'
+		],
+		image: 'img/activities/datascience-camp.jpg'
+	},
+	kvisdom: {
+		group: 'extracurricular',
+		title: 'KVISDOM YouTube Channel',
+		tag: 'Media Production',
+		meta: 'Executive Producer · 2023-2025 · Thailand',
+		summary: 'Produces national STEM broadcasts that translate complex research into accessible storytelling.',
+		highlights: [
+			'Orchestrated filming, editing, and live-streaming schedules across student creator teams.',
+			'Adopted data-driven content planning to improve viewer engagement and retention.',
+			'Delivered multi-camera coverage for flagship KVIS events and national olympiad briefings.'
+		],
+		image: 'img/activities/kvisdom.jpg'
+	},
+	photography: {
+		group: 'extracurricular',
+		title: 'KVIS Event Photographer',
+		tag: 'Creative Arts',
+		meta: 'Photographer · 2023-2025 · Kamnoetvidya Science Academy',
+		summary: 'Documented major academic and cultural events, crafting the visual narrative of campus life.',
+		highlights: [
+			'Produced photo essays for sports days, festivals, and national competition send-offs.',
+			'Coordinated asset delivery to media teams for same-day social coverage.',
+			'Taught junior photographers framing, lighting, and storytelling basics.'
+		],
+		image: 'img/activities/photography.jpg'
+	},
+	'school-choir': {
+		group: 'extracurricular',
+		title: 'KVIS School Choir · Bass Section',
+		tag: 'Community Spirit',
+		meta: 'Performer · 2024 · KVIS',
+		summary: 'Contributed to signature performances celebrating school heritage and gratitude.',
+		highlights: [
+			'Performed the Wai Khru tribute, honouring teachers with traditional repertoire.',
+			'Balanced vocal training with academic commitments through disciplined practice.',
+			'Helped spark participation from classmates who were new to performing arts.'
+		],
+		image: 'img/leadership/school-choir.jpg'
+	},
+	'fisym-club': {
+		group: 'leadership',
+		title: 'FiSym Club · Vice President',
+		tag: 'Finance Literacy',
+		meta: 'Executive Team · 2023-2024 · KVIS',
+		summary: 'Built financial literacy programmes that demystify personal finance and investing for teens.',
+		highlights: [
+			'Designed simulation portfolios with risk profiling tailored to student interests.',
+			'Invited industry mentors to host Q&A clinics on macro trends and wealth planning.',
+			'Published actionable playbooks on budgeting, saving, and ethical investing.'
+		],
+		image: 'img/leadership/fisym.jpg'
+	},
+	'animators-club': {
+		group: 'leadership',
+		title: "Animator's Tournament Club · President",
+		tag: 'Creative Leadership',
+		meta: 'Club President · 2024-2025 · KVIS',
+		summary: 'Expanded a 3D animation community that fuses storytelling, Blender skills, and showcase events.',
+		highlights: [
+			'Authored the training roadmap from storyboarding to final renders for 17 members.',
+			'Coordinated with faculty advisors on equipment, venue logistics, and event curation.',
+			'Delivered live demos and exhibitions during festivals to inspire new cohorts.'
+		],
+		image: 'img/leadership/animators-club.jpg'
+	},
+	'student-committee': {
+		group: 'leadership',
+		title: 'KVIS Student Committee · Head of IT',
+		tag: 'Digital Transformation',
+		meta: 'Executive Board · 2024-2025 · KVIS',
+		summary: 'Modernised committee operations with a campus-wide booking and communications platform.',
+		highlights: [
+			'Migrated fragmented spreadsheets into a secure, real-time booking system.',
+			'Led user testing sessions with teachers, staff, and students to refine UX flows.',
+			'Implemented analytics dashboards to forecast resource usage and collisions.'
+		],
+		image: 'img/leadership/student-committee.jpg'
+	},
+	'student-council': {
+		group: 'leadership',
+		title: 'KVIS Student Council · Executive',
+		tag: 'Policy & Governance',
+		meta: 'Elected Leader · 2023-2025 · KVIS',
+		summary: 'Steered campus-wide policy proposals, debates, and student-led civic engagement.',
+		highlights: [
+			'Organised public forums to gather insights ahead of school-wide referendums.',
+			'Crafted communications that clarified policy impacts and vote logistics.',
+			'Partnered with committee heads to align initiatives across departments.'
+		],
+		image: 'img/leadership/student-council.jpg'
+	},
+	'give-got-grown': {
+		group: 'leadership',
+		title: 'Give Got Grown Volunteer Group · Co-founder',
+		tag: 'Social Innovation',
+		meta: 'Founder · 2024-2025 · Thailand',
+		summary: 'Mobilised volunteers to design exercise kits and wellness activities for rural communities.',
+		highlights: [
+			'Fundraised through community campaigns, delivering exercise kits and education.',
+			'Built partnerships with local schools to schedule wellness workshops.',
+			'Managed digital comms to recruit peers and report on impact transparently.'
+		],
+		image: 'img/leadership/give-got-grown.jpg'
+	}
 	};
 
-	const extracurricularIds = ['jstp', 'open-house', 'kvisdom', 'mentor-singapore', 'datascience-camp', 'school-choir'];
-	const leadershipIds = ['student-committee', 'fisym', 'animators', 'student-council', 'give-got-grown', 'photography'];
+	const activityOrder = ['jstp', 'open-house', 'mentor-singapore', 'international-camp', 'kvisdom', 'photography', 'school-choir', 'fisym-club', 'animators-club', 'student-committee', 'student-council', 'give-got-grown'];
+	const extracurricularIds = activityOrder.filter(id => activityDetails[id].group === 'extracurricular');
+	const leadershipIds = activityOrder.filter(id => activityDetails[id].group === 'leadership');
 
 	const $modal = $('#projectModal');
 	const $projectTitle = $('#projectTitle');
@@ -621,7 +634,7 @@
 			return;
 		}
 		$projectGrid.empty();
-		projectList.forEach((project, index) => {
+		projectCards.forEach((project, index) => {
 			const isHidden = index >= projectVisibleLimit;
 			const summary = project.summary ? `<p class="work-summary">${project.summary}</p>` : '';
 			const $col = $('<div/>', {
@@ -662,7 +675,7 @@
 		if (!$projectToggle.length) {
 			return;
 		}
-		if (projectList.length <= projectVisibleLimit) {
+		if (projectCards.length <= projectVisibleLimit) {
 			$projectToggle.addClass('d-none');
 			return;
 		}
@@ -687,12 +700,23 @@
 		}
 		$awardsTimeline.empty();
 		awardsData.forEach(award => {
+			const hasCertificate = Boolean(award.certificateImage);
+			const attributes = hasCertificate
+				? `role="button" tabindex="0" data-full="${award.certificateImage}" data-title="${award.certificateTitle || award.title}" data-meta="${award.certificateMeta || ''}" data-description="${award.certificateDescription || award.summary}"`
+				: '';
+			const media = award.image
+				? `<div class="award-timeline__media">
+						<img src="${award.image}" alt="${award.certificateTitle || award.title} visual" />
+					</div>`
+				: '';
+			const cta = hasCertificate ? '<span class="award-timeline__cta">View certificate</span>' : '';
 			const $article = $(`
-				<article class="award-timeline__item">
+				<article class="award-timeline__item${hasCertificate ? ' is-linkable' : ''}" ${attributes}>
 					<div class="award-timeline__dot">
 						<i class="${award.icon}"></i>
 					</div>
 					<div class="award-timeline__panel">
+						${media}
 						<div class="award-timeline__meta">
 							<span class="award-timeline__year">${award.year}</span>
 							<span class="award-timeline__location">${award.location}</span>
@@ -700,6 +724,7 @@
 						<span class="${award.badgeClass}">${award.badgeLabel}</span>
 						<h4 class="award-timeline__title">${award.title}</h4>
 						<p class="award-timeline__summary">${award.summary}</p>
+						${cta}
 					</div>
 				</article>
 			`);
@@ -737,7 +762,7 @@
 	}
 
 	function updateSectionCounts() {
-		$('#projectCount').text(`(${projectList.length})`);
+		$('#projectCount').text(`(${projectCards.length})`);
 		$('#awardsCount').text(`(${awardsData.length})`);
 		$('#extracurricularCount').text(`(${extracurricularIds.length})`);
 		$('#leadershipCount').text(`(${leadershipIds.length})`);
@@ -745,7 +770,7 @@
 
 	function updateCounters() {
 		$('#counterHonors').text(awardsData.length);
-		$('#counterResearch').text(projectList.length);
+		$('#counterResearch').text(projectCards.length);
 		$('#counterLeadership').text(leadershipIds.length);
 		$('#counterActivities').text(extracurricularIds.length + leadershipIds.length);
 		if ($.fn.counterUp) {
@@ -881,7 +906,7 @@
 	}
 
 	function populateProjectModal(projectId) {
-		const detail = projectDetails[projectId];
+		const detail = modalDetails[projectId];
 		if (!detail) {
 			return;
 		}
