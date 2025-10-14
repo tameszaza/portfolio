@@ -1890,6 +1890,95 @@ footer .credits a {
   font-weight: 600;
   white-space: nowrap;
 }
+/* Ensure image wrappers can place the badge */
+.activity-tile__image,
+.certificate-card__frame {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The vertical-ellipsis badge */
+.tile-affordance {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+  opacity: 1;                 /* ALWAYS visible */
+  transform: none;            /* no hover dependency */
+  pointer-events: none;       /* don't block clicks */
+}
+
+/* Optional: a tiny feedback on hover/focus without hiding it */
+.activity-tile:hover .tile-affordance,
+.certificate-card:hover .tile-affordance {
+  background: rgba(0,0,0,.7);
+}
+
+/* Portrait cert on large screens: image left, text right and left-aligned */
+@media (min-width: 992px) {
+  .certificate-modal.is-portrait .modal-body {
+    display: flex;
+    align-items: center;      /* vertical center of the text block */
+    gap: 2rem;
+  }
+  .certificate-modal.is-portrait .certificate-modal__image {
+    flex: 0 0 46%;
+    max-width: 46%;
+    margin-bottom: 0;         /* kill the default bottom margin */
+  }
+  .certificate-modal.is-portrait .certificate-modal__image img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;         /* keep it inside viewport */
+    object-fit: contain;
+  }
+  .certificate-modal.is-portrait .certificate-modal__details {
+    flex: 1 1 0;
+    text-align: left;         /* ← left-align text only in this case */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical center */
+    max-width: 54%;
+  }
+  .certificate-modal.is-portrait .certificate-modal__details p {
+    max-width: none;          /* no centering clamp */
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* Bigger certificate modal on large screens */
+.certificate-modal .modal-dialog {
+  /* grow but never exceed viewport */
+  max-width: min(92vw, 1280px);
+}
+
+@media (min-width: 1400px) {
+  .certificate-modal .modal-dialog {
+    max-width: min(90vw, 1360px);
+  }
+}
+
+/* Give the image a bit more breathing room vertically */
+.certificate-modal .certificate-modal__image img {
+  max-height: 82vh; /* was 540px; scales better in wide modals */
+}
+
+/* (Only for the portrait split layout you added earlier) */
+@media (min-width: 992px) {
+  .certificate-modal.is-portrait .certificate-modal__image img {
+    max-height: 82vh; /* match the general rule */
+  }
+}
 
 /* Make links in the project modal visible */
 #projectDescription a {

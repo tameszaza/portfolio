@@ -95,7 +95,7 @@
   // 1) Project-style modal details (used by ALL sections’ popups)
   const modalDetails = {
     // Projects
-    limneth: {
+    lumineth: {
       title: 'Lumineth Assistive Smart Assisstive System for the Visually Impaired',
       category: 'Embeded & Networking systems',
       date: 'SISTEMIC 2025 • Singapore',
@@ -103,8 +103,8 @@
       images: [
         { src: 'img/projects/lumineth-cover.jpeg', alt: 'Lumineth system worn by Tames' },
         { src: 'img/projects/Lu1.jpg', alt: 'Awarding ceremony' },
-		{ src: 'img/projects/Lu2.jpg', alt: 'Tames presenting the product to other international students' },
-		{ src: 'img/projects/Lu3.jpg', alt: 'Tames was welcomed home by school representatives' },
+        { src: 'img/projects/Lu2.jpg', alt: 'Tames presenting the product to other international students' },
+        { src: 'img/projects/Lu3.jpg', alt: 'Tames was welcomed home by school representatives' },
       ],
       certificates: [
         { title: 'Singapore International STEM Innovation Challenge: Bronze medal', issuer: 'National Junior College, Singapore', year: '2025', image: 'img/certificates/sistemic.png' }
@@ -120,7 +120,7 @@
         { src: 'img/projects/YSC1.jpg', alt: 'Young Scientist Competition gold medal certificate' }
       ],
       certificates: [
-        { title: '27th Young Scientist Competition: Gold Medal', issuer: 'NSTDA • Thailand', year: '2025', image: 'img/certificates/ysc.png' },
+        { title: '27th Young Scientist Competition: Gold Medal', issuer: 'NSTDA • Thailand', year: '2025', image: 'img/certificates/YSC.jpg' },
         { title: 'IEEE CIS Thailand Conference Presentation', issuer: 'IEEE Computational Intelligence Society Thailand Chapter', year: '2025' }
       ]
     },
@@ -132,27 +132,34 @@
 	  ' <a href="https://app.kvis.ac.th/foodallergies/" target="_blank" rel="noopener">Click here to visit the website</a>.',
       images: [
         { src: 'img/projects/inewgen0.jpg', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/inewgen2.png', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/inewgen3.jpg', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/inewgen4.jpg', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/inewgen5.jpg', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/NSC0.jpg', alt: 'Food allergen warning program for people with food allergy' },
-		{ src: 'img/projects/NSC1.jpg', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/inewgen2.png', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/inewgen3.jpg', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/inewgen4.jpg', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/inewgen5.jpg', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/NSC0.jpg', alt: 'Food allergen warning program for people with food allergy' },
+        { src: 'img/projects/NSC1.jpg', alt: 'Food allergen warning program for people with food allergy' },
       ],
       certificates: [
-        { title: 'Thailand New Gen Inventors Award: Silver Medal', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/inewgen0.png' },
+        { title: 'Thailand New Gen Inventors Award: Silver Medal', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/inewgen3.jpg' },
 		{ title: 'Thailand New Gen Inventors Award: Popular Vote', issuer: 'NSTDA & NRCT', year: '2025', image: 'img/certificates/inewgen1.jpeg' },
-        { title: 'National Software Contest Finalist', issuer: 'NECTEC • Thailand', year: '2024' }
+        { title: 'National Software Contest: Finalist', issuer: 'NECTEC • Thailand', year: '2024', image: 'img/certificates/NSC0.jpg' },
+        { title: 'National Software Contest: Funded', issuer: 'NECTEC • Thailand', year: '2024', image: 'img/certificates/NSC1.jpg' },
       ]
     },
     'global-league': {
       title: 'Global Sports League Optimizer',
       category: 'Operations Research',
       date: 'IMMC 2025 • International',
-      description: 'Formulated a decision-based annealing optimisation model that balances fairness, travel time and broadcast requirements for international sports leagues. Delivered sensitivity analyses and what-if scheduling scenarios for policy makers.',
-      images: [{ src: 'img/projects/global-league.jpg', alt: 'Sports league scheduling optimisation results' }],
+      description: 'Involved finding the optimal way to arrange the sport competition schedule to maximize fairness and other factors, which we used decision-based annealing optimization to tackle this problem. I am the leader of this 4-member project, nominated in the IMMC Mathematical model competition ,and received the Honorable Mention award. Noted that all work had been done under 120 hours time-limit.',
+      images: [{ src: 'img/projects/IMMC0.png', alt: 'Sports league scheduling optimisation results' },
+        { src: 'img/projects/IMMC1.png', alt: 'Sports league scheduling optimisation pipeline' },
+
+        { src: 'img/projects/IMMC2.png', alt: 'Sports league scheduling optimisation pipeline' },
+
+        { src: 'img/projects/IMMC3.png', alt: 'Sports league scheduling optimisation pipeline' },
+      ],
       certificates: [
-        { title: 'International Mathematical Modeling Challenge (IMMC)', issuer: 'IMMC 2025', year: '2025' },
+        { title: 'International Mathematical Modeling Challenge (IMMC): Honorable Mention Award', issuer: 'IMMC 2025', year: '2025' , image: 'img/certificates/IMMC.jpg'},
         { title: 'High School Mathematical Contest in Modeling', issuer: 'COMAP • USA', year: '2024' }
       ]
     },
@@ -160,18 +167,28 @@
       title: 'GO-KILA Sports Matchmaking Platform',
       category: 'Start-up Engineering',
       date: 'Shark Tank TYP (in progress) • 2025',
-      description: 'Architected a cloud-native platform that pairs amateur athletes with nearby teams using routing heuristics and live chat. Built the backend services, database design, and websocket-based messaging for real-time coordination.',
-      images: [{ src: 'img/projects/go-kila.jpg', alt: 'GO-KILA sports platform mobile mockup' }],
+      description: 'A sport matchmaking web platform, which is a start-up currently applying to the Shark Tank TV program. I am Responsible for the backend part, including database management, backend requests logic, website route design, matchmaking optimization based on their location, and team chat messages using websockets.'+ 
+	  ' <a href="https://www.go-kila.com/" target="_blank" rel="noopener">Click here to visit the website</a>.',
+      images: [{ src: 'img/projects/gokila0.png', alt: 'GO-KILA sports platform' },
+        { src: 'img/projects/gokila1.png', alt: 'GO-KILA sports platform' },
+        { src: 'img/projects/gokila2.png', alt: 'GO-KILA sports platform' },
+        { src: 'img/projects/gokila3.jpeg', alt: 'GO-KILA sports platform' },
+      ],
       certificates: [
-        { title: 'Datathon 2025 ABData Science Elite Summer Camp', issuer: 'CHHK-Shenzhen & KVIS', year: '2025' }
+        { title: 'Pending for Sharktank TV-program audition', issuer: 'Sharktank TV-program', year: '2025' }
       ]
     },
     'enrollment-scanner': {
       title: 'KVIS OPH Enrollment Scanner',
       category: 'Data Systems',
       date: 'KVIS Open House 2023-2025',
-      description: 'Engineered a computer-vision powered scanning pipeline that digitises student enrollment forms for large-scale events. Automated statistical analytics and deployed the solution on Flask with integrated Dewarp models for 2025 operations.',
-      images: [{ src: 'img/projects/enrollment-scanner.jpg', alt: 'KVIS enrollment scanner web interface' }],
+      description: 'Involved scanning subject enrollment data from participants (approx. 2500 students) on paper into digital format for further statistical analysis using computer vision and machine learning like the YOLOv8 model and hosting the web on Flask for scalability. The head of this project, coordinating with teammates and teachers and designed the main model pipeline. Received overwhelmingly positive feedback. In the 2025 version, included the dewarp model to help detect the paper in any orientation, including semi-folded paper.',
+      images: [{ src: 'img/projects/OPH0.jpg', alt: 'KVIS-OPH 2025' },
+        { src: 'img/projects/OPH2.jpg', alt: 'KVIS-OPH 2025' },
+        { src: 'img/projects/OPH3.jpg', alt: 'KVIS-OPH 2025' },
+        { src: 'img/projects/OPH4.jpg', alt: 'KVIS-OPH 2025' },
+        { src: 'img/projects/OPH5.png', alt: 'KVIS-OPH 2025' },
+      ],
       certificates: [
         { title: 'KVIS Open House Innovation Highlight', issuer: 'Kamnoetvidya Science Academy', year: '2025' }
       ]
@@ -298,7 +315,7 @@
       title: 'Singapore International STEM Innovation Challenge 2025',
       category: 'Award',
       date: 'Bronze Medalist • NJC, Singapore • 2025',
-      description: 'Represented KVIS with Limneth, an assistive AI for the visually impaired, and secured the Bronze Medal among 64 schools worldwide.',
+      description: 'Represented KVIS with lumineth, an assistive AI for the visually impaired, and secured the Bronze Medal among 64 schools worldwide.',
       images: [{ src: 'img/certificates/sistemic-2025.jpg', alt: 'SISTEMIC 2025 certificate' }],
       certificates: [{ title: 'SISTEMIC 2025', issuer: 'National Junior College', year: '2025', image: 'img/certificates/sistemic-2025.jpg' }]
     },
@@ -410,11 +427,11 @@
 
   // 2) Main-page tile definitions per section
   const projectCards = [
-    { id: 'limneth', image: 'img/projects/lumineth-cover.jpeg', title: modalDetails.limneth.title, tag: 'Embedded & Networking systems', meta: '2025', summary: 'Edge AI assistant delivering scene narration, obstacle alerts, and transit guidance for visually impaired communities.' },
+    { id: 'lumineth', image: 'img/projects/lumineth-cover.jpeg', title: modalDetails.lumineth.title, tag: 'Embedded & Networking systems', meta: '2025', summary: 'Edge AI assistant delivering scene narration, obstacle alerts, face and emotion recognition for visually impaired through voice command.' },
     { id: 'speech-detection', image: 'img/projects/YSC0.jpeg', title: modalDetails['speech-detection'].title, tag: 'Machine Learning', meta: '2024 – 2025', summary: 'Design an improved anomaly-based mGANs architecture with high accuracy for diverse/generalized datasets to classify synthetic speech and human speech.' },
     { id: 'food-allergen', image: 'img/projects/inewgen1.jpg', title: modalDetails['food-allergen'].title, tag: 'Public Health Tech', meta: '2024 – 2025', summary: 'Computer vision and ML platform that personalises allergen alerts and estimated nutrients.' },
-    { id: 'global-league', image: 'img/projects/global-league.jpg', title: modalDetails['global-league'].title, tag: 'Operations Research', meta: '2025', summary: 'Scheduling optimizer balancing travel, fairness, and broadcast priorities for an international sports league case study.' },
-    { id: 'go-kila', image: 'img/projects/go-kila.jpg', title: modalDetails['go-kila'].title, tag: 'Start-up Engineering', meta: '2025 (ongoing)', summary: 'Start-up backend connecting athletes with clubs through analytics-driven matchmaking and websocket messaging.' },
+    { id: 'global-league', image: 'img/projects/IMMC0.png', title: modalDetails['global-league'].title, tag: 'Operations Research', meta: '2025', summary: 'This project is part of math modeling compettition (IMMC) involve using Structural Simulated Annealing optimization (SSA)' },
+    { id: 'go-kila', image: 'img/projects/gokila0.png', title: modalDetails['go-kila'].title, tag: 'Start-up Engineering', meta: '2025 (ongoing)', summary: 'A sport matchmaking web platform, which is a start-up  currently applying to the Shark Tank TV program.' },
     { id: 'enrollment-scanner', image: 'img/projects/enrollment-scanner.jpg', title: modalDetails['enrollment-scanner'].title, tag: 'Data Systems', meta: '2023 – 2025', summary: 'Vision-powered kiosk digitising 2,500+ enrollment forms with instant analytics for KVIS Open House each year.' },
     { id: 'surveillance-optimization', image: 'img/projects/surveillance-optimization.jpg', title: modalDetails['surveillance-optimization'].title, tag: 'Intelligent Systems', meta: '2024', summary: 'Ray-tracing and simulated annealing workflow eliminating CCTV blind spots for campus safety planning.' },
     { id: 'stock-predictor', image: 'img/projects/stock-predictor.jpg', title: modalDetails['stock-predictor'].title, tag: 'Financial Data Science', meta: '2024', summary: 'Ensemble models forecasting S&P 500 trends to coach FiSym members on strategy, risk, and evidence-based investing.' }
@@ -441,7 +458,7 @@
 
   // Awards now tile-based on main page
   const awardsCards = [
-    { id: 'award-sistemic-2025', image: 'img/certificates/sistemic-2025.jpg', title: 'SISTEMIC 2025', tag: 'Bronze Medalist', meta: 'NJC · Singapore · 2025', summary: 'Limneth assistive AI recognized among global finalists.' },
+    { id: 'award-sistemic-2025', image: 'img/certificates/sistemic-2025.jpg', title: 'SISTEMIC 2025', tag: 'Bronze Medalist', meta: 'NJC · Singapore · 2025', summary: 'lumineth assistive AI recognized among global finalists.' },
     { id: 'award-cat-2025', image: 'img/overlay-bg.jpg', title: 'CAT 2025', tag: 'Silver & Distinction', meta: 'Thailand · 2025', summary: 'National silver and global Distinction ranking.' },
     { id: 'award-immc-2025', image: 'img/overlay-bg.jpg', title: 'IMMC 2025', tag: 'Honorable Mention', meta: 'Global Online · 2025', summary: 'International recognition for scheduling optimization.' },
     { id: 'award-newgen-2025', image: 'img/certificates/new-gen-2025.jpg', title: 'New Gen 2025', tag: 'Silver & Popular Vote', meta: 'BITEC · Thailand · 2025', summary: 'Food allergen warning platform won Silver and Popular Vote.' },
@@ -486,21 +503,30 @@
   // Renderers (main page tiles)
   // =========================
 
-  function tileHtml(id, img, title, tag, meta, summary) {
-    return `
-      <a href="#" class="activity-tile js-open-modal" role="button" data-id="${id}">
-        <div class="activity-tile__image">
-          <img src="${img}" alt="${title}" class="img-fluid" />
-        </div>
-        <div class="activity-tile__body">
-          <span class="activity-tile__tag">${tag || ''}</span>
-          <h4 class="activity-tile__title">${title}</h4>
-          <p class="activity-tile__meta">${meta || ''}</p>
-          ${summary ? `<p class="activity-tile__summary">${summary}</p>` : ''}
-        </div>
-      </a>
-    `;
-  }
+function tileHtml(id, img, title, tag, meta, summary) {
+  const safeTitle = $('<div>').text(title || 'Detail').html();
+  return `
+    <a href="#"
+       class="activity-tile js-open-modal"
+       role="button"
+       data-id="${id}"
+       aria-haspopup="dialog"
+       aria-label="Open details for ${safeTitle}">
+      <div class="activity-tile__image">
+        <img src="${img}" alt="${title}" class="img-fluid" />
+        <span class="tile-affordance" aria-hidden="true"><i class="fa fa-ellipsis-v"></i></span>
+      </div>
+      <div class="activity-tile__body">
+        <span class="activity-tile__tag">${tag || ''}</span>
+        <h4 class="activity-tile__title">${title}</h4>
+        <p class="activity-tile__meta">${meta || ''}</p>
+        ${summary ? `<p class="activity-tile__summary">${summary}</p>` : ''}
+      </div>
+    </a>
+  `;
+}
+
+
 
   function renderProjectGrid() {
     if (!$projectGrid.length) return;
@@ -733,17 +759,22 @@ function renderCertificateGallery() {
   col.className = 'col-md-4 col-lg-3 mb-4';
 
   // Build the element without dangerous inline data-*
-  const $card = $(`
-    <a href="#" class="certificate-card" role="button" aria-controls="certificateModal">
-      <div class="certificate-card__frame">
-        <img src="${item.image}" alt="${item.title} certificate" class="img-fluid" />
-      </div>
-      <div class="certificate-card__caption">
-        <h5>${item.title}</h5>
-        <p>${item.meta}</p>
-      </div>
-    </a>
-  `);
+  // inside renderCertificateGallery() when building $card
+const $card = $(`
+  <a href="#" class="certificate-card" role="button" aria-controls="certificateModal"
+     aria-label="Open certificate: ${$('<div>').text(item.title).html()}">
+    <div class="certificate-card__frame">
+      <img src="${item.image}" alt="${$('<div>').text(item.title).text()} certificate" class="img-fluid" />
+      <span class="tile-affordance" aria-hidden="true"><i class="fa fa-ellipsis-v"></i></span>
+    </div>
+    <div class="certificate-card__caption">
+      <h5>${item.title}</h5>
+      <p>${item.meta}</p>
+    </div>
+  </a>
+`);
+
+
 
   // Store values safely (no HTML injection into attributes)
   $card.data('full', item.image);
@@ -775,18 +806,61 @@ function renderCertificateGallery() {
   // =========================
 function openCertificateModal(context) {
   if (!context || !$certificateModal.length) return;
+
   const $ctx = $(context);
   const imageSrc = $ctx.data('full') || $ctx.find('img').attr('src');
   const title = $ctx.data('title') || 'Certificate';
   const meta = $ctx.data('meta') || '';
   const description = $ctx.data('description') || '';
 
-  $certificateModalImage.attr('src', imageSrc || '').attr('alt', title);
+  // Set content
+  $certificateModalImage
+    .attr('src', imageSrc || '')
+    .attr('alt', title);
+
   $certificateModalTitle.text(title);
   $certificateModalMeta.text(meta);
-  $certificateModalDescription.html(description); // ← allow HTML
+  $certificateModalDescription.html(description); // allow HTML
+
+  // Reset orientation classes each time
+  $certificateModal.removeClass('portrait landscape');
+
+  // After the image is loaded, decide layout (portrait vs landscape)
+  function applyOrientation() {
+    const img = $certificateModalImage[0];
+    if (!img || !img.naturalWidth || !img.naturalHeight) return;
+
+    if (img.naturalHeight > img.naturalWidth) {
+      // Portrait → side-by-side (image left, text right)
+      $certificateModal.addClass('portrait');
+    } else {
+      // Landscape → keep stacked (no class needed, but add for clarity)
+      $certificateModal.addClass('landscape');
+    }
+  }
+
+  $certificateModalImage.off('load.certaspect').on('load.certaspect', applyOrientation);
+  if ($certificateModalImage[0].complete) {
+    // Cached image path
+    applyOrientation();
+  }
+  // Decide portrait/landscape and toggle a *scoped* class only on big screens
+const $modalRoot = $certificateModal;              // modal container
+$modalRoot.removeClass('is-portrait');            // reset each time
+
+$certificateModalImage.off('load._orient').on('load._orient', function () {
+  const isPortrait = this.naturalHeight > this.naturalWidth;
+  if (isPortrait && window.matchMedia('(min-width: 992px)').matches) {
+    $modalRoot.addClass('is-portrait');
+  } else {
+    $modalRoot.removeClass('is-portrait');
+  }
+});
+
+
   $certificateModal.modal('show');
 }
+
 
 
  
