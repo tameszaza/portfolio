@@ -1,4 +1,52 @@
 (function ($) {
+  // =========================
+// DOM Cache (restored)
+// =========================
+const $projectModal = $('#projectModal');
+const $projectTitle = $('#projectTitle');
+const $projectMeta = $('#projectMeta');
+const $projectDescription = $('#projectDescription');
+const $projectMainImage = $('#projectMainImage');
+const $projectThumbnails = $('#projectThumbnails');
+const $projectCertificates = $('#projectCertificates');
+
+const $projectGrid = $('#projectGrid');
+const $projectToggle = $('#projectToggle');
+const $awardsGrid = $('#awardsGrid');
+
+const $extracurricularGrid = $('#extracurricularGrid');
+const $leadershipGrid = $('#leadershipGrid');
+
+const $certificateModal = $('#certificateModal');
+const $certificateModalImage = $('#certificateModalImage');
+const $certificateModalTitle = $('#certificateModalTitle');
+const $certificateModalMeta = $('#certificateModalMeta');
+const $certificateModalDescription = $('#certificateModalDescription');
+
+// Card template helper (restored)
+function tileHtml(id, img, title, tag, meta, summary) {
+  const safeTitle = $('<div>').text(title || 'Detail').html();
+  return `
+    <a href="#"
+       class="activity-tile js-open-modal"
+       role="button"
+       data-id="${id}"
+       aria-haspopup="dialog"
+       aria-label="Open details for ${safeTitle}">
+      <div class="activity-tile__image">
+        <img src="${img}" alt="${title}" class="img-fluid" />
+        <span class="tile-affordance" aria-hidden="true"><i class="fa fa-ellipsis-v"></i></span>
+      </div>
+      <div class="activity-tile__body">
+        <span class="activity-tile__tag">${tag || ''}</span>
+        <h4 class="activity-tile__title">${title || ''}</h4>
+        <p class="activity-tile__meta">${meta || ''}</p>
+        ${summary ? `<p class="activity-tile__summary">${summary}</p>` : ''}
+      </div>
+    </a>
+  `;
+}
+
   "use strict";
   var nav = $('nav');
   var navHeight = nav.outerHeight();
@@ -142,33 +190,46 @@
   }
 
   function loadContent() {
+  const CANDIDATES = ['content.json', 'data/content.json'];
+
+  function tryFetch(paths) {
+    if (!paths.length) {
+      console.error('No content.json found in expected locations');
+      showContentError();
+      return;
+    }
+    const url = paths[0];
     if (window.fetch) {
-      fetch('data/content.json', { cache: 'no-cache' })
-        .then(function (response) {
-          if (!response.ok) throw new Error('HTTP ' + response.status);
-          return response.json();
+      fetch(url, { cache: 'no-cache' })
+        .then(r => {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
         })
         .then(hydrateContent)
-        .catch(function (error) {
-          console.error('Failed to load portfolio content', error);
-          showContentError();
-        });
-      return;
-    }
-
-    if ($ && $.getJSON) {
-      $.getJSON('data/content.json')
+        .catch(() => tryFetch(paths.slice(1)));
+    } else if ($ && $.getJSON) {
+      $.getJSON(url)
         .done(hydrateContent)
-        .fail(function (_, textStatus, errorThrown) {
-          console.error('Failed to load portfolio content', textStatus || errorThrown);
-          showContentError();
-        });
-      return;
+        .fail(() => tryFetch(paths.slice(1)));
+    } else {
+      console.error('No supported method available to load portfolio content');
+      showContentError();
     }
-
-    console.error('No supported method available to load portfolio content');
-    showContentError();
   }
+
+  tryFetch(CANDIDATES);
+}
+
+function showContentError(message) {
+  const fallback = message || 'Portfolio content is temporarily unavailable.';
+  const errorHtml = '<div class="col-12"><p class="text-center text-danger">' + fallback + '</p></div>';
+
+  if ($projectGrid && $projectGrid.length) $projectGrid.html(errorHtml);
+  if ($awardsGrid && $awardsGrid.length) $awardsGrid.html(errorHtml);
+  if ($extracurricularGrid && $extracurricularGrid.length) $extracurricularGrid.html(errorHtml);
+  if ($leadershipGrid && $leadershipGrid.length) $leadershipGrid.html(errorHtml);
+}
+
 
   function renderProjectGrid() {
     if (!$projectGrid.length) return;
