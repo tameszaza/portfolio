@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Content Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <div class="container-fluid py-4">
+      <header class="mb-4">
+        <h1 class="h3 mb-2">Portfolio Content Admin</h1>
+        <p class="text-muted mb-0">
+          Edit projects, awards, and activities pulled from <code>data/content.json</code>. Changes happen in your browser —
+          export the JSON file when you are ready to update the live site.
+        </p>
+      </header>
+
+      <div class="admin-toolbar mb-3">
+        <div class="btn-group mr-3" role="group" aria-label="Category selector">
+          <button type="button" class="btn btn-outline-secondary" data-category="projects">Projects</button>
+          <button type="button" class="btn btn-outline-secondary" data-category="awards">Awards</button>
+          <button type="button" class="btn btn-outline-secondary" data-category="activities">Activities</button>
+        </div>
+        <div class="btn-toolbar__spacer"></div>
+        <div class="btn-group" role="group" aria-label="Data controls">
+          <label class="btn btn-outline-secondary mb-0">
+            <input type="file" id="importFile" accept="application/json" hidden />
+            Import JSON
+          </label>
+          <button type="button" class="btn btn-primary" id="exportBtn">Export JSON</button>
+          <button type="button" class="btn btn-outline-danger" id="resetBtn">Reset Changes</button>
+        </div>
+      </div>
+
+      <div class="row no-gutters admin-content">
+        <aside class="col-lg-4 col-xl-3 pr-lg-3 mb-4 mb-lg-0">
+          <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <span id="listTitle" class="font-weight-semibold">Items</span>
+              <button type="button" class="btn btn-sm btn-success" id="addItemBtn">
+                <span class="mr-1">+</span> Add New
+              </button>
+            </div>
+            <div class="list-group list-group-flush admin-records" id="recordList" aria-live="polite">
+              <div class="list-group-item text-muted">No data loaded yet.</div>
+            </div>
+          </div>
+        </aside>
+
+        <main class="col-lg-8 col-xl-9 pl-lg-3">
+          <div class="card h-100">
+            <div class="card-header">
+              <h2 class="h5 mb-0" id="editorTitle">Select an item to edit</h2>
+            </div>
+            <div class="card-body" id="editorBody">
+              <p class="text-muted mb-0">
+                Choose a record on the left to edit its details. Use the <strong>Export JSON</strong> button to download
+                the updated <code>content.json</code> for deployment.
+              </p>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <footer class="mt-4 text-muted small">
+        <p class="mb-1" id="statusLine">Status: awaiting data.</p>
+        <p class="mb-0">
+          Tip: When you finish editing, replace <code>web1/data/content.json</code> in your project with the exported file,
+          then rebuild or redeploy your static site.
+        </p>
+      </footer>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

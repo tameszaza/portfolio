@@ -1,0 +1,73 @@
+.admin-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-toolbar__spacer {
+  flex: 1 1 auto;
+}
+
+.admin-records {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.admin-records .list-group-item {
+  cursor: pointer;
+}
+
+.admin-records .list-group-item.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.array-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.array-editor-header h3 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.array-group {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #f9fbfd;
+}
+
+.array-group .form-row {
+  margin-bottom: 0.5rem;
+}
+
+.array-group .form-row:last-child {
+  margin-bottom: 0;
+}
+
+.array-group__actions {
+  text-align: right;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 991.98px) {
+  .admin-records {
+    max-height: none;
+  }
+}
