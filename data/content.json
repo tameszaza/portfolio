@@ -239,7 +239,7 @@
       ],
       "certificates": [
         {
-          "title": "High School Mathematical Contest in Modeling",
+          "title": "High School Mathematical Contest in Modeling: Honorable Mention award.",
           "issuer": "COMAP • USA",
           "year": "2024"
         }
@@ -249,7 +249,7 @@
       "title": "S&P 500 Stock Market Prediction",
       "category": "Financial Data Science",
       "date": "2024 · Thailand",
-      "description": "Built an ensemble of XGBoost, CatBoost, and random forest models with feature engineering pipelines to forecast S&P 500 trends for FiSym investment coaching.",
+      "description": "Developed a predictive model for the S&P 500, the biggest US stock market, using various ML models and ensemble methods such as XGBOOST, CATBOOST, and random forest, along with rolling windows and various data preprocessing procedures.",
       "images": [
         {
           "src": "img/projects/stock-predictor.jpg",
@@ -434,19 +434,11 @@
         }
       ]
     },
-    "award-cat-2025": {
-      "title": "Computational & Algorithmic Thinking 2024-2025",
-      "category": "Award",
-      "date": "Silver & Distinction • Thailand • 2025",
-      "description": "Earned national silver (2024) and bronze (2025) with global Distinction ranking from the Australian Mathematics Trust.",
-      "images": [],
-      "certificates": []
-    },
     "award-immc-2025": {
-      "title": "1st International Mathematical Modeling Challenge 2025",
+      "title": "11st International Mathematical Modeling Challenge 2025",
       "category": "Award",
       "date": "Honorable Mention • Global Online • 2025",
-      "description": "Led Thailand’s four-person team to optimise sports scheduling with decision-based annealing, earning the international Honorable Mention.",
+      "description": "Led Thailand’s four-person team to optimize sports scheduling with decision-based annealing technique on big data , earning the international Honorable Mention award.",
       "images": [],
       "certificates": []
     },
@@ -463,7 +455,7 @@
       ],
       "certificates": [
         {
-          "title": "New Gen 2025",
+          "title": "I New Gen Award 2025",
           "issuer": "NSTDA & NRCT",
           "year": "2025",
           "image": "img/certificates/new-gen-2025.jpg"
@@ -474,7 +466,7 @@
       "title": "27th Young Scientist Competition 2025",
       "category": "Award",
       "date": "Gold Medalist • NSTDA • 2025",
-      "description": "Awarded Gold for the multi-generator GAN speech detection research and invited to present at IEEE CIS Thailand.",
+      "description": "Awarded Gold among 508 Projects from 103 Schools for Central and Eastern Center for the multi-generator GAN speech detection research and invited to present at IEEE CIS Thailand.",
       "images": [
         {
           "src": "img/certificates/ysc-2025.jpg",
@@ -494,7 +486,7 @@
       "title": "High School Mathematical Contest in Modeling 2024",
       "category": "Award",
       "date": "Honorable Mention • Global Online • 2024",
-      "description": "Received Honorable Mention among 1,055 teams for modelling Olympic scheduling with SARIMAX forecasting.",
+      "description": "Led a 4-member team to create a mathematical model using the SARIMAX autoregression model to solve the problem: “To Play or not to Play: Modeling Future Olympic Games” and received Honorable Mention among 1,055 international teams.",
       "images": [],
       "certificates": []
     },
@@ -502,7 +494,7 @@
       "title": "Siriraj Mathematics and Science Aptitude Test 2024",
       "category": "Award",
       "date": "2nd Runner-Up • Bangkok • 2024",
-      "description": "Placed top three among 1,303 national teams while representing Siriraj Hospital’s STEM knowledge evaluation.",
+      "description": "Placed top three among 1,303 national teams while representing faculty of medicine Siriraj Hospital’s STEM knowledge competition.",
       "images": [
         {
           "src": "img/certificates/simsat-2024.jpg",
@@ -522,7 +514,7 @@
       "title": "23rd Thailand Physics Olympiad",
       "category": "Award",
       "date": "Silver Medalist • Thailand • 2024",
-      "description": "Ranked 12th nationally after multi-round theoretical and experimental finals with POSN.",
+      "description": "Ranked 12th nationally after multi-round theoretical and experimental finals with Academic Olympiad and Development of Science Education Foundation (POSN).",
       "images": [
         {
           "src": "img/certificates/tpho-2024.jpg",
@@ -578,7 +570,7 @@
       "title": "Second POSN Informatics Training Camp 2023",
       "category": "Award",
       "date": "Top 50 Finalist • Thammasat • 2023",
-      "description": "Qualified for the national top 50 Informatics training camp organised by POSN.",
+      "description": "Qualified for Bangkok central region center top 50 Informatics training camp organised by Academic Olympiad and Development of Science Education Foundation (POSN).",
       "images": [],
       "certificates": []
     },
@@ -586,7 +578,7 @@
       "title": "Conrad Challenge 2023-2024",
       "category": "Award",
       "date": "Innovation Stage • Global • 2024",
-      "description": "Advanced to the global Innovation Stage in the Energy & Environment category with the eco-sustainable fuel system project.",
+      "description": "Advanced to the global Innovation Stage in the Energy & Environment category with the eco-sustainable fuel system project. Created the Ecoustica which we dive into the ideas, the scientific principles, and the process of making noise as another source of clean energy into a reality, and I was responsible for creating and developing the product design and the website. I was performed the setup for filming our video with the best quality.",
       "images": [],
       "certificates": []
     },
@@ -595,6 +587,14 @@
       "category": "Award",
       "date": "Silver Distinction • Thailand • 2024",
       "description": "Awarded Silver with Distinction in the senior division for excellence across algebra, geometry, and probability.",
+      "images": [],
+      "certificates": []
+    },
+    "award-cat-2024": {
+      "title": "Computational & Algorithmic Thinking 2024",
+      "category": "Award",
+      "date": "Silver & Distinction • Thailand • 2025",
+      "description": "Earned national silver (2024) and bronze (2025) with global Distinction ranking from the Australian Mathematics Trust.",
       "images": [],
       "certificates": []
     }
@@ -784,14 +784,14 @@
       "title": "SISTEMIC 2025",
       "tag": "Bronze Medalist",
       "meta": "NJC · Singapore · 2025",
-      "summary": "lumineth assistive AI recognized among global finalists."
+      "summary": "Lumineth: A smart assistive system for the visually impaired recognized among global finalists."
     },
     {
-      "id": "award-cat-2025",
+      "id": "award-cat-2024",
       "image": "img/overlay-bg.jpg",
-      "title": "CAT 2025",
-      "tag": "Silver & Distinction",
-      "meta": "Thailand · 2025",
+      "title": "CAT 2024",
+      "tag": "Silver Medal & Distinction Award",
+      "meta": "Thailand · 2024",
       "summary": "National silver and global Distinction ranking."
     },
     {
@@ -805,8 +805,8 @@
     {
       "id": "award-newgen-2025",
       "image": "img/certificates/new-gen-2025.jpg",
-      "title": "New Gen 2025",
-      "tag": "Silver & Popular Vote",
+      "title": "I New Gen Award 2025",
+      "tag": "Silver Medal & Popular Vote",
       "meta": "BITEC · Thailand · 2025",
       "summary": "Food allergen warning platform won Silver and Popular Vote."
     },
@@ -829,10 +829,10 @@
     {
       "id": "award-simsat-2024",
       "image": "img/certificates/simsat-2024.jpg",
-      "title": "Siriraj SIMSAT 2024",
+      "title": "SIMSAT 2024",
       "tag": "2nd Runner-Up",
       "meta": "Bangkok · 2024",
-      "summary": "Top three nationwide for science aptitude."
+      "summary": "Top three nationwide for science aptitude by faculty of medicine Siriraj Hospital, Mahidol University"
     },
     {
       "id": "award-tpho-2024",
@@ -840,7 +840,7 @@
       "title": "TPhO 2024",
       "tag": "Silver Medalist",
       "meta": "Thailand · 2024",
-      "summary": "12th nationally in theory and experiment finals."
+      "summary": "Ranked 12th nationally in the physic theory and experiment finals."
     },
     {
       "id": "award-ipst-2024",

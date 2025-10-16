@@ -1,55 +1,767 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <h1>My Portfolio</h1>
-            <ul>
-                <li><a href="web1/index.htnl">Home</a></li>
-                <li><a href="web2/index.html">About</a></li>
-                <li><a href="web3/index.html">Projects</a></li>
-                <li><a href="web4/index.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <title>Thanakrit Damduan | STEM Innovation Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="Thanakrit Damduan, STEM innovation, machine learning, research projects, awards, standardized tests"
+      name="keywords"
+    />
+    <meta
+      content="Academic honors, research portfolio, and leadership track record of Thanakrit Damduan, KVIS scholar and STEM innovator."
+      name="description"
+    />
 
-    <main>
-        <section id="home">
-            <h2>Welcome to My Portfolio</h2>
-        </section>
-        
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Add your description here</p>
-        </section>
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon" />
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-        <section id="projects">
-            <h2>My Projects</h2>
-            <div class="projects-grid">
-                <!-- Add your projects here -->
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+  </head>
+
+  <body id="page-top">
+    <!-- Project Detail Modal -->
+    <div class="modal fade project-modal" id="projectModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="project-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="project-modal__header">
+              <span class="project-modal__meta" id="projectMeta"></span>
+              <h3 class="project-modal__title" id="projectTitle"></h3>
             </div>
-        </section>
+            <div class="project-modal__content">
+              <div class="project-modal__gallery">
+                <div class="project-modal__main-image">
+                  <img id="projectMainImage" src="" alt="Project preview" />
+                </div>
+                <div class="project-modal__thumbnails" id="projectThumbnails"></div>
+              </div>
+              <div class="project-modal__details">
+                <div class="project-modal__section">
+                  <h5>Description</h5>
+                  <p id="projectDescription"></p>
+                </div>
+                <div class="project-modal__section">
+                  <h5>Certificates &amp; Awards</h5>
+                  <div id="projectCertificates"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <input type="email" placeholder="Your email">
-                <textarea placeholder="Your message"></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
+    <!-- Certificate Modal -->
+    <div class="modal fade certificate-modal" id="certificateModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="certificate-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="certificate-modal__image">
+              <img id="certificateModalImage" src="" alt="Certificate preview" />
+            </div>
+            <div class="certificate-modal__details">
+              <h3 id="certificateModalTitle"></h3>
+              <p class="certificate-modal__meta" id="certificateModalMeta"></p>
+              <p id="certificateModalDescription"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
-    </footer>
+    <!-- Activity Modal -->
+    <div class="modal fade activity-modal" id="activityModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="activity-modal__close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body">
+            <div class="activity-modal__media">
+              <img id="activityModalImage" src="" alt="Activity feature visual" />
+            </div>
+            <div class="activity-modal__details">
+              <span class="activity-modal__tag" id="activityModalTag"></span>
+              <h3 id="activityModalTitle"></h3>
+              <p class="activity-modal__meta" id="activityModalMeta"></p>
+              <p id="activityModalSummary"></p>
+              <ul id="activityModalHighlights" class="activity-modal__highlights"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!--/ Nav Star /-->
+    <nav
+      class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
+      id="mainNav"
+    >
+      <div class="container">
+        <a class="navbar-brand js-scroll" href="#page-top">Tames</a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarDefault"
+          aria-controls="navbarDefault"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div
+          class="navbar-collapse collapse justify-content-end"
+          id="navbarDefault"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link js-scroll active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#scores">Scores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#work">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#awards">Awards</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#extracurricular">Extracurricular</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#leadership">Leadership</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#certificates">Certificates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--/ Nav End /-->
+
+    <!--/ Intro Skew Star /-->
+    <div
+      id="home"
+      class="intro route bg-image"
+      style="background-image: url(img/intro-bg.jpg)"
+    >
+      <div class="overlay-itro"></div>
+      <div class="intro-content display-table align-right">
+        <div class="table-cell">
+          <div class="container">
+            <!--<p class="display-6 color-d">Hello, world!</p>-->
+            <h1 class="intro-title mb-4">Thanakrit Damduan</h1>
+            <p class="intro-subtitle">
+              <span class="text-slider-items"
+                >STEM Innovator,Machine Learning Researcher,Physics Olympian, Head of IT | KVIS Student Committee , Computer Network, Photographer, Coder</span
+              ><strong class="text-slider"></strong>
+            </p>
+            <p class="intro-lead">
+              “If you wait until you’re ready, you‘ll be waiting for the rest of your life”
+            <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Intro Skew End /-->
+
+    <section id="about" class="about-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="box-shadow-full">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img
+                          src="img/Tames.jpg"
+                          class="img-fluid rounded b-shadow-a"
+                          alt
+                          style="max-height: 15rem"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p style="margin-bottom: 2rem;">
+                          <span class="title-s">Name: </span>
+                          <span>Thanakrit Damduan</span>
+                        </p>
+                        <p style="margin-bottom: 2rem;">
+                          <span class="title-s">Phone: </span>
+                          <span
+                            ><a href="tel:+66843292183"
+                              >(+66) 84-329-2183</a
+                            ></span
+                          >
+                        </p>
+                        <p style="margin-bottom: 2rem;">
+                          <span class="title-s">Email: </span>
+                          <span
+                            ><a href="mailto:thanakrit.dam64@gmail.com"
+                              >thanakrit.dam64@gmail.com</a
+                            ></span
+                          >
+                        </p>
+                        <p>
+                          <span class="title-s">Github: </span>
+                          <span
+                            ><a
+                              href="https://github.com/tameszaza"
+                              target="_blank"
+                              >tameszaza</a
+                            ></span
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill-mf">
+                    <p class="title-s" style="font-size: 1.5rem">Education</p>
+                    <p class="pull-right">GPA</p>
+                    <div class="school">
+                      <p class="title-s">Kamnoetvidya Science Academy</p>
+                      <span style="font-size: 1rem">2023-2026</span>
+                      <span class="pull-right title-s" style="font-size: 1rem">3.99</span>
+                    </div>
+                    <div class="school">
+                      <p class="title-s">Patumwan Demonstration School</p>
+                      <span style="font-size: 1rem">2020-2023</span>
+                      <span class="pull-right title-s" style="font-size: 1rem">3.99</span>
+                    </div>
+                    <div class="skills-wrapper">
+                      <p class="title-s"style="margin-top: 30px;">Skills &amp; Courses</p>
+                      <ul class="about-bullets">
+                        <li>Advanced courses in Physics, Chemistry, and Biology</li>
+                        <li>Machine Learning, General Computer Science, Graph Theory</li>
+                        <li>Robotic and Automation systems, Intelligent mobile robot on ROS, mechatronics and industrial robot</li>
+                        <li>Python, C, C++, C#, Java, JavaScript, React, HTML, SQL, Bash, GO</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="about-me pt-4 pt-md-0">
+                    <div class="title-box-2">
+                      <h5 class="title-left">About me</h5>
+                    </div>
+                    <p class="lead">
+                      Driven by a deep passion for computer science, machine learning, computer networks, and physics, I turn scientific curiosity into solutions that improve everyday life.
+                    </p>
+                    <p class="lead">
+                      At Kamnoetvidya Science Academy I lead cross-disciplinary squads on projects that span synthetic speech detection, decision-based optimisation, and assistive technologies—bridging research with real deployment.
+                    </p>
+                    <p class="lead">
+                      Beyond research, I empower the KVIS community as Head of Information &amp; Technology for the Student Committee, building the campus booking platform and mentoring juniors through national innovation programmes.
+                    </p>
+                    <div class="about-highlights">
+                      <p class="title-s">Current Highlights</p>
+                      <ul class="about-bullets">
+                        <li>Guiding Limneth and GO-KILA to deliver accessible AI and data-driven matchmaking experiences.</li>
+                        <li>Coaching research teams recognised by YSC, SISTIC, and NSC on system design and validation.</li>
+                        <li>Supporting JSTP-SCB scholars and school innovators in speech processing, computer vision, and data science.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--/ Section Services Star /-->
+    <section id="scores" class="services-mf route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Standardized Test Profile</h3>
+          <p class="subtitle-a">
+            Benchmarks that evidence the language, reasoning, and advanced STEM foundations driving my research.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- IELTS -->
+      <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+        <div class="service-box scores-card">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-android-globe"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">
+              IELTS <span style="font-size: 1.5rem;">7.5</span> <span style="font-size: 0.8rem;">overall</span>
+            </h2>
+            <ul class="scores-list">
+              <li><span class="label">Listening</span><span class="value">8.0</span></li>
+              <li><span class="label">Reading</span><span class="value">8.5</span></li>
+              <li><span class="label">Writing</span><span class="value">7.0</span></li>
+              <li><span class="label">Speaking</span><span class="value">6.0</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAT -->
+      <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+        <div class="service-box scores-card">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-ios-analytics"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">
+              SAT <span style="font-size: 1.5rem;">1420</span>
+            </h2>
+            <ul class="scores-list">
+              <li><span class="label">Math</span><span class="value">780</span></li>
+              <li><span class="label">Evidence-Based Reading &amp; Writing</span><span class="value">640</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- AP -->
+      <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+        <div class="service-box scores-card">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-ios-paper"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">Advanced Placement</h2>
+            <ul class="scores-list">
+              <li><span class="label">Computer Science A</span><span class="value">5</span></li>
+              <li><span class="label">Calculus BC</span><span class="value">5</span></li>
+              <li><span class="label">Calculus AB</span><span class="value">5</span></li>
+              <li><span class="label">Statistics</span><span class="value">5</span></li>
+              <li><span class="label">Physics C: Mechanics</span><span class="value">5</span></li>
+              <li><span class="label">Physics C: E&amp;M</span><span class="value">5</span></li>
+              <li><span class="label">Chemistry</span><span class="value">5</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACT -->
+      <div class="col-md-6 col-lg-3" style="margin-bottom: 30px;">
+        <div class="service-box scores-card">
+          <div class="service-ico">
+            <span class="ico-circle"><i class="ion-ios-speedometer"></i></span>
+          </div>
+          <div class="service-content">
+            <h2 class="s-title">ACT STEM Strength</h2>
+            <ul class="scores-list">
+              <li><span class="label">ACT Math</span><span class="value">36 <span style="font-weight:400;">/ 36</span></span></li>
+              <li><span class="label">ACT Science</span><span class="value">35 <span style="font-weight:400;">/ 36</span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+   <!--/ Section Scores End /-->
+
+    <div
+      class="section-counter paralax-mf bg-image"
+      style="background-image: url(img/counters-bg.jpg)"
+    >
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box">
+              <div class="counter-ico">
+                <span class="ico-circle"
+                  ><i class="ion-checkmark-round"></i
+                ></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter" id="counterHonors">0</p>
+                <span class="counter-text">HONORS &amp; AWARDS</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"
+                  ><i class="ion-ios-calendar-outline"></i
+                ></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter" id="counterResearch">0</p>
+                <span class="counter-text">RESEARCH INITIATIVES</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-ios-people"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter" id="counterLeadership">0</p>
+                <span class="counter-text">LEADERSHIP ROLES</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="ion-ribbon-a"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="counter" id="counterActivities">0</p>
+                <span class="counter-text">EXTRACURRICULARS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--/ Section Portfolio Star /-->
+    <section id="work" class="portfolio-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Research &amp; Projects
+                <span class="section-count" id="projectCount"></span>
+              </h3>
+              <p class="subtitle-a">
+                Translating machine learning, optimization, and systems thinking into solutions that serve communities.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="projectGrid"></div>
+        <div class="row">
+          <div class="col-12 text-center mt-4">
+            <button type="button" class="button button-a button-rouded d-none" id="projectToggle">
+              View All Projects
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/ Section Portfolio End /-->
+
+    <section id="awards" class="awards-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              Honors &amp; Awards
+              <span class="section-count" id="awardsCount"></span>
+            </h3>
+            <p class="subtitle-a">
+              Spotlighting the milestones that propelled my research and innovation journey onto national and global stages.
+            </p>
+            <div class="line-mf"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Main-page layout now matches Extracurricular tiles -->
+      <div class="row" id="awardsGrid"></div>
+    </div>
+  </section>
+
+
+    
+
+    <section id="extracurricular" class="activities-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Extracurricular Highlights
+                <span class="section-count" id="extracurricularCount"></span>
+              </h3>
+              <p class="subtitle-a">
+                Initiatives that extend our lab impact into real classrooms, media, and cross-border collaborations.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="extracurricularGrid"></div>
+      </div>
+    </section>
+
+    <section id="leadership" class="activities-mf sect-pt4 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Leadership &amp; Volunteering
+                <span class="section-count" id="leadershipCount"></span>
+              </h3>
+              <p class="subtitle-a">
+                Driving strategic operations, finance, and community wellbeing across clubs and social ventures.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="leadershipGrid"></div>
+      </div>
+    </section>
+    <!--/ Section Activities End /-->
+<section id="certificates" class="certificates-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">Certificate Gallery</h3>
+          <p class="subtitle-a">
+            Browse the credential highlights—select any certificate to view the full-resolution award.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auto-rendered from JS -->
+    <div class="row" id="certificateGrid"></div>
+  </div>
+</section>
+
+    <!--/ Section Contact-Footer Star /-->
+    <section
+      class="paralax-mf footer-paralax bg-image sect-mt4 route"
+      style="background-image: url(img/overlay-bg.jpg)"
+    >
+      <div class="overlay-mf"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="contact-mf">
+              <div id="contact" class="box-shadow-full">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="title-box-2">
+                      <h5 class="title-left">Send Me a Message</h5>
+                    </div>
+                    <div>
+                      <form
+                        action
+                        method="post"
+                        role="form"
+                        class="contactForm"
+                      >
+                        <div id="sendmessage">
+                          Your message has been sent. Thank you!
+                        </div>
+                        <div id="errormessage"></div>
+                        <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                id="name"
+                                placeholder="Your Name"
+                                data-rule="minlen:4"
+                                data-msg="Please enter at least 4 chars"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="email"
+                                class="form-control"
+                                name="email"
+                                id="email"
+                                placeholder="Your Email"
+                                data-rule="email"
+                                data-msg="Please enter a valid email"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                data-rule="minlen:4"
+                                data-msg="Please enter at least 8 chars of subject"
+                              />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <textarea
+                                class="form-control"
+                                name="message"
+                                rows="5"
+                                data-rule="required"
+                                data-msg="Please write something for us"
+                                placeholder="Message"
+                              ></textarea>
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <button
+                              type="submit"
+                              class="button button-a button-big button-rouded"
+                            >
+                              Send Message
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="title-box-2 pt-4 pt-md-0">
+                      <h5 class="title-left">Get in Touch</h5>
+                    </div>
+                    <div class="more-info">
+                      <p class="lead">
+                        I welcome collaborations across research, innovation challenges, and community STEM outreach. Reach out for project partnerships, speaking opportunities, or to learn more about my ongoing work.
+                      </p>
+                      <ul class="list-ico">
+                        <li>
+                          <span class="ion-ios-location"></span> Kamnoetvidya Science Academy, Rayong 21210, Thailand
+                        </li>
+                        <li>
+                          <span class="ion-ios-telephone"></span>
+                          <a href="tel:+66843292183">(+66) 84-329-2183</a>
+                        </li>
+                        <li>
+                          <span class="ion-email"></span>
+                          <a href="mailto:thanakrit.dam64@gmail.com">thanakrit.dam64@gmail.com</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="socials">
+                      <ul>
+                        <li>
+                          <a href="https://github.com/tameszaza" target="_blank" rel="noopener"
+                            ><span class="ico-circle"
+                              ><i class="ion-social-github"></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="https://www.youtube.com/@KVISDOM" target="_blank" rel="noopener"
+                            ><span class="ico-circle"
+                              ><i class="ion-social-youtube"></i></span
+                          ></a>
+                        </li>
+                        <li>
+                          <a href="mailto:thanakrit.dam64@gmail.com"
+                            ><span class="ico-circle"
+                              ><i class="ion-email"></i></span
+                          ></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="copyright-box">
+                <p class="copyright">
+                  &copy; 2025 <strong>Thanakrit Damduan</strong>. Crafted with DevFolio.
+                </p>
+                <div class="credits">
+                  Template by
+                  <a href="https://bootstrapmade.com/" target="_blank" rel="noopener">BootstrapMade</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+    <!--/ Section Contact-footer End /-->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+
+    <!-- JavaScript Libraries -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/counterup/jquery.waypoints.min.js"></script>
+    <script src="lib/counterup/jquery.counterup.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
