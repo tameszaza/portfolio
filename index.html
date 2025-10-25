@@ -53,9 +53,11 @@
             </div>
             <div class="project-modal__content">
               <div class="project-modal__gallery">
-                <div class="project-modal__main-image">
-                  <img id="projectMainImage" src="" alt="Project preview" />
-                </div>
+                <div class="project-modal__main-image" style="position: relative;">
+  <img id="projectMainImage" src="" alt="Project preview" />
+  <div id="projectMainImageLabel" class="project-main-label"></div>
+</div>
+
                 <div class="project-modal__thumbnails" id="projectThumbnails"></div>
               </div>
               <div class="project-modal__details">
@@ -763,5 +765,6 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+    
   </body>
 </html>

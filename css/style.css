@@ -2181,3 +2181,73 @@ footer .credits a {
     bottom: 15px;
   }
 }
+/* Thumbnails inside project modal with optional labels */
+.project-modal__thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.project-thumbnail {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96px;
+  cursor: pointer;
+}
+
+.project-thumbnail__frame {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-thumbnail__frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-thumbnail.is-active .project-thumbnail__frame img {
+  outline: 2px solid #0d6efd;
+  outline-offset: 0;
+}
+
+/* small label under each thumbnail when provided */
+.project-thumbnail__label {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: #9aa3ad;
+  max-width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.project-main-label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  pointer-events: none;
+  max-width: 70%;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: none;
+}
+.project-thumbnail__label {
+  display: none !important;
+}

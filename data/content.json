@@ -21,6 +21,9 @@
         {
           "src": "img/projects/Lu3.jpg",
           "alt": "Tames was welcomed home by school representatives"
+        },
+        {
+          "src": "img/projects/LUMINETH1.png"
         }
       ],
       "certificates": [
@@ -39,12 +42,36 @@
       "description": "Design an improved anomaly-based mGANs architecture (eD-AnoGAN and RES-mGANomaly) with high accuracy for diverse/generalized datasets to classify synthetic speech and human speech by imposing the multi-generator and latent consistency loss concept. Developed a baseline for adapting a multi-generator approach to human voice tasks, improving cybersecurity measures.",
       "images": [
         {
+          "src": "img/projects/ICITEE4.jpg",
+          "label": "ICITEE"
+        },
+        {
+          "src": "img/projects/ICITEE6.jpg",
+          "label": "ICITEE"
+        },
+        {
+          "src": "img/projects/ICITEE2.jpg",
+          "label": "ICITEE"
+        },
+        {
+          "src": "img/projects/ICITEE1.jpg",
+          "label": "ICITEE"
+        },
+        {
+          "src": "img/projects/ICITEE5.jpg",
+          "label": "ICITEE"
+        },
+        {
+          "src": "img/projects/ICITEE3.png",
+          "label": "ICITEE"
+        },
+        {
           "src": "img/projects/YSC0.jpeg",
-          "alt": "Synthetic speech detection GAN workflow"
+          "label": "YSC"
         },
         {
           "src": "img/projects/YSC1.jpg",
-          "alt": "Young Scientist Competition gold medal certificate"
+          "label": "YSC"
         }
       ],
       "certificates": [
@@ -69,31 +96,42 @@
       "images": [
         {
           "src": "img/projects/inewgen0.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "I-NEW GEN"
         },
         {
           "src": "img/projects/inewgen2.png",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "I-NEW GEN"
         },
         {
           "src": "img/projects/inewgen3.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "I-NEW GEN"
         },
         {
           "src": "img/projects/inewgen4.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "I-NEW GEN"
         },
         {
           "src": "img/projects/inewgen5.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "I-NEW GEN"
         },
         {
           "src": "img/projects/NSC0.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "NSC"
         },
         {
           "src": "img/projects/NSC1.jpg",
-          "alt": "Food allergen warning program for people with food allergy"
+          "alt": "Food allergen warning program for people with food allergy",
+          "label": "NSC"
+        },
+        {
+          "src": "img/projects/FOOD1.png",
+          "label": "I-NEW GEN"
         }
       ],
       "certificates": [
@@ -199,23 +237,30 @@
       "images": [
         {
           "src": "img/projects/OPH0.jpg",
-          "alt": "KVIS-OPH 2025"
+          "alt": "KVIS-OPH 2025",
+          "label": "2025"
         },
         {
           "src": "img/projects/OPH2.jpg",
-          "alt": "KVIS-OPH 2025"
+          "alt": "KVIS-OPH 2025",
+          "label": "2024"
         },
         {
           "src": "img/projects/OPH3.jpg",
-          "alt": "KVIS-OPH 2025"
+          "alt": "KVIS-OPH 2025",
+          "label": "2025"
         },
         {
           "src": "img/projects/OPH4.jpg",
-          "alt": "KVIS-OPH 2025"
+          "alt": "KVIS-OPH 2025",
+          "label": "2024"
         },
         {
           "src": "img/projects/OPH5.png",
           "alt": "KVIS-OPH 2025"
+        },
+        {
+          "src": "img/projects/OPH6.jpg"
         }
       ],
       "certificates": [
@@ -233,8 +278,14 @@
       "description": "Designed a ray-tracing, simulated annealing, and genetic programming workflow to maximise CCTV coverage for critical facilities.",
       "images": [
         {
-          "src": "img/projects/surveillance-optimization.jpg",
+          "src": "img/projects/HIMCM1.png",
           "alt": "Visualising optimised CCTV coverage layout"
+        },
+        {
+          "src": "img/projects/HIMCM2.png"
+        },
+        {
+          "src": "img/projects/HIMCM3.png"
         }
       ],
       "certificates": [
@@ -252,17 +303,24 @@
       "description": "Developed a predictive model for the S&P 500, the biggest US stock market, using various ML models and ensemble methods such as XGBOOST, CATBOOST, and random forest, along with rolling windows and various data preprocessing procedures.",
       "images": [
         {
-          "src": "img/projects/stock-predictor.jpg",
+          "src": "img/projects/SP1.png",
           "alt": "Dashboard visualising S&P 500 prediction signals"
+        },
+        {
+          "src": "img/projects/SP2.png"
         }
       ],
-      "certificates": []
+      "certificates": [
+        {
+          "title": "img/projects/SP3.png"
+        }
+      ]
     },
     "jstp": {
       "title": "Junior Science Talent Project (JSTP-SCB)",
       "category": "STEM Outreach",
       "date": "Mentor • 2023-2025 • NSTDA Thailand",
-      "description": "Guided JSTP-SCB scholars by translating AI research journeys into hands-on, student-led prototypes.",
+      "description": "This program aims to nurture the high school students to achieve scientific, technological, and innovation mindset. Be a senior student mentor for the selection camp of middle school JSTP-SCB project batch 7.",
       "images": [
         {
           "src": "img/activities/jstp-scb.jpg",
@@ -275,7 +333,7 @@
       "title": "KVIS Open House Enrollment Scanner",
       "category": "Applied AI",
       "date": "Lead Engineer • 2023-2025 • Kamnoetvidya Science Academy",
-      "description": "Engineered the computer vision pipeline that digitises enrolment flows for 2,500+ visitors annually.",
+      "description": "Engineered the computer vision pipeline that digitises enrolment flows for 2,500+ visitors annually. learned and gained experience with image processing and computer vision AI model and database system. learned and gained experience in real-world machine learning application in a complete workflow.",
       "images": [
         {
           "src": "img/activities/kvis-open-house.jpg",
@@ -287,8 +345,8 @@
     "mentor-singapore": {
       "title": "Mentor for Juniors' Projects",
       "category": "Cross-border Mentor",
-      "date": "Coach • 2024-2025 • Thailand & Singapore",
-      "description": "Coached Thai and Singaporean student teams in speech technology, UX research, and deployment.",
+      "date": "Coach • 2025 • Thailand & Singapore",
+      "description": "The project is working on comparing different text-to-speech models capability on detecting Thai and Singaporean students’ handwriting.",
       "images": [
         {
           "src": "img/activities/mentor-singapore.jpg",
@@ -298,10 +356,10 @@
       "certificates": []
     },
     "international-camp": {
-      "title": "ABData Science Elite Summer Camp",
+      "title": "AI & Data Science Elite Summer Camp",
       "category": "International Delegate",
       "date": "Participant • Jul-Aug 2025 • CUHK Shenzhen",
-      "description": "Collaborated with global peers on datathon challenges spanning sustainability and smart cities.",
+      "description": "Collaborated with global peers on datatron challenges spanning sustainability and smart cities. Has show outstanding commitment and perseverance in the level up ice breaker mission, successfully completing daily check-ins for all six tasks during the Datatron Summer Camp.",
       "images": [
         {
           "src": "img/activities/datascience-camp.jpg",
@@ -314,7 +372,7 @@
       "title": "KVISDOM YouTube Channel",
       "category": "Media Production",
       "date": "Executive Producer • 2023-2025 • Thailand",
-      "description": "Produces national STEM broadcasts that translate complex research into accessible storytelling.",
+      "description": "KVISDOM is a nonprofit educational YouTube channel organized by KVIS students to help elevate the educational system in Thailand. VDO editor editing many clips on the KVISDOM YouTube channel and Production technician controlling the VDO recording, managing the lighting, and operating cameras.",
       "images": [
         {
           "src": "img/activities/kvisdom.jpg",
@@ -327,7 +385,7 @@
       "title": "KVIS Event Photographer",
       "category": "Creative Arts",
       "date": "Photographer • 2023-2025 • KVIS",
-      "description": "Documented major academic and cultural events, crafting the visual narrative of campus life.",
+      "description": "School photographer in major school events such as the teacher appreciation ceremony, KVIS sport festival, art festival, 7th KVIS-ISF, dorm party, and KVIS-MWIT sport festival.Won the third place in the school photographing competition on the topic of “Love Song” in the art festival",
       "images": [
         {
           "src": "img/activities/photography.jpg",
@@ -340,7 +398,7 @@
       "title": "KVIS School Choir · Bass Section",
       "category": "Community Spirit",
       "date": "Performer • 2024 • KVIS",
-      "description": "Contributed to signature performances celebrating school heritage and gratitude.",
+      "description": "Contributed to signature performances celebrating school heritage and gratitude. Sang the Wai Khru song on Teacher Appreciation Day to honor and pay respect to our teachers in front of the auditorium.",
       "images": [
         {
           "src": "img/leadership/school-choir.jpg",
@@ -353,7 +411,7 @@
       "title": "FiSym Club · Vice President",
       "category": "Finance Literacy",
       "date": "Executive Team • 2023-2024 • KVIS",
-      "description": "Built financial literacy programmes that demystify personal finance and investing for teens.",
+      "description": "Established the club to improve KVIS student personal financial awareness and investment skill. Learned for designing the course syllabus, writing the club proposal, coordinating with teachers, the club president and the club secretary.",
       "images": [
         {
           "src": "img/leadership/fisym.jpg",
@@ -366,7 +424,7 @@
       "title": "Animator's Tournament Club · President",
       "category": "Creative Leadership",
       "date": "Club President • 2024-2025 • KVIS",
-      "description": "Expanded a 3D animation community that fuses storytelling, Blender skills, and showcase events.",
+      "description": "Established the club to teach the new skill to the students for the basic 3D modeling technique and animating short animations using Blender to club members in total of 7 students. Managed the team and I am responsible and learned about making the course syllabus, making the club proposal, coordinating with teachers, the club VP, and the club secretary, and teaching the topic of basic 3D modeling and basic lighting.",
       "images": [
         {
           "src": "img/leadership/animators-club.jpg",
@@ -376,10 +434,10 @@
       "certificates": []
     },
     "student-committee": {
-      "title": "KVIS Student Committee · Head of IT",
+      "title": "KVIS Student Committee · Head of  Information and Technology department",
       "category": "Digital Transformation",
       "date": "Executive Board • 2024-2025 • KVIS",
-      "description": "Modernised committee operations with a campus-wide booking and communications platform.",
+      "description": "Managed and Developed the KVIS Student Committee website, where I solved the issued of overlapping meeting room bookings. Previously, reservations were made via Excel sheets on a  shared drive, so I developed a web-based booking system for the solution so that everyone can access real-time information and manage the meeting room schedule. This website helps prevent double bookings and is convenient and friendly to use. Currently, both teachers and students use this system for study room reservations.",
       "images": [
         {
           "src": "img/leadership/student-committee.jpg",
@@ -392,7 +450,7 @@
       "title": "KVIS Student Council · Executive",
       "category": "Policy & Governance",
       "date": "Elected Leader • 2023-2025 • KVIS",
-      "description": "Steered campus-wide policy proposals, debates, and student-led civic engagement.",
+      "description": "Responsible for the KVIS student president and VP election and directs and shapes the student committee operations from our policies. A party list of the PakPing political party, which has been voted the most by all KVIS students. Before the election day, we participated in the debate and made several promotion posters promoting our policies.",
       "images": [
         {
           "src": "img/leadership/student-council.jpg",
@@ -405,7 +463,7 @@
       "title": "Give Got Grown Volunteer Group · Co-founder",
       "category": "Social Innovation",
       "date": "Founder • 2024-2025 • Thailand",
-      "description": "Mobilised volunteers to design exercise kits and wellness activities for rural communities.",
+      "description": "Founder Give Got Grown Volunteer group which I am a head of monitoring and evaluation group activities. Our group created a lot of activities to help the communities near our school and the communities in our home province. First, we raised money by designing and distributing cloth bags and water bottles to buy products and equipment to make muscle exercise machines using pulleys to rehabilitate patients. Created Facebook account Give Got Grown to promote, communicate, advertise the activities. We invited school friends and another school to do the activities to help the people.",
       "images": [
         {
           "src": "img/leadership/give-got-grown.jpg",
@@ -421,16 +479,34 @@
       "description": "Represented KVIS with lumineth, an assistive AI for the visually impaired, and secured the Bronze Medal among 64 schools worldwide.",
       "images": [
         {
-          "src": "img/certificates/sistemic-2025.jpg",
+          "src": "img/projects/Lu3.jpg",
           "alt": "SISTEMIC 2025 certificate"
+        },
+        {
+          "src": "img/projects/Lu1.jpg"
+        },
+        {
+          "src": "img/projects/Lu2.jpg"
+        },
+        {
+          "src": "img/projects/SIS1.jpg"
+        },
+        {
+          "src": "img/projects/SIS2.jpg"
+        },
+        {
+          "src": "img/projects/SIS3.jpg"
+        },
+        {
+          "src": "img/projects/SIS4.jpg"
         }
       ],
       "certificates": [
         {
-          "title": "SISTEMIC 2025",
-          "issuer": "National Junior College",
+          "title": "Singapore International STEM Innovation Challenge: Bronze medal",
+          "issuer": "National Junior College, Singapore",
           "year": "2025",
-          "image": "img/certificates/sistemic-2025.jpg"
+          "image": "img/certificates/sistemic.png"
         }
       ]
     },
@@ -438,7 +514,7 @@
       "title": "11st International Mathematical Modeling Challenge 2025",
       "category": "Award",
       "date": "Honorable Mention • Global Online • 2025",
-      "description": "Led Thailand’s four-person team to optimize sports scheduling with decision-based annealing technique on big data , earning the international Honorable Mention award.",
+      "description": "Led Thailand’s four-person team to optimize global sports league scheduling with decision-based annealing technique on big data , earning the international Honorable Mention award.",
       "images": [],
       "certificates": []
     },
@@ -446,7 +522,7 @@
       "title": "Thailand New Gen Inventors Award 2025",
       "category": "Award",
       "date": "Silver & Popular Vote • BITEC Bangkok • 2025",
-      "description": "Developed the food allergen warning platform and won both the Silver Medal and national Popular Vote among 1,549 teams.",
+      "description": "Developed the food allergen warning platform in titled: “The Food Allergen Warning Program for People with Food Allergies to make life easier” in the health and medicine category and won both the Silver Medal and national Popular Vote among 1,549 teams.",
       "images": [
         {
           "src": "img/certificates/new-gen-2025.jpg",
@@ -466,7 +542,7 @@
       "title": "27th Young Scientist Competition 2025",
       "category": "Award",
       "date": "Gold Medalist • NSTDA • 2025",
-      "description": "Awarded Gold among 508 Projects from 103 Schools for Central and Eastern Center for the multi-generator GAN speech detection research and invited to present at IEEE CIS Thailand.",
+      "description": "Awarded Gold among 508 Projects from 103 Schools for Central and Eastern Center for the research titled \"Synthesis speech detection with multi generator Generative Adversarial Networks” in the computer science category",
       "images": [
         {
           "src": "img/certificates/ysc-2025.jpg",
@@ -494,7 +570,7 @@
       "title": "Siriraj Mathematics and Science Aptitude Test 2024",
       "category": "Award",
       "date": "2nd Runner-Up • Bangkok • 2024",
-      "description": "Placed top three among 1,303 national teams while representing faculty of medicine Siriraj Hospital’s STEM knowledge competition.",
+      "description": "Placed top three among 1,303 national teams while representing faculty of medicine Siriraj Hospital’s that Math, Physics, Bio and Chemistry knowledge competition.The team consisted of 3 members, and I was responsible for physics and mathematics.",
       "images": [
         {
           "src": "img/certificates/simsat-2024.jpg",
@@ -514,7 +590,7 @@
       "title": "23rd Thailand Physics Olympiad",
       "category": "Award",
       "date": "Silver Medalist • Thailand • 2024",
-      "description": "Ranked 12th nationally after multi-round theoretical and experimental finals with Academic Olympiad and Development of Science Education Foundation (POSN).",
+      "description": "TPhO is one of the most prestigious high school national Physics competitions in Thailand. I was ranked 12th among 30 medalists from 98 participants in national round after multi-round theoretical and experimental finals with Academic Olympiad and Development of Science Education Foundation (POSN).",
       "images": [
         {
           "src": "img/certificates/tpho-2024.jpg",
@@ -531,10 +607,10 @@
       ]
     },
     "award-ipst-2024": {
-      "title": "IPST Physics Camp 2024",
+      "title": "The Institute for the Promotion of Teaching Science and Technology(IPST) Camp 2024",
       "category": "Award",
       "date": "National Finalist • Bangkok • 2024",
-      "description": "Selected as one of 33 national finalists for the Physics IPST Camp toward the International Physics Olympiad team.",
+      "description": "Selected from over 10,000 initial applicants nationwide, I advanced through several rigorous selection rounds and was ultimately chosen as one of 33 participants for physics IPST Camp 1 and one of just 17 finalists for physics IPST Camp 2, the final stage in the selection of student entries as national team members from Thailand to the International Physics Olympiad (IPhO) in 2025.",
       "images": [
         {
           "src": "img/certificates/ipst-camp.jpg",
@@ -551,10 +627,10 @@
       ]
     },
     "award-amc-2023": {
-      "title": "American Mathematics Competitions (AMC) 2023",
+      "title": "American Mathematics Competitions (AMC)2023",
       "category": "Award",
       "date": "Gold Distinction • USA (Remote) • 2023",
-      "description": "Earned Gold Distinction with a score of 120/150 and qualified for the American Invitational Mathematics Examination.",
+      "description": "Earned Gold Distinction with a score of 120/150 and qualified for the American Invitational Mathematics Examination (AIME).",
       "images": [],
       "certificates": []
     },
@@ -562,7 +638,7 @@
       "title": "Hong Kong International Mathematical Olympiad 2023",
       "category": "Award",
       "date": "Silver Medal • Hong Kong • 2023",
-      "description": "Achieved Silver Medal for HKIMO round 3 while collaborating with international peers on advanced problem solving.",
+      "description": "Achieved Silver Medal for HKIMO heat round while collaborating with international peers on advanced problem solving. HKIMO supports and develops math skills by considering international standards and is directly operated by the Olympiad Champion Education Center (OCEC) in Hong Kong.",
       "images": [],
       "certificates": []
     },
@@ -586,7 +662,7 @@
       "title": "Australian Mathematics Competition 2024",
       "category": "Award",
       "date": "Silver Distinction • Thailand • 2024",
-      "description": "Awarded Silver with Distinction in the senior division for excellence across algebra, geometry, and probability.",
+      "description": "Awarded Silver with Global Distinction in the senior division for excellence across algebra, geometry, and probability.",
       "images": [],
       "certificates": []
     },
@@ -594,15 +670,29 @@
       "title": "Computational & Algorithmic Thinking 2024",
       "category": "Award",
       "date": "Silver & Distinction • Thailand • 2025",
-      "description": "Earned national silver (2024) and bronze (2025) with global Distinction ranking from the Australian Mathematics Trust.",
+      "description": "Earned national silver (2024) and bronze (2025) with global Distinction ranking from the Australian Mathematics Trust (AMT).",
       "images": [],
-      "certificates": []
+      "certificates": [
+        {
+          "image": "img/certificates/CAT20241.png"
+        },
+        {
+          "image": "img/certificates/CAT20242.png"
+        },
+        {
+          "image": "img/certificates/CAT20251.png"
+        },
+        {
+          "image": "img/certificates/CAT20252.png"
+        }
+      ]
     }
   },
   "projectCards": [
     {
       "id": "lumineth",
       "image": "img/projects/lumineth-cover.jpeg",
+      "imageDescription": "Cover image for Lumineth Assistive Smart Assisstive System for the Visually Impaired",
       "title": "Lumineth Assistive Smart Assisstive System for the Visually Impaired",
       "tag": "Embedded & Networking systems",
       "meta": "2025",
@@ -610,7 +700,8 @@
     },
     {
       "id": "speech-detection",
-      "image": "img/projects/YSC0.jpeg",
+      "image": "img/projects/ICITEE4.jpg",
+      "imageDescription": "Cover image for Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
       "title": "Synthetic Speech Detection via Multi-Generator GANs with Anomaly Detection Architectures",
       "tag": "Machine Learning",
       "meta": "2024 – 2025",
@@ -619,6 +710,7 @@
     {
       "id": "food-allergen",
       "image": "img/projects/inewgen1.jpg",
+      "imageDescription": "Cover image for Food Allergen Warning Program",
       "title": "Food Allergen Warning Program",
       "tag": "Public Health Tech",
       "meta": "2024 – 2025",
@@ -630,7 +722,8 @@
       "title": "Global Sports League Optimizer",
       "tag": "Operations Research",
       "meta": "2025",
-      "summary": "This project is part of math modeling compettition (IMMC) involve using Structural Simulated Annealing optimization (SSA)"
+      "summary": "This project is part of math modeling compettition (IMMC) involve using Structural Simulated Annealing optimization (SSA)",
+      "imageDescription": "Cover image for Global Sports League Optimizer"
     },
     {
       "id": "go-kila",
@@ -638,11 +731,13 @@
       "title": "GO-KILA Sports Matchmaking Platform",
       "tag": "Start-up Engineering",
       "meta": "2025 (ongoing)",
-      "summary": "A sport matchmaking web platform, which is a start-up  currently applying to the Shark Tank TV program."
+      "summary": "A sport matchmaking web platform, which is a start-up  currently applying to the Shark Tank TV program.",
+      "imageDescription": "Cover image for GO-KILA Sports Matchmaking Platform"
     },
     {
       "id": "enrollment-scanner",
-      "image": "img/projects/enrollment-scanner.jpg",
+      "image": "img/projects/OPH6.jpg",
+      "imageDescription": "Cover image for KVIS OPH Enrollment Scanner",
       "title": "KVIS OPH Enrollment Scanner",
       "tag": "Data Systems",
       "meta": "2023 – 2025",
@@ -651,6 +746,7 @@
     {
       "id": "surveillance-optimization",
       "image": "img/projects/surveillance-optimization.jpg",
+      "imageDescription": "Cover image for Surveillance Coverage Optimizer",
       "title": "Surveillance Coverage Optimizer",
       "tag": "Intelligent Systems",
       "meta": "2024",
@@ -658,7 +754,8 @@
     },
     {
       "id": "stock-predictor",
-      "image": "img/projects/stock-predictor.jpg",
+      "image": "img/projects/SP0.png",
+      "imageDescription": "Cover image for S&P 500 Stock Market Prediction",
       "title": "S&P 500 Stock Market Prediction",
       "tag": "Financial Data Science",
       "meta": "2024",
@@ -671,32 +768,36 @@
       "title": "Junior Science Talent Project (JSTP-SCB)",
       "tag": "STEM Outreach",
       "meta": "Mentor · 2023-2025 · NSTDA Thailand",
-      "summary": "Guided JSTP-SCB scholars by translating AI research journeys into hands-on, student-led prototypes.",
-      "image": "img/activities/jstp-scb.jpg"
+      "summary": "Qualified to participate in the incubation program for highly talented student through activity of JSTP-SCB of the National Science and Technology Department Agency (NSTDA).",
+      "image": "img/activities/jstp-scb.jpg",
+      "imageDescription": "Photo representing Junior Science Talent Project (JSTP-SCB)"
     },
     "open-house": {
       "group": "extracurricular",
-      "title": "KVIS Open House Enrollment Scanner",
+      "title": "KVIS Open House Enrollment Scanner(2023-2025)",
       "tag": "Applied AI",
       "meta": "Lead Engineer · 2023-2025 · KVIS",
       "summary": "Engineered the computer vision pipeline that digitises enrolment flows for 2,500+ visitors annually.",
-      "image": "img/activities/kvis-open-house.jpg"
+      "image": "img/activities/kvis-open-house.jpg",
+      "imageDescription": "Photo representing KVIS Open House Enrollment Scanner(2023-2025)"
     },
     "mentor-singapore": {
       "group": "extracurricular",
       "title": "Mentor for Juniors' Projects",
       "tag": "Cross-border Mentor",
-      "meta": "Coach · 2024-2025 · Thailand & Singapore",
-      "summary": "Coached Thai and Singaporean student teams in speech technology, UX research, and deployment.",
-      "image": "img/activities/mentor-singapore.jpg"
+      "meta": "Coach · 2025 · Thailand & Singapore",
+      "summary": "Coached Thai and Singaporean student teams in the project is working on comparing different text-to-speech models capability on detecting Thai and Singaporean students’ handwriting.",
+      "image": "img/activities/mentor-singapore.jpg",
+      "imageDescription": "Photo representing Mentor for Juniors' Projects"
     },
     "international-camp": {
       "group": "extracurricular",
-      "title": "ABData Science Elite Summer Camp",
+      "title": "AI & Data Science Elite Summer Camp",
       "tag": "International Delegate",
       "meta": "Participant · Jul-Aug 2025 · CUHK Shenzhen",
-      "summary": "Collaborated with global peers on datathon challenges spanning sustainability and smart cities.",
-      "image": "img/activities/datascience-camp.jpg"
+      "summary": "Collaborated with global peers to join the 2025 AI & Data Science Elite Summer Camp (Datatron2025) at CHHK-Shenzhen.",
+      "image": "img/activities/datascience-camp.jpg",
+      "imageDescription": "Photo representing AI & Data Science Elite Summer Camp"
     },
     "kvisdom": {
       "group": "extracurricular",
@@ -704,7 +805,8 @@
       "tag": "Media Production",
       "meta": "Executive Producer · 2023-2025 · Thailand",
       "summary": "Produces national STEM broadcasts that translate complex research into accessible storytelling.",
-      "image": "img/activities/kvisdom.jpg"
+      "image": "img/activities/kvisdom.jpg",
+      "imageDescription": "Photo representing KVISDOM YouTube Channel"
     },
     "photography": {
       "group": "extracurricular",
@@ -712,7 +814,8 @@
       "tag": "Creative Arts",
       "meta": "Photographer · 2023-2025 · KVIS",
       "summary": "Documented major academic and cultural events, crafting the visual narrative of campus life.",
-      "image": "img/activities/photography.jpg"
+      "image": "img/activities/photography.jpg",
+      "imageDescription": "Photo representing KVIS Event Photographer"
     },
     "school-choir": {
       "group": "leadership",
@@ -720,7 +823,8 @@
       "tag": "Community Spirit",
       "meta": "Performer · 2024 · KVIS",
       "summary": "Contributed to signature performances celebrating school heritage and gratitude.",
-      "image": "img/leadership/school-choir.jpg"
+      "image": "img/leadership/school-choir.jpg",
+      "imageDescription": "Photo representing KVIS School Choir · Bass Section"
     },
     "fisym-club": {
       "group": "leadership",
@@ -728,7 +832,8 @@
       "tag": "Finance Literacy",
       "meta": "Executive Team · 2023-2024 · KVIS",
       "summary": "Built financial literacy programmes that demystify personal finance and investing for teens.",
-      "image": "img/leadership/fisym.jpg"
+      "image": "img/leadership/fisym.jpg",
+      "imageDescription": "Photo representing FiSym Club · Vice President"
     },
     "animators-club": {
       "group": "leadership",
@@ -736,23 +841,26 @@
       "tag": "Creative Leadership",
       "meta": "Club President · 2024-2025 · KVIS",
       "summary": "Expanded a 3D animation community that fuses storytelling, Blender skills, and showcase events.",
-      "image": "img/leadership/animators-club.jpg"
+      "image": "img/leadership/animators-club.jpg",
+      "imageDescription": "Photo representing Animator's Tournament Club · President"
     },
     "student-committee": {
       "group": "leadership",
-      "title": "KVIS Student Committee · Head of IT",
+      "title": "KVIS Student Committee · Head of Information and Technology department",
       "tag": "Digital Transformation",
       "meta": "Executive Board · 2024-2025 · KVIS",
       "summary": "Modernised committee operations with a campus-wide booking and communications platform.",
-      "image": "img/leadership/student-committee.jpg"
+      "image": "img/leadership/student-committee.jpg",
+      "imageDescription": "Photo representing KVIS Student Committee · Head of Information and Technology department"
     },
     "student-council": {
       "group": "leadership",
       "title": "KVIS Student Council · Executive",
       "tag": "Policy & Governance",
-      "meta": "Elected Leader · 2023-2025 · KVIS",
+      "meta": "Elected Leader · 2024-2025 · KVIS",
       "summary": "Steered campus-wide policy proposals, debates, and student-led civic engagement.",
-      "image": "img/leadership/student-council.jpg"
+      "image": "img/leadership/student-council.jpg",
+      "imageDescription": "Photo representing KVIS Student Council · Executive"
     },
     "give-got-grown": {
       "group": "leadership",
@@ -760,7 +868,8 @@
       "tag": "Social Innovation",
       "meta": "Founder · 2024-2025 · Thailand",
       "summary": "Mobilised volunteers to design exercise kits and wellness activities for rural communities.",
-      "image": "img/leadership/give-got-grown.jpg"
+      "image": "img/leadership/give-got-grown.jpg",
+      "imageDescription": "Photo representing Give Got Grown Volunteer Group · Co-founder"
     }
   },
   "activityOrder": [
@@ -780,8 +889,9 @@
   "awardsCards": [
     {
       "id": "award-sistemic-2025",
-      "image": "img/certificates/sistemic-2025.jpg",
-      "title": "SISTEMIC 2025",
+      "image": "img/projects/Lu3.jpg",
+      "imageDescription": "Award image for Singapore International STEM Innovation Challenge (SISTEMIC) 2025",
+      "title": "Singapore International STEM Innovation Challenge (SISTEMIC) 2025",
       "tag": "Bronze Medalist",
       "meta": "NJC · Singapore · 2025",
       "summary": "Lumineth: A smart assistive system for the visually impaired recognized among global finalists."
@@ -789,7 +899,8 @@
     {
       "id": "award-cat-2024",
       "image": "img/overlay-bg.jpg",
-      "title": "CAT 2024",
+      "imageDescription": "Award image for Computational & Algorithmic Thinking (CAT 2024&2025)",
+      "title": "Computational & Algorithmic Thinking (CAT 2024&2025)",
       "tag": "Silver Medal & Distinction Award",
       "meta": "Thailand · 2024",
       "summary": "National silver and global Distinction ranking."
@@ -797,10 +908,11 @@
     {
       "id": "award-immc-2025",
       "image": "img/overlay-bg.jpg",
-      "title": "IMMC 2025",
+      "title": "International Mathematical Modeling Challenge (IMMC) 2025",
       "tag": "Honorable Mention",
       "meta": "Global Online · 2025",
-      "summary": "International recognition for scheduling optimization."
+      "summary": "International recognition for scheduling optimization.",
+      "imageDescription": "Award image for International Mathematical Modeling Challenge (IMMC) 2025"
     },
     {
       "id": "award-newgen-2025",
@@ -808,63 +920,71 @@
       "title": "I New Gen Award 2025",
       "tag": "Silver Medal & Popular Vote",
       "meta": "BITEC · Thailand · 2025",
-      "summary": "Food allergen warning platform won Silver and Popular Vote."
+      "summary": "Food allergen warning platform won Silver and Popular Vote.",
+      "imageDescription": "Award image for I New Gen Award 2025"
     },
     {
       "id": "award-ysc-2025",
       "image": "img/certificates/ysc-2025.jpg",
-      "title": "YSC 2025",
+      "title": "Young Scientist Competition (YSC) 2025",
       "tag": "Gold Medalist",
       "meta": "NSTDA · Thailand · 2025",
-      "summary": "Multi-generator GAN speech detection research awarded Gold."
+      "summary": "Multi-generator GAN speech detection research awarded Gold.",
+      "imageDescription": "Award image for Young Scientist Competition (YSC) 2025"
     },
     {
       "id": "award-hscm-2024",
       "image": "img/overlay-bg.jpg",
-      "title": "HiMCM 2024",
+      "title": "High School Mathematical Contest in Modeling (HiMCM) 2024",
       "tag": "Honorable Mention",
       "meta": "Global Online · 2024",
-      "summary": "Olympic scheduling with SARIMAX forecasting."
+      "summary": "Olympic scheduling with SARIMAX forecasting.",
+      "imageDescription": "Award image for High School Mathematical Contest in Modeling (HiMCM) 2024"
     },
     {
       "id": "award-simsat-2024",
       "image": "img/certificates/simsat-2024.jpg",
-      "title": "SIMSAT 2024",
+      "title": "Siriraj Mathematics and Science Aptitude Test (SIMSAT)2024",
       "tag": "2nd Runner-Up",
       "meta": "Bangkok · 2024",
-      "summary": "Top three nationwide for science aptitude by faculty of medicine Siriraj Hospital, Mahidol University"
+      "summary": "Top three nationwide for science aptitude by faculty of medicine Siriraj Hospital, Mahidol University",
+      "imageDescription": "Award image for Siriraj Mathematics and Science Aptitude Test (SIMSAT)2024"
     },
     {
       "id": "award-tpho-2024",
       "image": "img/certificates/tpho-2024.jpg",
-      "title": "TPhO 2024",
+      "title": "Thailand Physics Olympiad (TPhO)2024",
       "tag": "Silver Medalist",
       "meta": "Thailand · 2024",
-      "summary": "Ranked 12th nationally in the physic theory and experiment finals."
+      "summary": "Ranked 12th nationally in the physic theory and experiment finals.",
+      "imageDescription": "Award image for Thailand Physics Olympiad (TPhO)2024"
     },
     {
       "id": "award-ipst-2024",
       "image": "img/certificates/ipst-camp.jpg",
-      "title": "IPST Physics Camp 2024",
+      "title": "The Institute for the Promotion of Teaching Science and Technology(IPST) Camp 2024",
       "tag": "National Finalist",
       "meta": "Bangkok · 2024",
-      "summary": "Selected among 33 finalists for IPhO training."
+      "summary": "Selected among 33 finalists for IPhO training.",
+      "imageDescription": "Award image for The Institute for the Promotion of Teaching Science and Technology(IPST) Camp 2024"
     },
     {
       "id": "award-amc-2023",
       "image": "img/overlay-bg.jpg",
-      "title": "AMC 2023",
+      "title": "American Mathematics Competitions (AMC)2023",
       "tag": "Gold Distinction",
       "meta": "USA (Remote) · 2023",
-      "summary": "Qualified for AIME with 120/150."
+      "summary": "Qualified for AIME with 120/150.",
+      "imageDescription": "Award image for American Mathematics Competitions (AMC)2023"
     },
     {
       "id": "award-hkimo-2023",
       "image": "img/overlay-bg.jpg",
-      "title": "HKIMO 2023",
+      "title": "Hong Kong International Mathematical Olympiad (HKIMO)2023",
       "tag": "Silver Medal",
       "meta": "Hong Kong · 2023",
-      "summary": "International problem solving collaboration."
+      "summary": "International problem solving collaboration.",
+      "imageDescription": "Award image for Hong Kong International Mathematical Olympiad (HKIMO)2023"
     },
     {
       "id": "award-posn-informatics-2023",
@@ -872,7 +992,8 @@
       "title": "POSN Informatics 2023",
       "tag": "Top 50 Finalist",
       "meta": "Thammasat · 2023",
-      "summary": "Qualified for national top 50 camp."
+      "summary": "Qualified for national top 50 camp.",
+      "imageDescription": "Award image for POSN Informatics 2023"
     },
     {
       "id": "award-conrad-2024",
@@ -880,7 +1001,8 @@
       "title": "Conrad 2023-2024",
       "tag": "Innovation Stage",
       "meta": "Global · 2024",
-      "summary": "Energy & Environment project advanced globally."
+      "summary": "Energy & Environment project advanced globally.",
+      "imageDescription": "Award image for Conrad 2023-2024"
     },
     {
       "id": "award-amc-2024-amc",
@@ -888,7 +1010,8 @@
       "title": "AMC 2024",
       "tag": "Silver Distinction",
       "meta": "Thailand · 2024",
-      "summary": "Senior division excellence in math."
+      "summary": "Senior division excellence in math.",
+      "imageDescription": "Award image for AMC 2024"
     }
   ]
 }

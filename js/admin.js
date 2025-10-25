@@ -305,6 +305,11 @@
         '</div>',
       '</div>',
       '<div class="form-group">',
+        '<label for="field-cardImageDescription">Card Image Description (optional)</label>',
+        '<input type="text" class="form-control" id="field-cardImageDescription" name="cardImageDescription" value="' + escapeHtml(record.card.imageDescription || '') + '" />',
+        '<small class="form-text text-muted">Used for accessibility and alt text when filled.</small>',
+      '</div>',
+      '<div class="form-group">',
         '<label for="field-cardTitle">Card Title</label>',
         '<input type="text" class="form-control" id="field-cardTitle" name="cardTitle" value="' + escapeHtml(record.card.title || '') + '" />',
       '</div>',
@@ -366,7 +371,7 @@
     });
 
     addImageBtn.addEventListener('click', function () {
-      imageList.appendChild(createImageRow({ src: '', alt: '' }));
+      imageList.appendChild(createImageRow({ src: '', alt: '', label: '', description: '' }));
     });
 
     imageSection.appendChild(imageHeader);
@@ -455,18 +460,31 @@
     ].join('');
   }
 
+  // Image row now includes an optional "Label" field
   function createImageRow(image) {
     const wrapper = document.createElement('div');
     wrapper.className = 'array-group image-row';
     wrapper.innerHTML = [
       '<div class="form-row">',
-        '<div class="form-group col-md-7">',
+        '<div class="form-group col-md-6">',
           '<label>Image path</label>',
           '<input type="text" class="form-control image-src" value="' + escapeHtml(image.src || '') + '" />',
         '</div>',
-        '<div class="form-group col-md-5">',
+        '<div class="form-group col-md-6">',
           '<label>Alt text</label>',
           '<input type="text" class="form-control image-alt" value="' + escapeHtml(image.alt || '') + '" />',
+        '</div>',
+      '</div>',
+      '<div class="form-row">',
+        '<div class="form-group col-md-6">',
+          '<label>Label (optional)</label>',
+          '<input type="text" class="form-control image-label" value="' + escapeHtml(image.label || '') + '" />',
+          '<small class="form-text text-muted">Short name shown under the thumbnail inside the modal.</small>',
+        '</div>',
+        '<div class="form-group col-md-6">',
+          '<label>Description (optional)</label>',
+          '<textarea class="form-control image-description" rows="2">' + escapeHtml(image.description || '') + '</textarea>',
+          '<small class="form-text text-muted">If you add a caption element for the main image, this text can appear there.</small>',
         '</div>',
       '</div>',
       '<div class="array-group__actions">',
@@ -544,6 +562,7 @@
     const card = {
       id: id,
       image: (formData.get('cardImage') || '').trim(),
+      imageDescription: (formData.get('cardImageDescription') || '').trim(),
       title: (formData.get('cardTitle') || '').trim(),
       tag: (formData.get('cardTag') || '').trim(),
       meta: (formData.get('cardMeta') || '').trim(),
@@ -632,7 +651,8 @@
       tag: card.tag || '',
       meta: card.meta || '',
       summary: card.summary || '',
-      image: card.image || ''
+      image: card.image || '',
+      imageDescription: card.imageDescription || ''
     };
 
     if (isNew) {
@@ -754,14 +774,21 @@
     reader.readAsText(file);
   }
 
+  // Updated to collect optional "label"
   function collectImages(form) {
     const rows = form.querySelectorAll('.image-row');
     const images = [];
     rows.forEach(function (row) {
       const src = (row.querySelector('.image-src').value || '').trim();
       const alt = (row.querySelector('.image-alt').value || '').trim();
+      const label = (row.querySelector('.image-label').value || '').trim();
+      const description = (row.querySelector('.image-description').value || '').trim();
       if (src) {
-        images.push({ src: src, alt: alt });
+        const image = { src: src };
+        if (alt) image.alt = alt;
+        if (label) image.label = label;
+        if (description) image.description = description;
+        images.push(image);
       }
     });
     return images;
@@ -867,14 +894,14 @@
     if (category === 'projects' || category === 'awards') {
       return {
         id: '',
-        card: { id: '', image: '', title: '', tag: '', meta: '', summary: '' },
+        card: { id: '', image: '', imageDescription: '', title: '', tag: '', meta: '', summary: '' },
         detail: detail
       };
     }
     if (category === 'activities') {
       return {
         id: '',
-        card: { id: '', group: 'extracurricular', title: '', tag: '', meta: '', summary: '', image: '' },
+        card: { id: '', group: 'extracurricular', title: '', tag: '', meta: '', summary: '', image: '', imageDescription: '' },
         detail: detail
       };
     }
