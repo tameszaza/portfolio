@@ -24,8 +24,24 @@ const $certificateModalMeta = $('#certificateModalMeta');
 const $certificateModalDescription = $('#certificateModalDescription');
 
 // Card template helper (restored)
-function tileHtml(id, img, title, tag, meta, summary) {
+function normaliseTileImage(image, fallbackTitle) {
+  const fallbackAlt = fallbackTitle || 'Portfolio item preview';
+  if (!image) {
+    return { src: '', alt: fallbackAlt };
+  }
+  if (typeof image === 'string') {
+    return { src: image, alt: fallbackAlt };
+  }
+  const src = image.src || '';
+  const description = image.description || image.alt || '';
+  const alt = description || fallbackAlt;
+  return { src: src, alt: alt };
+}
+
+function tileHtml(id, image, title, tag, meta, summary) {
   const safeTitle = $('<div>').text(title || 'Detail').html();
+  const { src, alt } = normaliseTileImage(image, title);
+  const safeAlt = $('<div>').text(alt).html();
   return `
     <a href="#"
        class="activity-tile js-open-modal"
@@ -34,7 +50,7 @@ function tileHtml(id, img, title, tag, meta, summary) {
        aria-haspopup="dialog"
        aria-label="Open details for ${safeTitle}">
       <div class="activity-tile__image">
-        <img src="${img}" alt="${title}" class="img-fluid" />
+        <img src="${src}" alt="${safeAlt}" class="img-fluid" />
         <span class="tile-affordance" aria-hidden="true"><i class="fa fa-ellipsis-v"></i></span>
       </div>
       <div class="activity-tile__body">
@@ -239,7 +255,7 @@ function showContentError(message) {
     projectCards.forEach((p, index) => {
       const hidden = index >= projectVisibleLimit ? ' d-none project-card--hidden' : '';
       const $col = $('<div/>', { class: `col-md-6 col-lg-4 mb-4${hidden}` });
-      $col.html(tileHtml(p.id, p.image, p.title, p.tag, p.meta, p.summary));
+      $col.html(tileHtml(p.id, { src: p.image, description: p.imageDescription }, p.title, p.tag, p.meta, p.summary));
       $projectGrid.append($col);
     });
 
@@ -274,7 +290,7 @@ function showContentError(message) {
       const d = activityDetails[id];
       if (!d) return;
       const $col = $('<div/>', { class: 'col-md-6 col-lg-4 mb-4' });
-      $col.html(tileHtml(id, d.image, d.title, d.tag, d.meta, d.summary));
+      $col.html(tileHtml(id, { src: d.image, description: d.imageDescription }, d.title, d.tag, d.meta, d.summary));
       $grid.append($col);
     });
   }
@@ -284,7 +300,7 @@ function showContentError(message) {
     $awardsGrid.empty();
     awardsCards.forEach(a => {
       const $col = $('<div/>', { class: 'col-md-6 col-lg-4 mb-4' });
-      $col.html(tileHtml(a.id, a.image, a.title, a.tag, a.meta, a.summary));
+      $col.html(tileHtml(a.id, { src: a.image, description: a.imageDescription }, a.title, a.tag, a.meta, a.summary));
       $awardsGrid.append($col);
     });
   }
